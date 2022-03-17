@@ -1,8 +1,10 @@
 import React from "react";
+import GreetingContainer from "./NavBar/Greeting/GreetingContainer";
 
 const App = () => (
   <div>
-    <h1>This is the &#60; App /&#62; component</h1>
+    <h3>This is the &#60; App /&#62; component</h3>
+    <GreetingContainer />
   </div>
 );
 

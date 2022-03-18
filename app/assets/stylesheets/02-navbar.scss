@@ -1,7 +1,7 @@
 .gradient-box {
   height: 3px;
   width: 100%;
-  background-image: linear-gradient(to right, #62E51D, #e621ff)
+  background-image: linear-gradient(to right, #5afe04, #ff00ff)
 }
 
 
@@ -72,10 +72,10 @@
 }
 
 .login-button {
-  box-shadow: inset 0px 1px 0px 0px  #f6b6ff;
+  box-shadow: inset 0px 1px 0px 0px  #ffe2ff;
   width: 60px;
   height: 33.45px;
-  background-color:   #ee6dff ;
+  background-color:   #ff83ff;
   border: 1px solid  #c100da;
   border-radius: 3px;
   color: white;
@@ -83,18 +83,18 @@
 }
 
 .login-button:hover {
- background-color: #e621ff;
+ background-color: #ce1ad0;
 }
 
 .signup-button:hover {
- background-color: #810091;
+ background-color: #ce1ad0;
 }
 
 .signup-button {
-  box-shadow: inset 0px 1px 0px 0px   #f6b6ff;
+  box-shadow: inset 0px 1px 0px 0px   #ffe2ff;
   width: 69px;
   height: 33.45px;
-  background-color:   #e621ff;
+  background-color:   #ff00ff;
   border: 1px solid transparent;
   border-radius: 3px;
   color: white;
@@ -113,7 +113,16 @@
   height: 27.5px;
   font-size: 13px;
   color: hsl(210,8%,25%);
+  border: 1px solid transparent;
+  border-color:hsl(210,8%,75%);
+  border-radius: 3px;
   // border-color: hsl(210,8%,75%);
+}
+
+.search-input:focus {
+  border-color:#ff00ff;
+  outline: 1px solid transparent;
+  box-shadow: 0px 0px 3px 3px rgba(252, 5,255, 33%);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

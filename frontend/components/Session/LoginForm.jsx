@@ -23,15 +23,15 @@ export default class Login extends React.Component {
     //                                  ^^ fix this to /questions later
   }
 
-  loginDemo() {
-
-  }
+  loginDemo() {}
 
   render() {
     return (
       <div className="login-page">
         <div className="login-container">
-          <img width="35px" src={window.loginLogo}></img>
+          <Link to={`/`}>
+            <img width="35px" src={window.loginLogo}></img>
+          </Link>
           <button className="guest-login" onClick={this.loginDemo}>
             &ensp;Log in as guest&ensp;
           </button>

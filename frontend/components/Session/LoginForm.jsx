@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { login } from "../../actions/session_actions.js"
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ export default class Login extends React.Component {
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.loginDemo = this.loginDemo.bind(this);
   }
 
   handleInput(type) {
@@ -23,7 +25,17 @@ export default class Login extends React.Component {
     //                                  ^^ fix this to /questions later
   }
 
-  loginDemo() {}
+  loginDemo(e) {
+    e.preventDefault();
+    this.setState({username: "clone37"})
+    this.setState({ password: "09f84231f90j30irvoiqrvjwh3209hd#@!@#F!@dhuiw" });
+    dispatch(
+      login({
+        username: "clone37",
+        password: "09f84231f90j30irvoiqrvjwh3209hd#@!@#F!@dhuiw",
+      })
+    ).then(() => this.props.history.push("/"));
+  }
 
   render() {
     return (

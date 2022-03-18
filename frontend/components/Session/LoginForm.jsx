@@ -33,7 +33,7 @@ export default class Login extends React.Component {
         <div className="login-container">
           <img width="35px" src={window.loginLogo}></img>
           <button className="guest-login" onClick={this.loginDemo}>
-            🧪&ensp;Log in as guest&ensp;🧪
+            &ensp;Log in as guest&ensp;
           </button>
           <form>
             <div className="login-inputs">
@@ -62,7 +62,9 @@ export default class Login extends React.Component {
           </form>
           <div className="login-other-links">
             <span>Don't have an account? </span>
-            <Link to={`/signup`}>Sign up</Link>
+            <Link className={"login-to-signup-link"} to={`/signup`}>
+              Sign up
+            </Link>
           </div>
         </div>
       </div>

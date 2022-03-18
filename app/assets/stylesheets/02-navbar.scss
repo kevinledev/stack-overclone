@@ -4,8 +4,19 @@
   background-image: linear-gradient(to right, #62E51D, #e621ff)
 }
 
-img {
-  margin-left: 8px;
+
+
+.link-to-home {
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.link-to-home:hover{
+  background-color: #E3E5E7;
 }
 
 
@@ -32,9 +43,24 @@ img {
   height: 47px;
   max-width: 1297px;
   width: 100%;
-  gap: 24px;
+  gap: 16px;
   // margin-left: 50px;
   // margin-right: 50px;
+}
+
+.search {
+  display: flex; align-items: center;
+}
+
+.search img {
+ position:absolute;
+ height: 18px;
+ margin-left: 8px;
+ opacity: 0.25;
+}
+
+.search-input{
+  padding-left: 32px;
 }
 
 .session-buttons {
@@ -49,10 +75,19 @@ img {
   box-shadow: inset 0px 1px 0px 0px  #f6b6ff;
   width: 60px;
   height: 33.45px;
-  background-color:   #ee6dff;
+  background-color:   #ee6dff ;
   border: 1px solid  #c100da;
   border-radius: 3px;
   color: white;
+  margin-left: 8px;
+}
+
+.login-button:hover {
+ background-color: #e621ff;
+}
+
+.signup-button:hover {
+ background-color: #810091;
 }
 
 .signup-button {
@@ -83,5 +118,6 @@ img {
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   opacity: 0.5; /* Firefox */
+  font-size: 13px;
 }
 

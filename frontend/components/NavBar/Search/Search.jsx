@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 export default class Search extends React.Component {
@@ -10,11 +11,10 @@ export default class Search extends React.Component {
     
     return (
       <div className="search">
-
-          <input className="search-input" type="text" placeholder="Search..."/>
-          <div className="search-icon"></div>
-
+        <img src={window.searchIcon}></img>
+        <input className="search-input" type="text" placeholder="Search..." />
+        <div className="search-icon"></div>
       </div>
-    )
+    );
   }
 }

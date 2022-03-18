@@ -1,0 +1,15 @@
+body { 
+	margin: 0 auto !important; 
+  min-height: 100%;
+  height: 100vh;
+	float: none !important; 
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Liberation Sans",sans-serif;
+}
+
+#root {
+  height: inherit;
+}
+
+.app {
+  height: inherit;
+}

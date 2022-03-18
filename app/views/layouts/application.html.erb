@@ -7,6 +7,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <script type="text/javascript">
+      window.loginLogo = "<%= image_url("login_transparent.png") %>"
+      window.logoTransparent = "<%= image_url("logo_transparent.svg") %>"
+    </script>
   </head>
 
   <body>

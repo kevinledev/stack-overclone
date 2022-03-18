@@ -15,13 +15,14 @@ export default class Greeting extends React.Component {
         <button onClick={logout}>Logout</button>
       </div>
     ) : (
-      <div>
-        <button>
-          <Link to={`/login`}>Log In</Link>
-        </button>
-        <button>
-          <Link to={`/signup`} >Sign Up</Link>
-        </button>
+      <div className="session-buttons">
+        <Link to={`/login`}>
+          <button className="login-button">Log in</button>
+        </Link>
+
+        <Link to={`/signup`}>
+          <button className="signup-button">Sign Up</button>
+        </Link>
       </div>
     );
 

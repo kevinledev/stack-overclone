@@ -30,9 +30,8 @@ export const signup = (formUser) => (dispatch) => {
 };
 
 export const login = (formUser) => (dispatch) => {
-  return SessionApiUtil.login(formUser).then((user) =>
-    dispatch(receiveCurrentUser(user))
-  );
+  return SessionApiUtil.login(formUser)
+    .then((user) => dispatch(receiveCurrentUser(user)), ((errors) => console.log(errors.responseJSON))) ;
 };
 
 export const logout = () => (dispatch) => {

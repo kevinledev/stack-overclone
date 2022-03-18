@@ -1,10 +1,9 @@
 .gradient-box {
   height: 3px;
   width: 100%;
-  background-image: linear-gradient(to right, #5afe04, #ff00ff)
+  // background-image: linear-gradient(to right, #5afe04, #ff00ff);
+  background-image: linear-gradient(to right, #5afe04, BLACK);
 }
-
-
 
 .link-to-home {
   height: 47px;
@@ -15,24 +14,22 @@
   padding-right: 8px;
 }
 
-.link-to-home:hover{
-  background-color: #E3E5E7;
+.link-to-home:hover {
+  background-color: #e3e5e7;
 }
-
 
 .nav-bar-container {
   top: 0px;
   width: 100%;
-  background-color: #F8F9F9;
+  background-color: #f8f9f9;
   // background-color: black;
-  position:fixed;
+  position: fixed;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 1px 2px hsla(0,0%,0%,0.05),
-  0 1px 4px hsla(0,0%,0%,0.05),
-  0 2px 8px hsla(0,0%,0%,0.05);
+  box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
+    0 2px 8px hsla(0, 0%, 0%, 0.05);
 }
 
 .nav-items {
@@ -49,59 +46,57 @@
 }
 
 .search {
-  display: flex; align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .search img {
- position:absolute;
- height: 18px;
- margin-left: 8px;
- opacity: 0.25;
+  position: absolute;
+  height: 18px;
+  margin-left: 8px;
+  opacity: 0.25;
 }
 
-.search-input{
+.search-input {
   padding-left: 32px;
 }
 
 .session-buttons {
   display: flex;
-  flex-direction:  row;
+  flex-direction: row;
   align-items: center;
   gap: 4px;
   margin-right: 8px;
 }
 
 .login-button {
-  box-shadow: inset 0px 1px 0px 0px  #ffe2ff;
+  box-shadow: inset 0px 1px 0px 0px white;
   width: 60px;
   height: 33.45px;
-  background-color:   #ff83ff;
-  border: 1px solid  #c100da;
+  background-color: rgb(235,235,235);
+  border: 1px solid black;
   border-radius: 3px;
-  color: white;
+  color: black;
   margin-left: 8px;
 }
-
 .login-button:hover {
- background-color: #ce1ad0;
-}
-
-.signup-button:hover {
- background-color: #ce1ad0;
+  background-color: lightgrey;
 }
 
 .signup-button {
-  box-shadow: inset 0px 1px 0px 0px   #ffe2ff;
+  box-shadow: inset 0px 1px 0px 0px rgb(122,122,123);
   width: 69px;
   height: 33.45px;
-  background-color:   #ff00ff;
+  background-color: #272728;
   border: 1px solid transparent;
   border-radius: 3px;
   color: white;
 }
+.signup-button:hover {
+  background-color: black;
+}
 
-    
-.search { 
+.search {
   width: 100%;
   min-width: 200px;
   max-width: 100%;
@@ -112,21 +107,21 @@
   max-width: 100%;
   height: 27.5px;
   font-size: 13px;
-  color: hsl(210,8%,25%);
+  color: hsl(210, 8%, 25%);
   border: 1px solid transparent;
-  border-color:hsl(210,8%,75%);
+  border-color: hsl(210, 8%, 75%);
   border-radius: 3px;
   // border-color: hsl(210,8%,75%);
 }
 
 .search-input:focus {
-  border-color:#ff00ff;
+  border-color: #62E51D;
   outline: 1px solid transparent;
-  box-shadow: 0px 0px 3px 3px rgba(252, 5,255, 33%);
+  box-shadow: 0px 0px 3px 3px #62E51D66;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   opacity: 0.5; /* Firefox */
   font-size: 13px;
 }
-

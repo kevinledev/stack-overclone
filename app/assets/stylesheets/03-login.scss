@@ -1,14 +1,17 @@
 .login-page {
   background-color: #f1f2f3;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px;
   gap: 16px;
+  padding-bottom: 200px;
 }
 
 .guest-login {
@@ -78,6 +81,7 @@
 }
 .login-inputs button:hover {
  background-color: black;
+ cursor: pointer;
 }
 
 .login-inputs input:focus {

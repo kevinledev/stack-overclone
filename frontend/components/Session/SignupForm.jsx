@@ -10,7 +10,6 @@ export default class Signup extends React.Component {
       email: "",
       password: "",
     };
-
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -26,15 +25,51 @@ export default class Signup extends React.Component {
     //                                  ^^ fix this to /questions later
   }
 
+  componentDidMount() {
+    this.props.clearSessionErrors();
+  }
+
   render() {
+    const { errors } = this.props;
+    const firstError = errors[0];
+    console.log(this.props.errors);
     return (
       <div className="signup-page">
+        <div className="join-us-container">
+          <div className="join-text">Join the Stack Overclone community</div>
+          <ul>
+            <li>
+              <img src={window.qBubble}></img>
+              <span>Get unstuck - ask a question</span>
+            </li>
+            <li>
+              <img src={window.voteIcon}></img>
+              <span>Unlock new privileges like voting and commenting</span>
+            </li>
+            <li>
+              <img src={window.tagIcon}></img>
+              <span>Save your favorite tags, filters, and jobs</span>
+            </li>
+            <li>
+              <img src={window.trophyIcon}></img>
+              <span>Earn reputation and badges</span>
+            </li>
+            <div className="get-so-for-teams">
+              Collaborate and share knowledge with a private group for FREE. Get
+              Stack Overclone for Teams free for up to 50 clones.
+            </div>
+          </ul>
+        </div>
         <div className="signup-container">
-          {/* <Link to={`/`}>
-            <img width="35px" src={window.loginLogo}></img>
-          </Link> */}
           <form>
             <div className="signup-inputs">
+              <div className="login-errors">
+                {/* {errors.map((er) => (
+                  <div>{er}</div>
+                ))} */}
+                {errors[0]}
+              </div>
+
               <div className="username-input">
                 <label>Username </label>
                 <div>
@@ -82,10 +117,18 @@ export default class Signup extends React.Component {
             </div>
           </form>
           <div className="login-other-links">
-            <span>Already have an account? </span>
-            <Link className={"login-to-signup-link"} to={`/login`}>
-              Log in
-            </Link>
+            <div>
+              <span>Already have an account?</span>
+              <Link className={"login-to-signup-link"} to={`/login`}>
+                Log in
+              </Link>
+            </div>
+            <div>
+              <span>Are you an employer?</span>
+              <Link className={"login-to-signup-link"} to={`/login`}>
+                Let's connect
+              </Link>
+            </div>
           </div>
         </div>
       </div>

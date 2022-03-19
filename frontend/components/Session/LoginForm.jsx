@@ -23,11 +23,17 @@ export default class Login extends React.Component {
     e.preventDefault();
     this.props.processForm(this.state).then(() => this.props.history.push("/"));
     //                                  ^^ fix this to /questions later
+    if (this.props.errors) {
+      this.setState({
+        username: "",
+        password: "",
+      });
+    }
   }
 
   loginDemo(e) {
     e.preventDefault();
-    this.setState({username: "clone37"})
+    this.setState({ username: "clone37" });
     this.setState({ password: "09f84231f90j30irvoiqrvjwh3209hd#@!@#F!@dhuiw" });
     dispatch(
       login({
@@ -37,7 +43,13 @@ export default class Login extends React.Component {
     ).then(() => this.props.history.push("/"));
   }
 
+  componentDidMount() {
+    this.props.clearSessionErrors();
+  }
+
   render() {
+    const { errors } = this.props;
+
     return (
       <div className="login-page">
         <div className="login-container">
@@ -49,6 +61,7 @@ export default class Login extends React.Component {
           </button>
           <form>
             <div className="login-inputs">
+              <div className="login-errors">{errors}</div>
               <div className="username-input">
                 <label>Username </label>
                 <div>

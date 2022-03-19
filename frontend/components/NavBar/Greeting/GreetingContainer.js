@@ -6,6 +6,7 @@ const mapStateToProps = (state) => {
   if (state.session.currentUserId) {
     return {
       username: state.entities.users[state.session.currentUserId].username,
+      id: state.session.currentUserId,
       currentUser: Boolean(state.session.currentUserId),
     };
   } else {

@@ -7,12 +7,18 @@ export default class Greeting extends React.Component {
   }
 
   render() {
-    const { username, currentUser, logout } = this.props;
+    const { username, id, currentUser, logout } = this.props;
 
     const displayGreeting = currentUser ? (
-      <div>
-        <h2>Welcome {username}!</h2>
-        <button onClick={logout}>Logout</button>
+      <div className="greeting-container">
+        <div className="profile-icon">
+          <Link to={`/users/${id}`}>
+            <img src={window.navbarProfile}></img>
+          </Link>
+        </div>
+        <button className="signup-button" onClick={logout}>
+          Logout
+        </button>
       </div>
     ) : (
       <div className="session-buttons">

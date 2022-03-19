@@ -10,6 +10,7 @@ const App = () => (
     <NavBar />
     <Route path="/login" component={LoginFormContainer} />
     <Route path="/signup" component={SignupFormContainer} />
+    {/* <Route path="/users/:userId" component={UserShowContainer} /> */}
   </div>
 );
 

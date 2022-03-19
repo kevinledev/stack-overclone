@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   gap: 32px;
+  // margin-bottom:100px;
 }
 
 .join-us-container {
@@ -13,6 +14,7 @@
   top: -50px;
   color: #232629;
   font-size: 15px;
+  padding-bottom: 200px;
 }
 
 .join-text {
@@ -21,7 +23,8 @@
 }
 
 .join-us-container img {
-  width: 27px;
+  height: 27px;
+  width: 26px;
   padding-right: 10px;
 }
 
@@ -31,7 +34,7 @@
 
 .join-us-container span {
   position: relative;
-  top: -12px;
+  top: -10px;
 }
 
 .get-so-for-teams {
@@ -47,7 +50,7 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  // padding-bottom: 200px;
+  padding-bottom: 200px;
 }
 
 .signup-inputs {

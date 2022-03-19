@@ -86,10 +86,21 @@ export default class Login extends React.Component {
             </div>
           </form>
           <div className="login-other-links">
-            <span>Don't have an account? </span>
-            <Link className={"login-to-signup-link"} to={`/signup`}>
-              Sign up
-            </Link>
+            <span>
+              Don't have an account?
+              <Link className={"login-to-signup-link"} to={`/signup`}>
+                Sign up
+              </Link>
+            </span>
+            <span>
+              Are you an employer?
+              <a
+                className="login-to-signup-link"
+                href="https://www.linkedin.com/in/kevinledev/"
+              >
+                Let's connect
+              </a>
+            </span>
           </div>
         </div>
       </div>

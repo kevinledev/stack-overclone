@@ -125,9 +125,12 @@ export default class Signup extends React.Component {
             </div>
             <div>
               <span>Are you an employer?</span>
-              <Link className={"login-to-signup-link"} to={`/login`}>
+              <a
+                className="login-to-signup-link"
+                href="https://www.linkedin.com/in/kevinledev/"
+              >
                 Let's connect
-              </Link>
+              </a>
             </div>
           </div>
         </div>

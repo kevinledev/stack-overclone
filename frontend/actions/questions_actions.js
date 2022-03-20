@@ -33,7 +33,6 @@ export const fetchQuestions = () => (dispatch) => {
 }
 
 export const fetchQuestion = (questionId) => (dispatch) => {
-  debugger
   return QuestionApiUtil.fetchQuestion(questionId).then((question) =>
     dispatch(receiveQuestion(question))
   );

@@ -21,7 +21,7 @@ export default class Login extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state).then(() => this.props.history.push("/"));
+    this.props.processForm(this.state).then(() => this.props.history.push("/questions"));
     //                                  ^^ fix this to /questions later
     if (this.props.errors) {
       this.setState({
@@ -40,7 +40,7 @@ export default class Login extends React.Component {
         username: "clone37",
         password: "09f84231f90j30irvoiqrvjwh3209hd#@!@#F!@dhuiw",
       })
-    ).then(() => this.props.history.push("/"));
+    ).then(() => this.props.history.push("/questions"));
   }
 
   componentDidMount() {

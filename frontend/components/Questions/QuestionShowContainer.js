@@ -1,12 +1,12 @@
 import { connect } from "react-redux";
 import {
+  fetchQuestions,
   fetchQuestion,
   deleteQuestion,
 } from "../../actions/questions_actions";
 import QuestionShow from "./QuestionShow";
 
 const mapStateToProps = (state, ownProps) => {
-
   return {
     question: state.entities.questions[ownProps.match.params.questionId]
   };

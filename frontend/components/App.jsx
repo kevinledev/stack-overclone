@@ -11,18 +11,14 @@ import UserShowContainer from "./Users/UserShowContainer";
 
 const App = () => (
   <div className="app">
-    <header>
-      <NavBar />
-      <div className="separator" style={{ height: "50px" }}></div>
-    </header>
-
+      <header>
+        {/* <NavBar /> */}
+        <div className="separator" style={{ height: "50px" }}></div>
+      </header>
+      <Route path='/' component={NavBar} />
     <Switch>
       <Route exact path="/questions" component={QuestionsIndexContainer} />
-      <Route
-        exact
-        path="/questions/:questionId"
-        component={QuestionShowContainer}
-      />
+      <Route path="/questions/:questionId" component={QuestionShowContainer} />
       <Route path="/users/:userId" component={UserShowContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />

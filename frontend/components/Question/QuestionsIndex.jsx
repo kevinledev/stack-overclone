@@ -1,23 +1,34 @@
 import React from "react";
 import QuestionsIndexItem from "./QuestionsIndexItem";
 
-export default class QuestionIndex extends React.Component {
+export default class QuestionsIndex extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchQuestions();
-  }
+  // componentDidMount() {
+  //   debugger
+  //   this.props.fetchQuestions();
+  // }
+
+  // componentDidUpdate(){
+  //   this.props.fetchQuestions();
+  // }
+
 
   render() {
     const { questions, deleteQuestion } = this.props;
-    console.log(questions)
+    const questionsSortedNew = questions.reverse();
+    console.log(questions);
 
     return (
-      <div>
-        {questions.map(q => (<QuestionsIndexItem question={q} deleteQuestion={deleteQuestion}/>))}
+      <div className="question-index">
+        <h1 className="">All Questions</h1>
+        <h2>{questions.length} questions</h2>
+        {questionsSortedNew.map((q) => (
+          <QuestionsIndexItem question={q} deleteQuestion={deleteQuestion} />
+        ))}
       </div>
-    )
+    );
   }
 }

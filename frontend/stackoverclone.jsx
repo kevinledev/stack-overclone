@@ -11,7 +11,7 @@ import {
   postQuestion,
   updateQuestion,
   deleteQuestion,
-} from "./actions/questions_actions.js";
+} from "./actions/questions_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -33,13 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // session testing
-  // window.login = login;
-  // window.logout = logout;
-  // window.signup = signup;
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
+  window.login = login;
+  window.logout = logout;
+  window.signup = signup;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
 
-  //testing question API endpoints
+  //testing questions actions
   window.fetchQuestions = fetchQuestions,
   window.fetchQuestion = fetchQuestion,
   window.postQuestion = postQuestion,

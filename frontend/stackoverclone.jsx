@@ -5,6 +5,8 @@ import Root from "./components/Root";
 
 import { signup, login, logout } from "./actions/session_actions";
 
+import { fetchQuestions, fetchQuestion, postQuestion, updateQuestion, deleteQuestion } from "./util/question_api_util";
+
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
 
@@ -30,6 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
   window.signup = signup;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+
+  //testing question API endpoints
+  window.fetchQuestions = fetchQuestions,
+  window.fetchQuestion = fetchQuestion,
+  window.postQuestion = postQuestion,
+  window.updateQuestion = updateQuestion,
+  window.deleteQuestion = deleteQuestion
 
   ReactDOM.render(<Root store={store} />, root);
 });

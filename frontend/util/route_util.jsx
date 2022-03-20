@@ -13,7 +13,6 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
 );
 
 const mapStateToProps = (state) => {
-  console.log(state.session)
   return { loggedIn: Boolean(state.session.currentUserId) };
 };
 

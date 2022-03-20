@@ -32,7 +32,7 @@ export default class Signup extends React.Component {
   render() {
     const { errors } = this.props;
     const firstError = errors[0];
-    console.log(this.props.errors);
+
     return (
       <div className="signup-page">
         <div className="join-us-container">

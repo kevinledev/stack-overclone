@@ -5,6 +5,7 @@ export const RECEIVE_QUESTION = "RECEIVE_QUESTION";
 export const REMOVE_QUESTION = "REMOVE_QUESTION";
 
 const receiveQuestion = (question) => {
+  debugger
   return {
     type: RECEIVE_QUESTION,
     question,
@@ -26,15 +27,15 @@ const removeQuestion = (questionId) => {
 };
 
 export const fetchQuestions = () => (dispatch) => {
-  debugger
   return QuestionApiUtil.fetchQuestions().then((questions) =>
     dispatch(receiveQuestions(questions))
   );
 }
 
 export const fetchQuestion = (questionId) => (dispatch) => {
+  debugger
   return QuestionApiUtil.fetchQuestion(questionId).then((question) =>
-    dispatch(receiveQuestions(question))
+    dispatch(receiveQuestion(question))
   );
 };
 

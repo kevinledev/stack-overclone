@@ -12,8 +12,6 @@ export default class QuestionShow extends React.Component {
 
   render() {
     const { question, deleteQuestion } = this.props;
-    debugger
-
     return(
       <div>
         <div>

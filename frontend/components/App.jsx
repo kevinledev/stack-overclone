@@ -1,5 +1,4 @@
 import React from "react";
-import GreetingContainer from "./NavBar/Greeting/GreetingContainer";
 import { Route, Switch } from "react-router-dom";
 import { AuthRoute } from "../util/route_util";
 import LoginFormContainer from "./Session/LoginFormContainer";
@@ -8,18 +7,20 @@ import NavBar from "./NavBar/NavBar";
 import QuestionsIndexContainer from "./Questions/QuestionsIndexContainer";
 import QuestionShowContainer from "./Questions/QuestionShowContainer";
 import UserShowContainer from "./Users/UserShowContainer";
+import Sidebar from "./Sidebar/Sidebar";
 
 const App = () => (
   <div className="app">
-      <header>
-        {/* <NavBar /> */}
-        <div className="separator" style={{ height: "50px" }}></div>
-      </header>
-      <Route path='/' component={NavBar} />
+    <header>
+      <div className="separator" style={{ height: "50px" }}>
+        <NavBar />
+      </div>
+    </header>
+    < Sidebar />
     <Switch>
-      <Route exact path="/questions" component={QuestionsIndexContainer} />
-      <Route path="/questions/:questionId" component={QuestionShowContainer} />
       <Route path="/users/:userId" component={UserShowContainer} />
+      <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
+      <Route exact path="/questions" component={QuestionsIndexContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
     </Switch>

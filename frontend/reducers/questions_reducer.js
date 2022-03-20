@@ -7,16 +7,15 @@ import {
 const questionsReducer = (state={}, action) => {
   Object.freeze(state);
   let newState = Object.assign({}, state);
-
   switch(action.type) {
     case RECEIVE_QUESTIONS:
-      return action.questions;
+      return Object.assign({}, state, action.questions);
     case RECEIVE_QUESTION:
-      newState[action.question.id] = action.question;
-      return newState;
+      return Object.assign({}, { [action.question.id]: action.question });
     case REMOVE_QUESTION:
-      delete newState[action.questionId]
-      return newState;
+      let nextState = Object.assign({}, state);
+      delete nextState[action.questionId]
+      return nextState;
     default:
       return state;
   }

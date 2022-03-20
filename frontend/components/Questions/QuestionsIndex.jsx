@@ -18,7 +18,6 @@ export default class QuestionsIndex extends React.Component {
   render() {
     const { questions, deleteQuestion } = this.props;
     const questionsSortedNew = questions.reverse();
-    console.log(questions);
 
     return (
       <div className="question-index">

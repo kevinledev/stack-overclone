@@ -25,27 +25,32 @@ const removeQuestion = (questionId) => {
   };
 };
 
-export const fetchQuestions = () => {
-  return QuestionApiUtil.fetchQuestions()
-    .then(questions => dispatch(receiveQuestions(questions)))
+export const fetchQuestions = () => (dispatch) => {
+  return QuestionApiUtil.fetchQuestions().then((questions) =>
+    dispatch(receiveQuestions(questions))
+  );
 }
 
-export const fetchQuestion = (questionId) => {
-  return QuestionApiUtil.fetchQuestion(questionId)
-    .then(question => dispatch(receiveQuestions(question)))
-}
+export const fetchQuestion = (questionId) => (dispatch) => {
+  return QuestionApiUtil.fetchQuestion(questionId).then((question) =>
+    dispatch(receiveQuestions(question))
+  );
+};
 
-export const postQuestion = (question) => {
-  return QuestionApiUtil.postQuestion(question)
-    .then(question => dispatch(receiveQuestion(question)))
-}
+export const postQuestion = (question) => (dispatch) => {
+  return QuestionApiUtil.postQuestion(question).then((question) =>
+    dispatch(receiveQuestion(question))
+  );
+};
 
-export const updateQuestion = (question) => {
-  return QuestionApiUtil.updateQuestion(question)
-    .then(question => dispatch(receiveQuestion(question)))
-}
+export const updateQuestion = (question) => (dispatch) => {
+  return QuestionApiUtil.updateQuestion(question).then((question) =>
+    dispatch(receiveQuestion(question))
+  );
+};
 
-export const deleteQuestion = (questionId) => {
-  return QuestionApiUtil.deleteQuestion(questionId)
-    .then(() => dispatch(removeQuestion(questionId)))
-}
+export const deleteQuestion = (questionId) => (dispatch) => {
+  return QuestionApiUtil.deleteQuestion(questionId).then(() =>
+    dispatch(removeQuestion(questionId))
+  );
+};

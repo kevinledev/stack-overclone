@@ -5,7 +5,13 @@ import Root from "./components/Root";
 
 import { signup, login, logout } from "./actions/session_actions";
 
-import { fetchQuestions, fetchQuestion, postQuestion, updateQuestion, deleteQuestion } from "./util/question_api_util";
+import {
+  fetchQuestions,
+  fetchQuestion,
+  postQuestion,
+  updateQuestion,
+  deleteQuestion,
+} from "./actions/questions_actions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");

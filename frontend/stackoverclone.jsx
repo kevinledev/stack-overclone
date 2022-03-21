@@ -13,6 +13,8 @@ import {
   deleteQuestion,
 } from "./actions/questions_actions";
 
+import {fetchUsers} from './actions/users_actions'
+
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
 
@@ -40,11 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
 
   //testing questions actions
-  window.fetchQuestions = fetchQuestions,
-  window.fetchQuestion = fetchQuestion,
-  window.postQuestion = postQuestion,
-  window.updateQuestion = updateQuestion,
-  window.deleteQuestion = deleteQuestion
+  window.fetchQuestions = fetchQuestions;
+  window.fetchQuestion = fetchQuestion;
+  window.postQuestion = postQuestion;
+  window.updateQuestion = updateQuestion;
+  window.deleteQuestion = deleteQuestion;
+
+  //testing fetch users
+  window.fetchUsers = fetchUsers;
 
   ReactDOM.render(<Root store={store} />, root);
 });

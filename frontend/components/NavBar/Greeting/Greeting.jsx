@@ -11,11 +11,11 @@ export default class Greeting extends React.Component {
 
     const displayGreeting = currentUser ? (
       <div className="greeting-container">
-        <div className="profile-icon">
-          <Link to={`/users/${id}`}>
-            <img src={window.navbarProfile}></img>
-          </Link>
+          <Link to={`/users/${id}`} style={{textDecoration:"none"}}>
+        <div className="my-profile-container">
+            <p className="my-profile-link">My Profile</p>
         </div>
+          </Link>
         <button className="signup-button" onClick={logout}>
           Logout
         </button>

@@ -1,0 +1,60 @@
+.sidebar {
+  z-index:100;
+  // position: absolute;
+  flex-shrink: 0;
+  height: 100vw;
+  width: auto;
+  min-width: 164px;
+  // max-width: 600px;
+  box-shadow: 0 0 0 hsla(210, 8%, 5%, 5%);
+  border-right: 1px solid #D6D9DC;
+  box-sizing: border-box;
+  float:right;
+  background-color:#F8F9F9;
+}
+
+
+.sidebar .home {
+  font-size: 14px;
+  text-decoration: none;
+  color: #525960;
+  margin-top: 24px;
+  width: 100%;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  padding-left: 8px;
+}
+.sidebar .home:hover{
+  cursor:pointer;
+  color: black;
+}
+
+.public {
+  margin-top:18px;
+  color: #6A737C;
+  font-size: 11px;
+  padding-left: 8px;
+}
+
+.public-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-questions-link, .sidebar-users-link {
+  height: 33px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #525960;
+  display: flex;
+  flex-direction: row;
+  align-items:  center;
+  padding-left: 8px;
+  padding-right: 6px;
+}
+
+.sidebar-users-link {
+  padding-left: 36px;
+}

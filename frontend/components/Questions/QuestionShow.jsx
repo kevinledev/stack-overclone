@@ -7,6 +7,10 @@ class QuestionShow extends React.Component {
     super(props);
   }
 
+  componentDidMount(){
+    this.props.fetchQuestion(this.props.question.id)
+  }
+
   render() {
 
     const { question } = this.props;

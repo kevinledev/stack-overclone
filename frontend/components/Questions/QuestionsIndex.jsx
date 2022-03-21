@@ -9,11 +9,7 @@ export default class QuestionsIndex extends React.Component {
   componentDidMount() {
     this.props.fetchQuestions();
   }
-
-  // componentDidUpdate(){
-  //   this.props.fetchQuestions();
-  // }
-
+  
 
   render() {
     const { questions, deleteQuestion } = this.props;

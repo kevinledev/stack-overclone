@@ -14,7 +14,6 @@ export default class QuestionsIndex extends React.Component {
 
   render() {
     const { questions, deleteQuestion } = this.props;
-    const questionsSortedNew = questions.reverse();
 
     return (
       <div className="question-index">
@@ -26,7 +25,7 @@ export default class QuestionsIndex extends React.Component {
         </div>
         <h2>{questions.length} questions</h2>
         <div className="question-index-wrapper">
-          {questionsSortedNew.map((q) => (
+          {questions.map((q) => (
             <QuestionsIndexItem question={q} deleteQuestion={deleteQuestion} />
           ))}
         </div>

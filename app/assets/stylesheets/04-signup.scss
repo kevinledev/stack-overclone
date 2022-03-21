@@ -65,6 +65,7 @@
   align-items: center;
 }
 
+
 .email-input {
   margin-top: 16px;
   display: block;
@@ -91,6 +92,11 @@
   height: 32.59px;
   border-radius: 3px;
   color: hsl(210,8%,25%);
+}
+.signup-inputs input:focus{
+  border-color: #62E51D;
+  outline: 1px solid transparent;
+  box-shadow: 0px 0px 3px 3px #62E51D66;
 }
 
 .signup-inputs button {

@@ -1,25 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 class QuestionShow extends React.Component {
   constructor(props) {
-    super(props);
+    super(props);1.
   }
 
-  componentDidMount(){
-    this.props.fetchQuestion(this.props.question.id)
+  componentDidMount() {
+
+    this.props.fetchQuestion(this.props.match.params.questionId);
   }
 
   render() {
-
     const { question } = this.props;
-    return (
+
+    const questionDisplay = question ? (
       <div>
         {question.title}
         {question.body}
+      </div> 
+    ) : (
+      <></>
+    )
+
+    return (
+      <div>
+        {questionDisplay}
       </div>
-    );
+    )
   }
 }
-export default QuestionShow;
+export default (QuestionShow);

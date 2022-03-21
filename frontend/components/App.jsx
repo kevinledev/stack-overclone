@@ -9,6 +9,7 @@ import QuestionShowContainer from "./Questions/QuestionShowContainer";
 import UserShowContainer from "./Users/UserShowContainer";
 import UsersIndexContainer from "./Users/UsersIndexContainer";
 import Sidebar from "./Sidebar/Sidebar";
+import { withRouter } from "react-router-dom";
 
 const App = () => (
   <div className="app">

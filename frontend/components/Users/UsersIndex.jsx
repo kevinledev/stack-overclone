@@ -5,10 +5,13 @@ export default class UsersIndex extends React.Component {
     super(props);
   }
 
-  // componentDidMount() {
+  componentWillMount() {
+    this.props.fetchUsers();
+  }
 
-  //   this.props.fetchUsers();
-  // }
+  componentDidMount(){
+    this.props.fetchUsers();
+  }
 
   render() {
     const { users } = this.props;

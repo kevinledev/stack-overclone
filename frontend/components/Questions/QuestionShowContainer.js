@@ -1,4 +1,5 @@
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import {
   fetchQuestion,
   deleteQuestion,
@@ -6,9 +7,8 @@ import {
 import QuestionShow from "./QuestionShow";
 
 const mapStateToProps = (state, ownProps) => {
-  
   return {
-    question: state.entities.questions[ownProps.match.params.questionId]
+    question: state.entities.questions[ownProps.match.params.questionId],
   };
 };
 

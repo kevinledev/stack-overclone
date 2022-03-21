@@ -1,15 +1,17 @@
 .sidebar {
   z-index:100;
-  // position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   flex-shrink: 0;
-  height: 100vw;
+  height: 95vh;
   width: auto;
   min-width: 164px;
   // max-width: 600px;
   box-shadow: 0 0 0 hsla(210, 8%, 5%, 5%);
   border-right: 1px solid #D6D9DC;
   box-sizing: border-box;
-  float:right;
+  // float:right;
   background-color:#F8F9F9;
 }
 
@@ -55,6 +57,10 @@
   padding-right: 6px;
 }
 
+.sidebar-questions-link img{
+  opacity: 60%;
+}
+
 .sidebar-users-link {
   padding-left: 36px;
 }
@@ -71,6 +77,15 @@
   align-items: center;
   padding: 12px 12px 6px 12px;
   text-decoration: none;
+}
+
+.make-bold {
+  color: #2f3337;
+  font-weight: 700;
+}
+
+.grey-this{
+  color: #525960;
 }
 
 .overclone-for-teams img {

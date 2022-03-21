@@ -12,7 +12,9 @@ import Sidebar from "./Sidebar/Sidebar";
 
 const App = () => (
   <div className="app">
-    <header><div style={{ height: "50px" }}><NavBar /></div></header>
+    <header style={{ height: "50px" }}>
+      <NavBar />
+    </header>
 
     <div className="main-container">
       <Switch>
@@ -25,13 +27,18 @@ const App = () => (
         <Switch>
           <Route path="/users/:userId" component={UserShowContainer} />
           <Route path="/users" component={UsersIndexContainer} />
-          <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
+          <Route
+            exact
+            path="/questions/:questionId"
+            component={QuestionShowContainer}
+          />
           <Route path="/questions" component={QuestionsIndexContainer} />
-          <AuthRoute path="/login" component={LoginFormContainer} />
-          <AuthRoute path="/signup" component={SignupFormContainer} />
         </Switch>
       </div>
     </div>
+
+    <AuthRoute exact path="/login" component={LoginFormContainer} />
+    <AuthRoute exact path="/signup" component={SignupFormContainer} />
   </div>
 );
 

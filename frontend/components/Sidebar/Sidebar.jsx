@@ -31,17 +31,17 @@ export default class Sidebar extends React.Component {
               </span>
             </span>
             <img src={window.teamsfree}></img>
-            <a href="https://stackoverflow.com/teams/create/free?utm_source=so-owned&utm_medium=side-bar&utm_campaign=campaign-38&utm_content=cta">
-              <div className="link-to-msteams">Create a free Team</div>
-              <span className="whatisteams">
-                <a
-                  href="https://stackoverflow.co/teams/"
-                  className="whatisteamslink"
-                >
-                  What is Teams?
-                </a>
-              </span>
-            </a>
+            <a href="https://stackoverflow.com/teams/create/free?utm_source=so-owned&utm_medium=side-bar&utm_campaign=campaign-38&utm_content=cta"></a>
+            <div className="link-to-msteams">Create a free Team</div>
+            <span className="whatisteams">
+              <a
+                href="https://stackoverflow.co/teams/"
+                className="whatisteamslink"
+              >
+                What is Teams?
+              </a>
+            </span>
+
           </div>
         </div>
       </div>

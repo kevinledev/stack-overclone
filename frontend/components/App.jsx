@@ -16,6 +16,9 @@ const App = () => (
       <NavBar />
     </header>
 
+    <AuthRoute exact path="/login" component={LoginFormContainer} />
+    <AuthRoute exact path="/signup" component={SignupFormContainer} />
+
     <div className="main-container">
       <Switch>
         {/* render the sidebar on all pages except root  */}
@@ -36,9 +39,6 @@ const App = () => (
         </Switch>
       </div>
     </div>
-
-    <AuthRoute exact path="/login" component={LoginFormContainer} />
-    <AuthRoute exact path="/signup" component={SignupFormContainer} />
   </div>
 );
 

@@ -6,7 +6,6 @@ export default class UserShow extends React.Component {
   }
 
   componentDidMount() {
-    debugger
     this.props.fetchUser(this.props.match.params.id);
   }
 

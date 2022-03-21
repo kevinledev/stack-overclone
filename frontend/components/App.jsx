@@ -12,15 +12,11 @@ import Sidebar from "./Sidebar/Sidebar";
 
 const App = () => (
   <div className="app">
-    <header>
-      <div className="separator" style={{ height: "50px" }}>
-        <NavBar />
-      </div>
-    </header>
+    <header><div style={{ height: "50px" }}><NavBar /></div></header>
 
     <div className="main-container">
-      {/* render the sidebar on all pages except root  */}
       <Switch>
+        {/* render the sidebar on all pages except root  */}
         {/* <Route exact path="/" /> */}
         <Route path="/" component={Sidebar} />
       </Switch>
@@ -29,11 +25,7 @@ const App = () => (
         <Switch>
           <Route path="/users/:userId" component={UserShowContainer} />
           <Route path="/users" component={UsersIndexContainer} />
-          <Route
-            exact
-            path="/questions/:questionId"
-            component={QuestionShowContainer}
-          />
+          <Route exact path="/questions/:questionId" component={QuestionShowContainer} />
           <Route path="/questions" component={QuestionsIndexContainer} />
           <AuthRoute path="/login" component={LoginFormContainer} />
           <AuthRoute path="/signup" component={SignupFormContainer} />

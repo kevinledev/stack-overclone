@@ -18,6 +18,8 @@ a:visited, a:hover, a:focus, a:active {
     text-decoration: none;
 }
 
+a {text-decoration:none;}
+
 .react-rendered {
   background-color: white;
     max-width: 776px;
@@ -26,7 +28,7 @@ a:visited, a:hover, a:focus, a:active {
     border-bottom-width: 0;
     border-left-width: 1px;
     border-right-width: 1px;
-    padding: 24px;
+    padding-top: 24px;
     box-sizing: border-box;
     border-right: 1px solid rgb(214,217,220);
 }

@@ -1,23 +1,31 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default class QuestionsIndexItem extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
   }
 
-
   render() {
-    const {question, deleteQuestion} = this.props;
-
+    const { question, deleteQuestion } = this.props;
     return (
-      <div>
-        <div className="question-index-title">
-          <Link to={`/questions/${question.id}`}>{question.title}</Link>
+      <div className="question-index-item">
+        <div className="questionindex-title-wrapper">
+          <Link
+            to={`/questions/${question.id}`}
+            className="questionindex-item-title"
+          >
+            {question.title}
+          </Link>
         </div>
-        <div>{question.body}</div>
-        <div>
-          {question.asker.username} asked {question.created_at}
+        <div className="questionindex-item-body">{question.body}</div>
+        <div className="questionindex-item-details">
+          <span className="questionindex-item-asker">
+            <Link to={`/users/${question.asker.id}`} className="questionindex-item-asker-link">
+              {question.asker.username}
+            </Link>
+            &nbsp;asked {question.created_at}
+          </span>
         </div>
       </div>
     );

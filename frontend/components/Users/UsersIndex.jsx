@@ -1,15 +1,27 @@
-import React from 'react';
+import React from "react";
 
 export default class UsersIndex extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchUsers();
-  }
+  // componentDidMount() {
+
+  //   this.props.fetchUsers();
+  // }
 
   render() {
-    return null;
+    const { users } = this.props;
+
+
+    return (
+      <div className="users-index">
+        hello
+        {/* <h1 className="">Users</h1>
+        {users.map((u) => (
+          <UsersIndexItem user={u}/>
+        ))} */}
+      </div>
+    );
   }
 }

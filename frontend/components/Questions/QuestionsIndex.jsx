@@ -1,5 +1,6 @@
 import React from "react";
 import QuestionsIndexItem from "./QuestionsIndexItem";
+import { Link } from "react-router-dom";
 
 export default class QuestionsIndex extends React.Component {
   constructor(props) {
@@ -17,11 +18,18 @@ export default class QuestionsIndex extends React.Component {
 
     return (
       <div className="question-index">
-        <h1 className="">All Questions</h1>
+        <div className="question-index-heading">
+          All Questions
+          <Link to={`/`}>
+            <button className="ask-question">Ask Question</button>
+          </Link>
+        </div>
         <h2>{questions.length} questions</h2>
-        {questionsSortedNew.map((q) => (
-          <QuestionsIndexItem question={q} deleteQuestion={deleteQuestion} />
-        ))}
+        <div className="question-index-wrapper">
+          {questionsSortedNew.map((q) => (
+            <QuestionsIndexItem question={q} deleteQuestion={deleteQuestion} />
+          ))}
+        </div>
       </div>
     );
   }

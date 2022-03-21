@@ -4,38 +4,34 @@ export const RECEIVE_QUESTIONS = "RECEIVE_QUESTIONS";
 export const RECEIVE_QUESTION = "RECEIVE_QUESTION";
 export const REMOVE_QUESTION = "REMOVE_QUESTION";
 
-const receiveQuestion = (question) => {
-
-  return {
-    type: RECEIVE_QUESTION,
-    question,
-  };
-};
-
 const receiveQuestions = (questions) => {
   return {
     type: RECEIVE_QUESTIONS,
-    questions,
+    questions: questions
   };
 };
+
+const receiveQuestion = (question) => {
+  return {
+    type: RECEIVE_QUESTION,
+    question: question
+  };
+};
+
 
 const removeQuestion = (questionId) => {
   return {
     type: REMOVE_QUESTION,
-    questionId,
+    questionId: questionId
   };
 };
 
 export const fetchQuestions = () => (dispatch) => {
-  return QuestionApiUtil.fetchQuestions().then((questions) =>
-    dispatch(receiveQuestions(questions))
-  );
+  return QuestionApiUtil.fetchQuestions().then(questions => dispatch(receiveQuestions(questions)))
 }
 
 export const fetchQuestion = (questionId) => (dispatch) => {
-  return QuestionApiUtil.fetchQuestion(questionId).then((question) =>
-    dispatch(receiveQuestion(question))
-  );
+  return QuestionApiUtil.fetchQuestion(questionId).then(question => dispatch(receiveQuestion(question)))
 };
 
 export const postQuestion = (question) => (dispatch) => {

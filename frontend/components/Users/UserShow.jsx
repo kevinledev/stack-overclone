@@ -22,8 +22,8 @@ export default class UserShow extends React.Component {
       </div>
     ) : (
       <></>
-    )
+    );
 
-    return <div className="user-show-container">{userDisplay}</div>;
+    return <div className="main-container">{userDisplay}</div>;
   }
 }

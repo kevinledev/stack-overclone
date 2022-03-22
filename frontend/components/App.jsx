@@ -18,32 +18,33 @@ const App = () => (
       <NavBar />
     </header>
 
-    <AuthRoute exact path="/login" component={LoginFormContainer} />
-    <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    <ProtectedRoute
-      exact
-      path="/questions/new"
-      component={CreateQuestionContainer}
-    />
+    <div className="app-block">
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <ProtectedRoute
+        exact
+        path="/ask-question"
+        component={CreateQuestionContainer}
+      />
 
-    <div className="main-container">
-      <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route exact path="/login" />
-        <Route exact path="/signup" />
-        <Route exact path="/questions/new" />
-        <Route path="/" component={Sidebar} />
-      </Switch>
+      <Route exact path="/" component={Homepage} />
+
+      {/* <Route exact path="/questions/new" component={Sidebar} /> */}
+      <Route exact path="/questions" component={Sidebar} />
+      <Route exact path="/users/:userId" component={Sidebar} />
 
       {/* Routes to User components */}
       <Route exact path="/users/:userId" component={UserShowContainer} />
       <Route exact path="/users" component={UsersIndexContainer} />
 
       {/* Routes to Question components */}
+
       <Route
-        exact path="/questions/:questionId"
+        exact
+        path="/questions/:questionId"
         component={QuestionShowContainer}
       />
+
       <Route exact path="/questions" component={QuestionsIndexContainer} />
     </div>
   </div>

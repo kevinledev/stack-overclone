@@ -1,19 +1,18 @@
 import { connect } from "react-redux";
 import { postQuestion } from "../../actions/questions_actions";
-import QuestionForm from "./QuestionForm";
+import CreateQuestionForm from "./CreateQuestionForm";
 
 const mapStateToProps = state => {
   return {
     question: {title: "", body: ""},
-    formType: "Ask question"
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    formAction: (question) => dispatch(postQuestion(question))
+    postQuestion: (question) => dispatch(postQuestion(question))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(QuestionForm)
+export default connect(mapStateToProps, mapDispatchToProps)(CreateQuestionForm)
 

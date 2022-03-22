@@ -16,18 +16,20 @@ export default class QuestionsIndex extends React.Component {
     const { questions, deleteQuestion } = this.props;
 
     return (
-      <div className="question-index">
-        <div className="question-index-heading">
-          All Questions
-          <Link to={`/questions/new`}>
-            <button className="ask-question">Ask Question</button>
-          </Link>
-        </div>
-        <h2>{questions.length} questions</h2>
-        <div className="question-index-wrapper">
-          {questions.map((q) => (
-            <QuestionsIndexItem question={q} />
-          ))}
+      <div className="main-container">
+        <div className="question-index">
+          <div className="question-index-heading">
+            All Questions
+            <Link to={`/ask-question`}>
+              <button className="ask-question">Ask Question</button>
+            </Link>
+          </div>
+          <h2>{questions.length} questions</h2>
+          <div className="question-index-wrapper">
+            {questions.map((q) => (
+              <QuestionsIndexItem question={q} />
+            ))}
+          </div>
         </div>
       </div>
     );

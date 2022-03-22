@@ -15,7 +15,7 @@ const Homepage = () => {
                 answers theirs
               </p>
               <Link to={`/questions`}>
-                <button>Jump to questions</button>
+                <button>Go to questions</button>
               </Link>
             </div>
 

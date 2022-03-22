@@ -7,7 +7,7 @@ export default class QuestionsIndexItem extends React.Component {
   }
 
   render() {
-    const { question, deleteQuestion } = this.props;
+    const { question } = this.props;
     return (
       <div className="question-index-item">
         <div className="questionindex-title-wrapper">

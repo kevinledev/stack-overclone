@@ -24,7 +24,7 @@ const App = () => (
     <div className="main-container">
       <Switch>
         {/* render the sidebar on all pages except root  */}
-        {/* <Route exact path="/" /> */}
+        <Route exact path="/" />
         <Route exact path="/login" />
         <Route exact path="/signup" />
         <Route exact path="/questions/new" />
@@ -33,14 +33,14 @@ const App = () => (
 
       <div className="react-rendered">
         <Switch>
-          <Route path="/users/:userId" component={UserShowContainer} />
-          <Route path="/users" component={UsersIndexContainer} />
+          <Route exact path="/users/:userId" component={UserShowContainer} />
+          <Route exact path="/users" component={UsersIndexContainer} />
           <Route
             exact
             path="/questions/:questionId"
             component={QuestionShowContainer}
           />
-          <Route path="/questions" component={QuestionsIndexContainer} />
+          <Route exact path="/questions" component={QuestionsIndexContainer} />
         </Switch>
       </div>
     </div>

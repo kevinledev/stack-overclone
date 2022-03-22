@@ -9,6 +9,7 @@ import QuestionShow from "./QuestionShow";
 const mapStateToProps = (state, ownProps) => {
   return {
     question: state.entities.questions[ownProps.match.params.questionId],
+    currentUserId: state.session.currentUserId,
   };
 };
 

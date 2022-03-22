@@ -26,7 +26,7 @@ export default class QuestionsIndex extends React.Component {
         <h2>{questions.length} questions</h2>
         <div className="question-index-wrapper">
           {questions.map((q) => (
-            <QuestionsIndexItem question={q} deleteQuestion={deleteQuestion} />
+            <QuestionsIndexItem question={q} />
           ))}
         </div>
       </div>

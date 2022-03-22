@@ -1,10 +1,8 @@
 .sidebar {
   z-index:100;
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   flex-shrink: 0;
-  height: 95vh;
+  height: 100vh;
   width: auto;
   min-width: 164px;
   // max-width: 600px;
@@ -13,6 +11,7 @@
   box-sizing: border-box;
   // float:right;
   background-color:#F8F9F9;
+  width:164px;
 }
 
 

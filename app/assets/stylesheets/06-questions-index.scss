@@ -6,9 +6,10 @@
 .question-index-heading {
   display: flex;
   flex-direction: row;
-  font-size: 30px;
+  font-size: 27px;
   color: #232629;
   justify-content: space-between;
+  align-items: center;
   padding-bottom: 27px;
   padding-left: 24px;
   padding-right: 24px;
@@ -43,7 +44,8 @@
 
 .question-index-item {
   border-bottom: 1px solid #d6d9dc;
-  padding: 16px;
+  padding: 16px 24px;
+  // padding-left: 24px;
 }
 
 .questionindex-title-wrapper {

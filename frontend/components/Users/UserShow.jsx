@@ -13,7 +13,7 @@ export default class UserShow extends React.Component {
     const { user } = this.props;
 
     const userDisplay = user ? (
-      <div>
+      <div className="user-show-container">
         <div>user id:{user.id}</div>
         <div>
           Display name:
@@ -24,10 +24,6 @@ export default class UserShow extends React.Component {
       <></>
     )
 
-    return (
-      <div>
-        {userDisplay}
-      </div>
-    );
+    return <div className="user-show-container">{userDisplay}</div>;
   }
 }

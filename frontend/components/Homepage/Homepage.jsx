@@ -1,6 +1,5 @@
 import React from "react";
-
-// import "./Homepage.css";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -15,7 +14,9 @@ const Homepage = () => {
                 Find the best answer to your technical questions, help others
                 answers theirs
               </p>
-              <button>Jump to questions</button>
+              <Link to={`/questions`}>
+                <button>Jump to questions</button>
+              </Link>
             </div>
 
             <div className="info-cards__right">
@@ -33,32 +34,31 @@ const Homepage = () => {
         </div>
 
         <div className="welcome-text-container">
-
           <h1>
             Every <span>developer</span> has a
           </h1>
           <h1>tab open to Stack Overclone</h1>
         </div>
-        <div className="statics-container">
-          <div className="visitors">
-            <h4>100+ million</h4>
-            <p>monthly visitors to Stackoverflow & Stack Exchange</p>
+        <div className="static-container">
+          <div className="static-container-el">
+            <h4>100+ trillion</h4>
+            <p>monthly visitors to Stack Overclone</p>
           </div>
-          <div className="developers">
-            <h4>45+ million</h4>
-            <p>monthly visitors to Stackoverflow & Stack Exchange</p>
+          <div className="static-container-el">
+            <h4>45+ quadrillion</h4>
+            <p>Times a developer got help since 2042</p>
           </div>
-          <div className="companies">
-            <h4>100+ million</h4>
-            <p>monthly visitors to Stackoverflow & Stack Exchange</p>
+          <div className="static-container-el">
+            <h4>1790% ROI</h4>
+            <p>from companies using Stack Overclone for Teams</p>
           </div>
-          <div className="teams">
-            <h4>100+ million</h4>
-            <p>monthly visitors to Stackoverflow & Stack Exchange</p>
+          <div className="static-container-el">
+            <h4>500,000+</h4>
+            <p>Stack Overclone for Teams instances active every day</p>
           </div>
         </div>
 
-        <div className="big-info-cards">
+        {/* <div className="big-info-cards">
           <div className="big-info__left">
             <h2>Stack Over flow logo</h2>
             <img className="logo-main"></img>
@@ -89,8 +89,8 @@ const Homepage = () => {
               <button>For large organizations</button>
               <button>For small teams</button>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
     </section>
   );

@@ -1,3 +1,16 @@
+.question-index {
+    background-color: white;
+  max-width: 776px;
+  width: calc(100% - 164px);
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  padding-top: 24px;
+  box-sizing: border-box;
+  border-right: 1px solid rgb(214,217,220);
+}
+
 .question-index-wrapper{
   display: flex;
   flex-direction: column-reverse;

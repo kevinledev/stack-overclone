@@ -35,19 +35,16 @@ const App = () => (
         <Route path="/" component={Sidebar} />
       </Switch>
 
-      <div className="react-rendered">
-        <Switch>
-          <Route exact path="/" />
-          <Route exact path="/users/:userId" component={UserShowContainer} />
-          <Route exact path="/users" component={UsersIndexContainer} />
-          <Route
-            exact
-            path="/questions/:questionId"
-            component={QuestionShowContainer}
-          />
-          <Route exact path="/questions" component={QuestionsIndexContainer} />
-        </Switch>
-      </div>
+      {/* Routes to User components */}
+      <Route exact path="/users/:userId" component={UserShowContainer} />
+      <Route exact path="/users" component={UsersIndexContainer} />
+
+      {/* Routes to Question components */}
+      <Route
+        exact path="/questions/:questionId"
+        component={QuestionShowContainer}
+      />
+      <Route exact path="/questions" component={QuestionsIndexContainer} />
     </div>
   </div>
 );

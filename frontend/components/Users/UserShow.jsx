@@ -6,19 +6,27 @@ export default class UserShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchUser(this.props.match.params.id);
+    this.props.fetchUser(this.props.match.params.userId);
   }
 
   render() {
     const { user } = this.props;
 
-    return (
+    const userDisplay = user ? (
       <div>
         <div>user id:{user.id}</div>
         <div>
           Display name:
           {user.username}
         </div>
+      </div>
+    ) : (
+      <></>
+    )
+
+    return (
+      <div>
+        {userDisplay}
       </div>
     );
   }

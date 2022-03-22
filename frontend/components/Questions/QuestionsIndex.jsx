@@ -19,7 +19,7 @@ export default class QuestionsIndex extends React.Component {
       <div className="question-index">
         <div className="question-index-heading">
           All Questions
-          <Link to={`/`}>
+          <Link to={`/questions/new`}>
             <button className="ask-question">Ask Question</button>
           </Link>
         </div>

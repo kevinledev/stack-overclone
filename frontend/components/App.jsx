@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { AuthRoute } from "../util/route_util";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import LoginFormContainer from "./Session/LoginFormContainer";
 import SignupFormContainer from "./Session/SignupFormContainer";
 import NavBar from "./NavBar/NavBar";
@@ -9,7 +9,7 @@ import QuestionShowContainer from "./Questions/QuestionShowContainer";
 import UserShowContainer from "./Users/UserShowContainer";
 import UsersIndexContainer from "./Users/UsersIndexContainer";
 import Sidebar from "./Sidebar/Sidebar";
-import { withRouter } from "react-router-dom";
+import CreateQuestionContainer from "./Questions/CreateQuestionContainer";
 
 const App = () => (
   <div className="app">
@@ -19,11 +19,15 @@ const App = () => (
 
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    <ProtectedRoute exact path="/questions/new" component={CreateQuestionContainer} />
 
     <div className="main-container">
       <Switch>
         {/* render the sidebar on all pages except root  */}
         {/* <Route exact path="/" /> */}
+        <Route exact path="/login" />
+        <Route exact path="/signup" />
+        <Route exact path="/questions/new" />
         <Route path="/" component={Sidebar} />
       </Switch>
 

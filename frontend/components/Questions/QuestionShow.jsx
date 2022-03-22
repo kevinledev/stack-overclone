@@ -5,11 +5,10 @@ import { withRouter } from "react-router-dom";
 
 class QuestionShow extends React.Component {
   constructor(props) {
-    super(props);1.
+    super(props);
   }
 
   componentDidMount() {
-
     this.props.fetchQuestion(this.props.match.params.questionId);
   }
 

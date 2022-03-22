@@ -10,6 +10,7 @@ import UserShowContainer from "./Users/UserShowContainer";
 import UsersIndexContainer from "./Users/UsersIndexContainer";
 import Sidebar from "./Sidebar/Sidebar";
 import CreateQuestionContainer from "./Questions/CreateQuestionContainer";
+import Homepage from "./Homepage/Homepage";
 
 const App = () => (
   <div className="app">
@@ -19,12 +20,15 @@ const App = () => (
 
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    <ProtectedRoute exact path="/questions/new" component={CreateQuestionContainer} />
+    <ProtectedRoute
+      exact
+      path="/questions/new"
+      component={CreateQuestionContainer}
+    />
 
     <div className="main-container">
       <Switch>
-        {/* render the sidebar on all pages except root  */}
-        <Route exact path="/" />
+        <Route exact path="/" component={Homepage} />
         <Route exact path="/login" />
         <Route exact path="/signup" />
         <Route exact path="/questions/new" />
@@ -33,6 +37,7 @@ const App = () => (
 
       <div className="react-rendered">
         <Switch>
+          <Route exact path="/" />
           <Route exact path="/users/:userId" component={UserShowContainer} />
           <Route exact path="/users" component={UsersIndexContainer} />
           <Route

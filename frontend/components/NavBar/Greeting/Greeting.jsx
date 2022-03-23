@@ -27,7 +27,7 @@ export default class Greeting extends React.Component {
         </Link>
 
         <Link to={`/signup`}>
-          <button className="signup-button">Sign Up</button>
+          <button className="signup-button">Sign up</button>
         </Link>
       </div>
     );

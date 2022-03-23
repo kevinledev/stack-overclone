@@ -21,6 +21,10 @@ class User < ApplicationRecord
     foreign_key: :asker_id,
     class_name: :Question
 
+  has_many :answers,
+    foreign_key: :answerer_id,
+    class_name: :Answer
+
   attr_reader :password
 
   def self.find_by_credentials(username, password)

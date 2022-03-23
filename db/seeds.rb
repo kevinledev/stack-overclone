@@ -8,11 +8,13 @@
 
 User.destroy_all
 Question.destroy_all
+Answer.destroy_all
 
-test = User.create(username: "test", email:"test@stackoverclone.com", password: "123123")
-u1 = User.create(username: "Kevin", email:"kevin@stackoverclone.com", password: "123123")
+test = User.create(username: "test clone", email:"test@stackoverclone.com", password: "123123")
+u1 = User.create(username: "kevin", email:"kevin@stackoverclone.com", password: "123123")
 u2 = User.create(username: "Zezima", email:"zezima@stackoverclone.com", password: "123123")
 u3 = User.create(username: "Sonic", email:"sonic@stackoverclone.com", password: "123123")
+u4 = User.create(username: "dogelon mars", email:"dogelonmars@stackoverclone.com", password: "secretpassword321")
 
 guest = User.create(username: "clone37", email:"guest@stackoverclone.com", password: "09f84231f90j30irvoiqrvjwh3209hd#@!@#F!@dhuiw")
 
@@ -47,3 +49,16 @@ q6 = Question.create!(
   title: "I’m going to be straight up with you!",
   body:"I’m going to be straight up with you! in my own humble opinion without being sentimental of course, without offending anyone who thinks differently from my own point of view,but also by looking into this matter in distinctive perspective, I would like to say I have nothing to say",
   asker_id: test.id)
+
+
+  a1= Answer.create!(
+    question_id: q2.id,
+    body: "My answer to this question is hello world",
+    answerer_id: guest.id
+  )
+
+  a2= Answer.create!(
+    question_id: q2.id,
+    body: "I am Dogelon. Dogelon Mars. Join me and together we will reach the stars.",
+    answerer_id: u4.id
+  )

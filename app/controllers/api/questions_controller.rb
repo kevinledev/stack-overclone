@@ -44,8 +44,6 @@ class Api::QuestionsController < ApplicationController
     user = current_user
     if @question && @question.asker_id == user.id
       @question.destroy!
-      # redirect_to api_questions_url
-      # redirect somewhere 
     else
       render json: @question.errors.full_messages, status: 401
     end

@@ -31,6 +31,7 @@ const App = () => (
 
       {/* <Route exact path="/questions/new" component={Sidebar} /> */}
       <Route exact path="/questions" component={Sidebar} />
+      <Route exact path="/questionsq" component={Sidebar} />
       <Route exact path="/users/:userId" component={Sidebar} />
 
       {/* Routes to User components */}

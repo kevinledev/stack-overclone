@@ -26,6 +26,7 @@ export default class CreateQuestionForm extends React.Component {
   }
 
   render() {
+
     return (
       <div className="create-question">
         <div className="create-question-heading">
@@ -88,13 +89,13 @@ export default class CreateQuestionForm extends React.Component {
               <p>Avoid asking opinion-based questions</p>
               <div className="cq-step-list">
                 <h1>
-                  1.<h2>Summarize the problem</h2>
+                  1.<span>Summarize the problem</span>
                 </h1>
                 <h1>
-                  2.<h2>Describe what you've tried</h2>
+                  2.<span>Describe what you've tried</span>
                 </h1>
                 <h1>
-                  3.<h2>Show some code</h2>
+                  3.<span>Show some code</span>
                 </h1>
               </div>
             </div>

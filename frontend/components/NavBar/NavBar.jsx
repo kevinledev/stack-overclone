@@ -14,11 +14,13 @@ export default class NavBar extends React.Component {
         <div className="nav-bar-container">
           <div className="gradient-box"></div>
           <div className="nav-items">
+
+            <div className="logo-search">
             <Link className={"link-to-home"} to={`/`}>
               <img src={window.logoTransparent} height="32px"></img>
             </Link>
-
             <Search />
+            </div>
             <GreetingContainer />
           </div>
         </div>

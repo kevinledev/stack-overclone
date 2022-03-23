@@ -29,7 +29,7 @@ class QuestionShow extends React.Component {
         <div className="question-show-heading">
           <div className="question-show-first-row">
             <span>{question.title}</span>
-            <Link to={`/questions/new`}>
+            <Link to={`/ask-question`}>
               <button className="ask-question">Ask Question</button>
             </Link>
           </div>

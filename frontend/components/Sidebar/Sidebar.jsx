@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default class Sidebar extends React.Component {
   constructor(props) {
@@ -14,19 +14,38 @@ export default class Sidebar extends React.Component {
         </Link>
         <h1 className="public">PUBLIC</h1>
         <div className="public-links-container">
-          <Link to={`/questions`} className="sidebar-questions-link">
+          <NavLink
+            to={`/questions`}
+            activeClassName="current-page"
+            className="sidebar-questions-link"
+          >
             <img src={window.globe}></img>
             &nbsp;&nbsp;Questions
+          </NavLink>
+          <NavLink
+            to={`/questionsq`}
+            activeClassName="current-page"
+            v
+            className="sidebar-questions-link"
+          >
+            <img src={window.globe}></img>
+            &nbsp;&nbsp;Questionsq
+          </NavLink>
+          {/* <Link to={`/questions`} className="sidebar-users-link">
+            LinkedIn
           </Link>
-          <Link to={`/users`} className="sidebar-users-link">
+          <Link to={`/questions`} className="sidebar-users-link">
+            Github
+          </Link> */}
+          <NavLink to={`/users`} className="sidebar-users-link">
             Users
-          </Link>
+          </NavLink>
           <h1 className="public">TEAMS</h1>
           <div className="overclone-for-teams">
             <span>
               <b className="make-bold">Stack Overclone for Teams</b>
               <span className="grey-this">
-                - Collaborate and share knowledge with a a private group.
+                &nbsp;- Collaborate and share knowledge with a a private group.
               </span>
             </span>
             <img src={window.teamsfree}></img>
@@ -40,7 +59,6 @@ export default class Sidebar extends React.Component {
                 What is Teams?
               </a>
             </span>
-
           </div>
         </div>
       </div>

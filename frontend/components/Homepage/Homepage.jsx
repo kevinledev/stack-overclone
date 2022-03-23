@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
+  debugger
   return (
     <section className="homepage-container">
       {/* <div className="left-hook"></div> */}
@@ -45,11 +46,11 @@ const Homepage = () => {
             <p>monthly visitors to Stack Overclone</p>
           </div>
           <div className="static-container-el">
-            <h4>45+ quadrillion</h4>
+            <h4>42+ quadrillion</h4>
             <p>Times a developer got help since 2042</p>
           </div>
           <div className="static-container-el">
-            <h4>1790% ROI</h4>
+            <h4>1690% ROI</h4>
             <p>from companies using Stack Overclone for Teams</p>
           </div>
           <div className="static-container-el">

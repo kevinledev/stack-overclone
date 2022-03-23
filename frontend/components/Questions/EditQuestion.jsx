@@ -3,8 +3,10 @@ import React from "react";
 export default class EditQuestion extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.question;
-
+    this.state = {
+      title: "",
+      body: ""
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateTitle = this.updateTitle.bind(this);
     this.updateBody = this.updateBody.bind(this);
@@ -14,13 +16,19 @@ export default class EditQuestion extends React.Component {
     this.props.fetchQuestion(this.props.match.params.questionId);
   }
 
+  componentDidUpdate(prevProps){
+    if (prevProps !== this.props) {
+      this.setState(this.props.question)
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props
       .updateQuestion(this.state)
       .then(() =>
-        this.props.history.push(`/questions/${this.props.question.id})`)
-      );
+        this.props.history.push(`/questions/${this.props.question.id}`))
+      ;
   }
 
   updateTitle(e) {
@@ -35,7 +43,6 @@ export default class EditQuestion extends React.Component {
     const { question } = this.props;
 
     if (!question) return null;
-
     return (
       <div className="main-container">
         <div className="edit-question">
@@ -50,6 +57,7 @@ export default class EditQuestion extends React.Component {
                     <input
                       type="text"
                       value={this.state.title}
+                      // value=""
                       onChange={this.updateTitle}
                     />
                   </div>
@@ -60,8 +68,10 @@ export default class EditQuestion extends React.Component {
                   </div>
                   <textarea
                     value={this.state.body}
+                    // value=""
                     onChange={this.updateBody}
                   />
+                  {this.state.body}
                 </label>
               </div>
               <input

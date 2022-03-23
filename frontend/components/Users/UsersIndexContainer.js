@@ -4,7 +4,7 @@ import { fetchUsers } from "../../actions/users_actions"
 
 const mapStateToProps = state => {
   return{
-    users: Object.values(state.users)
+    users: Object.values(state.entities.users)
   }
 }
 

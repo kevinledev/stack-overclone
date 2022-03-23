@@ -13,7 +13,7 @@ export default class UsersIndexItem extends React.Component {
 
     return (
       <div>
-        <div className="users-index-title">
+        <div className="users-index-item-title">
           <Link to={`/users/${user.id}`}>{user.username}</Link>
         </div>
       </div>

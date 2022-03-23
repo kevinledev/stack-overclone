@@ -23,19 +23,12 @@ export default class Sidebar extends React.Component {
             &nbsp;&nbsp;Questions
           </NavLink>
           <NavLink
-            to={`/testpage`}
-            className="sidebar-questions-link"
-            activeClassName="sidebar-current-page"
-          >
-            &nbsp;&nbsp;test
-          </NavLink>
-          <Link
             to={`/users`}
             className="sidebar-users-link"
             activeClassName="sidebar-current-page"
           >
             Users
-          </Link>
+          </NavLink>
           <h1 className="public">TEAMS</h1>
           <div className="overclone-for-teams">
             <span>

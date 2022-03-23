@@ -10,6 +10,7 @@ const Homepage = () => {
         <div className="speechcards">
           <div className="info-cards">
             <div className="info-cards__left">
+              <img src={window.homepageSearch}></img>
               <p>
                 Find the best answer to your technical questions, help others
                 answers theirs

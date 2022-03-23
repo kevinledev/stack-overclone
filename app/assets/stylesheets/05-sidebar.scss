@@ -37,6 +37,7 @@
   color: #6A737C;
   font-size: 11px;
   padding-left: 8px;
+  margin-bottom: 4px;
 }
 
 .public-links-container {
@@ -129,4 +130,14 @@
   color: #6a737c;
 }
 
+
+.sidebar-current-page{
+  background-color: rgb(241,242,243);
+  border-right: 3px solid rgb(98,229,29);
+  color: black;
+  opacity: 1;
+}
+.sidebar-current-page img{
+  opacity: 1;
+}
 

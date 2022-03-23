@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default class Sidebar extends React.Component {
   constructor(props) {
@@ -14,11 +14,27 @@ export default class Sidebar extends React.Component {
         </Link>
         <h1 className="public">PUBLIC</h1>
         <div className="public-links-container">
-          <Link to={`/questions`} className="sidebar-questions-link">
+          <NavLink
+            to={`/questions`}
+            className="sidebar-questions-link"
+            activeClassName="sidebar-current-page"
+          >
             <img src={window.globe}></img>
             &nbsp;&nbsp;Questions
-          </Link>
-          <Link to={`/users`} className="sidebar-users-link">
+          </NavLink>
+          <NavLink
+            to={`/questions`}
+            className="sidebar-questions-link"
+            activeClassName="sidebar-current-page"
+          >
+            <img src={window.globe}></img>
+            &nbsp;&nbsp;Questions
+          </NavLink>
+          <Link
+            to={`/users`}
+            className="sidebar-users-link"
+            activeClassName="sidebar-current-page"
+          >
             Users
           </Link>
           <h1 className="public">TEAMS</h1>
@@ -40,7 +56,6 @@ export default class Sidebar extends React.Component {
                 What is Teams?
               </a>
             </span>
-
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import UsersIndexContainer from "./Users/UsersIndexContainer";
 import Sidebar from "./Sidebar/Sidebar";
 import CreateQuestionContainer from "./Questions/CreateQuestionContainer";
 import Homepage from "./Homepage/Homepage";
+import EditQuestionContainer from "./Questions/EditQuestionContainer";
 
 const App = () => (
   <div className="app">
@@ -21,16 +22,11 @@ const App = () => (
     <div className="app-block">
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <ProtectedRoute
-        exact
-        path="/ask-question"
-        component={CreateQuestionContainer}
-      />
 
       <Route exact path="/" component={Homepage} />
-
-      {/* <Route exact path="/questions/new" component={Sidebar} /> */}
       <Route exact path="/questions" component={Sidebar} />
+      <Route exact path="/questions/:questionId/edit" component={Sidebar} />
+      <Route exact path="/questions/:questionId" component={Sidebar} />
       <Route exact path="/users/:userId" component={Sidebar} />
 
       {/* Routes to User components */}
@@ -38,14 +34,18 @@ const App = () => (
       <Route exact path="/users" component={UsersIndexContainer} />
 
       {/* Routes to Question components */}
-
+      <ProtectedRoute exact path="/questions/:questionId/edit" component={EditQuestionContainer}/>
       <Route
         exact
         path="/questions/:questionId"
         component={QuestionShowContainer}
       />
-
       <Route exact path="/questions" component={QuestionsIndexContainer} />
+      <ProtectedRoute
+        exact
+        path="/ask-question"
+        component={CreateQuestionContainer}
+      />
     </div>
   </div>
 );

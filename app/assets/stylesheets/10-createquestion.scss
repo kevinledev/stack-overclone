@@ -10,8 +10,8 @@
 }
 
 .create-question-heading{
-  margin-left: -250px;
-  width: 900px;
+  margin-left: 0px;
+  width: 1150px;
   display: flex;
   flex-direction: row;
   font-size: 27px;
@@ -20,6 +20,7 @@
   align-items: center;
   padding-bottom: 27px;
   padding-right: 24px;
+
 }
 
 .form-w-instructions{
@@ -50,7 +51,7 @@
   border-radius: 3px;
   background-color:white;
   width: 276px;
-  height: 248px;
+  height: 268px;
 }
 
 .create-question-form-container{
@@ -160,6 +161,7 @@
   font-size: 13px;
   color: #232629;
   margin-bottom: 13px;
+    line-height: 17px;
 }
 
 
@@ -199,7 +201,7 @@
   border: 1px solid transparent;
   border-radius: 3px;
   color: white;
-  margin-right: 26px;
+  margin-right: 40px;
 }
 .back-to-questions:hover {
   background-color: black;

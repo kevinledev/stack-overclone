@@ -21,10 +21,13 @@ export default class QuestionsIndexItem extends React.Component {
         <div className="questionindex-item-body">{question.body}</div>
         <div className="questionindex-item-details">
           <span className="questionindex-item-asker">
-            <Link to={`/users/${question.asker.id}`} className="questionindex-item-asker-link">
+            <Link
+              to={`/users/${question.asker.id}`}
+              className="questionindex-item-asker-link"
+            >
               {question.asker.username}
             </Link>
-            &nbsp;asked {question.created_at}
+            &nbsp;asked&nbsp;on {question.created_at.slice(0, 10)}
           </span>
         </div>
       </div>

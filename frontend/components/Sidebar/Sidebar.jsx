@@ -23,12 +23,11 @@ export default class Sidebar extends React.Component {
             &nbsp;&nbsp;Questions
           </NavLink>
           <NavLink
-            to={`/questions`}
+            to={`/testpage`}
             className="sidebar-questions-link"
             activeClassName="sidebar-current-page"
           >
-            <img src={window.globe}></img>
-            &nbsp;&nbsp;Questions
+            &nbsp;&nbsp;test
           </NavLink>
           <Link
             to={`/users`}

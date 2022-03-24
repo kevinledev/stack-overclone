@@ -80,9 +80,13 @@ class QuestionShow extends React.Component {
       <></>
     );
 
+
     const answerDisplay = answers ? (
         <div className="question-answers-wrapper">
-          {answers.map(a => <AnswerItem answer={a} deleteAnswer={deleteAnswer}/>)}
+          <h1>{answers.length} Answers</h1>
+          {answers.map(a => 
+          <AnswerItem answer={a} deleteAnswer={deleteAnswer} currentUserId={currentUserId}/>
+          )}
         </div>
     ) : (
       null

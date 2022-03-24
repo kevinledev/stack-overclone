@@ -35,45 +35,71 @@ class QuestionShow extends React.Component {
     const { editingQuestion } = this.state;
     const { question, currentUserId, answers, deleteAnswer } = this.props;
 
-    const questionShowOptions =
-      !editingQuestion && question && currentUserId === question.asker_id ? (
-        <div className="question-show-sub-body">
-          <div className="question-show-options">
-            <button onClick={this.toggleEditQuestion}>Edit</button>
-            <button
-              className="question-show-delete-button"
-              onClick={this.handleDelete}
-            >
-              Delete
-            </button>
-          </div>
-          <div className="asker-details">
-            <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
-            <Link to={`/users/${question.asker.id}`}>
-              {question.asker.username}
-            </Link>
-          </div>
-        </div>
-      ) : question ? (
-        <div className="question-show-sub-body">
-          <div className="question-show-options"></div>
-          <div className="asker-details">
-            <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
-            <Link to={`/users/${question.asker.id}`}>
-              {question.asker.username}
-            </Link>
-          </div>
-        </div>
-      ) : (
-        null
-      );
+    // const questionShowOptions =
+    //   !editingQuestion && question && currentUserId === question.asker_id ? (
+    //     <div className="question-show-sub-body">
+    //       <div className="question-show-options">
+    //         <button onClick={this.toggleEditQuestion}>Edit</button>
+    //         <button
+    //           className="question-show-delete-button"
+    //           onClick={this.handleDelete}
+    //         >
+    //           Delete
+    //         </button>
+    //       </div>
+    //       <div className="asker-details">
+    //         <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
+    //         <Link to={`/users/${question.asker.id}`}>
+    //           {question.asker.username}
+    //         </Link>
+    //       </div>
+    //     </div>
+    //   ) : !question ? null : (
+    //     <div className="question-show-sub-body">
+    //       <div className="question-show-options"></div>
+    //       <div className="asker-details">
+    //         <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
+    //         <Link to={`/users/${question.asker.id}`}>
+    //           {question.asker.username}
+    //         </Link>
+    //       </div>
+    //     </div>
+    //   );
 
+    const questionShowOptions = !question ? null : currentUserId !==
+      question.asker_id ? (
+      <div className="question-show-sub-body">
+        <div className="question-show-options"></div>
+        <div className="asker-details">
+          <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
+          <Link to={`/users/${question.asker.id}`}>
+            {question.asker.username}
+          </Link>
+        </div>
+      </div>
+    ) : // if the user is the asker
+    !editingQuestion ? (
+      <div className="question-show-sub-body">
+        <div className="question-show-options">
+          <button onClick={this.toggleEditQuestion}>Edit</button>
+          <button
+            className="question-show-delete-button"
+            onClick={this.handleDelete}
+          >
+            Delete
+          </button>
+        </div>
+        <div className="asker-details">
+          <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
+          <Link to={`/users/${question.asker.id}`}>
+            {question.asker.username}
+          </Link>
+        </div>
+      </div>
+    ) : // if user is editing question, editQuestionForm will display
+    null;
 
-    const editQuestionForm = editingQuestion ? (
-      <EditQuestionContainer />
-    ) : (
-      null
-    );
+    const editQuestionForm = editingQuestion ? <EditQuestionContainer /> : null;
 
     const questionDisplay = question ? (
       <div className="question-show">

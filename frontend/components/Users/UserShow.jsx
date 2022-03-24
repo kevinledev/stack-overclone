@@ -19,6 +19,7 @@ export default class UserShow extends React.Component {
           Display name:
           {user.username}
         </div>
+        {}
       </div>
     ) : (
       <></>

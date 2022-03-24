@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AnswerItem from "../Answers/AnswerItem";
 
 class QuestionShow extends React.Component {
   constructor(props) {
@@ -13,6 +14,12 @@ class QuestionShow extends React.Component {
     this.props.fetchQuestionAnswers(this.props.match.params.questionId);
   }
 
+  // componentDidUpdate(prevProps){
+  //   if (prevProps !== this.props) {
+  //     this.setState(this.props.answers)
+  //   }
+  // }
+
   handleDelete() {
     this.props
       .deleteQuestion(this.props.question.id)
@@ -20,8 +27,7 @@ class QuestionShow extends React.Component {
   }
 
   render() {
-    const { question, currentUserId, answers } = this.props;
-
+    const { question, currentUserId, answers, deleteAnswer } = this.props;
     const questionShowOptions =
       question && currentUserId === question.asker_id ? (
         <div className="question-show-options">
@@ -69,15 +75,23 @@ class QuestionShow extends React.Component {
             </div>
           </div>
         </div>
-        <div className="question-answers-wrapper">
-
-        </div>
       </div>
     ) : (
       <></>
     );
 
-    return <div className="question-show-container">{questionDisplay}</div>;
+    const answerDisplay = answers ? (
+        <div className="question-answers-wrapper">
+          {answers.map(a => <AnswerItem answer={a} deleteAnswer={deleteAnswer}/>)}
+        </div>
+    ) : (
+      null
+    )
+
+    return <div className="question-show-container">
+      {questionDisplay}
+      {answerDisplay}
+      </div>;
   }
 }
 export default QuestionShow;

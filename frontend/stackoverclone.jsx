@@ -6,12 +6,11 @@ import Root from "./components/Root";
 import { signup, login, logout } from "./actions/session_actions";
 
 import {
-  fetchQuestions,
-  fetchQuestion,
-  postQuestion,
-  updateQuestion,
-  deleteQuestion,
-} from "./actions/questions_actions";
+
+  postAnswer,
+  updateAnswer,
+  deleteAnswer,
+} from "./actions/answers_actions";
 
 import {fetchUsers} from './actions/users_actions'
 
@@ -41,12 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
-  //testing questions actions
-  window.fetchQuestions = fetchQuestions;
-  window.fetchQuestion = fetchQuestion;
-  window.postQuestion = postQuestion;
-  window.updateQuestion = updateQuestion;
-  window.deleteQuestion = deleteQuestion;
+  //testing answer actions
+  window.postAnswer = postAnswer;
+  window.updateAnswer = updateAnswer;
+  window.deleteAnswer = deleteAnswer;
 
   //testing fetch users
   window.fetchUsers = fetchUsers;

@@ -1,12 +1,15 @@
 import {
+  RECEIVE_ANSWERS,
   RECEIVE_ANSWER,
   REMOVE_ANSWER,
-} from "../actions/questions_actions";
+} from "../actions/answers_actions";
 
 const answersReducer = (state = {}, action) => {
   Object.freeze(state);
   let newState = Object.assign({}, state);
   switch (action.type) {
+    case RECEIVE_ANSWERS:
+      return Object.assign({}, state, action.answers);
     case RECEIVE_ANSWER:
       return Object.assign({}, { [action.answer.id]: action.answer });
     case REMOVE_ANSWER:

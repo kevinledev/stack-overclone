@@ -8,6 +8,7 @@ import { signup, login, logout } from "./actions/session_actions";
 import { fetchQuestions } from "./util/question_api_util";
 
 import {
+  fetchQuestionAnswers,
   postAnswer,
   updateAnswer,
   deleteAnswer,
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.postAnswer = postAnswer;
   window.updateAnswer = updateAnswer;
   window.deleteAnswer = deleteAnswer;
+  window.fetchQuestionAnswers = fetchQuestionAnswers;
 
   //testing fetch users
   window.fetchUsers = fetchUsers;

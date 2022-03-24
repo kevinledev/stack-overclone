@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { deleteQuestion } from "../../util/question_api_util";
 
 class QuestionShow extends React.Component {
   constructor(props) {
@@ -11,6 +10,7 @@ class QuestionShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchQuestion(this.props.match.params.questionId);
+    this.props.fetchQuestionAnswers(this.props.match.params.questionId);
   }
 
   handleDelete() {
@@ -20,7 +20,7 @@ class QuestionShow extends React.Component {
   }
 
   render() {
-    const { question, currentUserId } = this.props;
+    const { question, currentUserId, answers } = this.props;
 
     const questionShowOptions =
       question && currentUserId === question.asker_id ? (
@@ -68,6 +68,9 @@ class QuestionShow extends React.Component {
               </Link>
             </div>
           </div>
+        </div>
+        <div className="question-answers-wrapper">
+
         </div>
       </div>
     ) : (

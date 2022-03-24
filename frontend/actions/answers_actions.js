@@ -1,6 +1,14 @@
 import * as AnswerApiUtil from "../util/answer_api_util";
+export const RECEIVE_ANSWERS = "RECEIVE_ANSWERS"
 export const RECEIVE_ANSWER = "RECEIVE_ANSWER"
 export const REMOVE_ANSWER = "REMOVE_ANSWER"
+
+const receiveAnswers = (answers) => {
+  return {
+    type: RECEIVE_ANSWERS,
+    answers
+  };
+};
 
 const receiveAnswer = (answer) => {
   return {
@@ -14,6 +22,13 @@ const removeAnswer = (answerId) => {
     type: REMOVE_ANSWER,
     answerId
   };
+};
+
+export const fetchQuestionAnswers = (questionId) => (dispatch) => {
+
+  return AnswerApiUtil.fetchQuestionAnswers(questionId).then((answers) =>
+    dispatch(receiveAnswers(answers))
+  );
 };
 
 export const postAnswer = (answer) => (dispatch) => {

@@ -2,15 +2,16 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import {
   fetchQuestion,
-  deleteQuestion,
+  deleteQuestion, updateQuestion
 } from "../../actions/questions_actions";
 import { deleteAnswer, fetchQuestionAnswers } from "../../actions/answers_actions";
 import QuestionShow from "./QuestionShow";
 
 const mapStateToProps = (state, ownProps) => {
+  let currentQuestionId = ownProps.match.params.questionId;
   return {
-    question: state.entities.questions[ownProps.match.params.questionId],
-    answers: Object.values(state.entities.answers),
+    question: state.entities.questions[currentQuestionId],
+    answers: Object.values(state.entities.answers).filter(a => a.question_id === parseInt(currentQuestionId)),
     currentUserId: state.session.currentUserId,
   };
 };
@@ -18,9 +19,11 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchQuestion: (questionId) => dispatch(fetchQuestion(questionId)),
+    updateQuestion: (question) => dispatch(updateQuestion(question)),
     deleteQuestion: (questionId) => dispatch(deleteQuestion(questionId)),
-    fetchQuestionAnswers:  (questionId) => dispatch(fetchQuestionAnswers(questionId)),
-    deleteAnswer: (answerId) => dispatch(deleteAnswer(answerId))
+    fetchQuestionAnswers: (questionId) =>
+      dispatch(fetchQuestionAnswers(questionId)),
+    deleteAnswer: (answerId) => dispatch(deleteAnswer(answerId)),
   };
 };
 

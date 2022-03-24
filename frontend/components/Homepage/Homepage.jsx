@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <section className="homepage-container">
-      {/* <div className="left-hook"></div> */}
-      {/* <div className="right-hook"></div> */}
+      <div className="left-hook"></div>
+      <div className="right-hook"></div>
       <div className="homepage-main">
         <div className="speechcards">
           <div className="info-cards">
@@ -41,7 +41,7 @@ const Homepage = () => {
           <h1>tab open to Stack Overclone</h1>
         </div>
         <div className="dash-thing">
-          
+
         </div>
         <div className="static-container">
           <div className="static-container-el">

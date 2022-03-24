@@ -31,7 +31,7 @@ export default class AnswerItem extends React.Component {
           <div className="answer-details">
             <div className="answer-timestamp">
               answered&nbsp;{answer.created_at.slice(0, 10)}&nbsp;at&nbsp;
-            {answer.created_at.slice(11,19)}</div>
+            {answer.created_at.slice(11,16)}</div>
             <Link to={`/users/${answer.answerer.id}`}>
               {answer.answerer.username}
             </Link>

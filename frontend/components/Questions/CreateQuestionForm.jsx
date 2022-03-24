@@ -64,6 +64,7 @@ export default class CreateQuestionForm extends React.Component {
                     </h2>
                   </div>
                   <textarea
+                    spellcheck="false"
                     value={this.state.body}
                     onChange={this.updateBody}
                   />

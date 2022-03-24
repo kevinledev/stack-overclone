@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AnswerItem from "../Answers/AnswerItem";
+import EditQuestion from "./EditQuestion";
+import EditQuestionContainer from "./EditQuestionContainer";
 
 class QuestionShow extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = { editingQuestion: true };
     this.handleDelete = this.handleDelete.bind(this);
+    this.toggleEditQuestion = this.toggleEditQuestion.bind(this);
   }
 
   componentDidMount() {
@@ -14,34 +17,51 @@ class QuestionShow extends React.Component {
     this.props.fetchQuestionAnswers(this.props.match.params.questionId);
   }
 
-  // componentDidUpdate(prevProps){
-  //   if (prevProps !== this.props) {
-  //     this.setState(this.props.answers)
-  //   }
-  // }
-
   handleDelete() {
     this.props
       .deleteQuestion(this.props.question.id)
       .then(() => this.props.history.push(`/questions`));
   }
 
+  toggleEditQuestion() {
+    console.log(this.state.editingQuestion);
+    this.state.editingQuestion
+      ? this.setState({ editingQuestion: false })
+      : this.setState({ editingQuestion: true });
+  }
+
   render() {
+    const { editingQuestion } = this.state;
     const { question, currentUserId, answers, deleteAnswer } = this.props;
+
     const questionShowOptions =
-      question && currentUserId === question.asker_id ? (
-        <div className="question-show-options">
-          <Link to={`/questions/${question.id}/edit`}>Edit</Link>
-          <button
-            className="question-show-delete-button"
-            onClick={this.handleDelete}
-          >
-            Delete
-          </button>
+      !editingQuestion && question && currentUserId === question.asker_id ? (
+        <div className="question-show-sub-body">
+          <div className="question-show-options">
+            <button onClick={this.toggleEditQuestion}>Edit</button>
+            <button
+              className="question-show-delete-button"
+              onClick={this.handleDelete}
+            >
+              Delete
+            </button>
+          </div>
+          <div className="asker-details">
+              <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
+              <Link to={`/users/${question.asker.id}`}>
+                {question.asker.username}
+              </Link>
+            </div>
         </div>
-      ) : (
+        )
+      : (
         <div className="question-show-options"></div>
       );
+    const editQuestionForm = editingQuestion ? (
+      <EditQuestionContainer />
+    ) : (
+      <></>
+    );
 
     const questionDisplay = question ? (
       <div className="question-show">
@@ -65,37 +85,34 @@ class QuestionShow extends React.Component {
         </div>
         <div className="question-show-body-container">
           <div className="question-show-body-text">{question.body}</div>
-          <div className="question-show-sub-body">
+          {editQuestionForm}
             {questionShowOptions}
-            <div className="asker-details">
-              <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
-              <Link to={`/users/${question.asker.id}`}>
-                {question.asker.username}
-              </Link>
-            </div>
-          </div>
+
         </div>
       </div>
     ) : (
       <></>
     );
 
-
     const answerDisplay = answers ? (
-        <div className="question-answers-wrapper">
-          <h1>{answers.length} Answers</h1>
-          {answers.map(a => 
-          <AnswerItem answer={a} deleteAnswer={deleteAnswer} currentUserId={currentUserId}/>
-          )}
-        </div>
-    ) : (
-      null
-    )
+      <div className="question-answers-wrapper">
+        <h1>{answers.length} Answers</h1>
+        {answers.map((a) => (
+          <AnswerItem
+            answer={a}
+            deleteAnswer={deleteAnswer}
+            currentUserId={currentUserId}
+          />
+        ))}
+      </div>
+    ) : null;
 
-    return <div className="question-show-container">
-      {questionDisplay}
-      {answerDisplay}
-      </div>;
+    return (
+      <div className="question-show-container">
+        {questionDisplay}
+        {answerDisplay}
+      </div>
+    );
   }
 }
 export default QuestionShow;

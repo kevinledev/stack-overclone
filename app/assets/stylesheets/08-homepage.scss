@@ -18,18 +18,29 @@
 }
 
 .left-hook {
-	background-color: navy;
-	border-bottom-left-radius: 5px;
+	background-color: #62E51D;
+	border-bottom-left-radius: 10px;
 	width: 70px;
 	height: 70px;
 	position: absolute;
 	top: 0;
+	left: 0;
 
-	z-index: 3;
+	z-index: -10;
 	padding-top: 15px;
 }
 
-.right-hook {
+.right-hook {	
+	background-color: #EBEBEB;
+	border-bottom-left-radius: 10px;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 0;
+	right:250px;
+
+	z-index: -10;
+	padding-top: 15px;
 }
 
 .homepage-main {

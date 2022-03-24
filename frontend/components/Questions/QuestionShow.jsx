@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AnswerItem from "../Answers/AnswerItem";
-import EditQuestion from "./EditQuestion";
+import CreateAnswerFormContainer from "../Answers/CreateAnswerFormContainer";
+
 import EditQuestionContainer from "./EditQuestionContainer";
 
 class QuestionShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { editingQuestion: true };
+    this.state = { editingQuestion: false };
     this.handleDelete = this.handleDelete.bind(this);
     this.toggleEditQuestion = this.toggleEditQuestion.bind(this);
   }
@@ -47,20 +48,31 @@ class QuestionShow extends React.Component {
             </button>
           </div>
           <div className="asker-details">
-              <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
-              <Link to={`/users/${question.asker.id}`}>
-                {question.asker.username}
-              </Link>
-            </div>
+            <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
+            <Link to={`/users/${question.asker.id}`}>
+              {question.asker.username}
+            </Link>
+          </div>
         </div>
-        )
-      : (
-        <div className="question-show-options"></div>
+      ) : question ? (
+        <div className="question-show-sub-body">
+          <div className="question-show-options"></div>
+          <div className="asker-details">
+            <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
+            <Link to={`/users/${question.asker.id}`}>
+              {question.asker.username}
+            </Link>
+          </div>
+        </div>
+      ) : (
+        null
       );
+
+
     const editQuestionForm = editingQuestion ? (
       <EditQuestionContainer />
     ) : (
-      <></>
+      null
     );
 
     const questionDisplay = question ? (
@@ -86,8 +98,7 @@ class QuestionShow extends React.Component {
         <div className="question-show-body-container">
           <div className="question-show-body-text">{question.body}</div>
           {editQuestionForm}
-            {questionShowOptions}
-
+          {questionShowOptions}
         </div>
       </div>
     ) : (
@@ -111,6 +122,7 @@ class QuestionShow extends React.Component {
       <div className="question-show-container">
         {questionDisplay}
         {answerDisplay}
+        <CreateAnswerFormContainer />
       </div>
     );
   }

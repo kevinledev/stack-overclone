@@ -29,7 +29,7 @@ const App = () => (
       <Route exact path="/" component={Homepage} />
       <Route exact path="/users" component={Sidebar} />
       <Route exact path="/questions" component={Sidebar} />
-      <Route exact path="/questions/:questionId/edit" component={Sidebar} />
+
       <Route exact path="/questions/:questionId" component={Sidebar} />
       <Route exact path="/users/:userId" component={Sidebar} />
 
@@ -38,11 +38,6 @@ const App = () => (
       <Route exact path="/users" component={UsersIndexContainer} />
 
       {/* Routes to Question components */}
-      <ProtectedRoute
-        exact
-        path="/questions/:questionId/edit"
-        component={EditQuestionContainer}
-      />
       <Route
         exact
         path="/questions/:questionId"

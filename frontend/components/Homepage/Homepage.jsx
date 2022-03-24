@@ -40,6 +40,9 @@ const Homepage = () => {
           </h1>
           <h1>tab open to Stack Overclone</h1>
         </div>
+        <div className="dash-thing">
+          
+        </div>
         <div className="static-container">
           <div className="static-container-el">
             <h4>100+ trillion</h4>

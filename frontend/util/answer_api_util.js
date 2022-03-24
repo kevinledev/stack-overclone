@@ -1,3 +1,12 @@
+
+// export const fetchUserAnswers = (questionId) => {
+//   return $.ajax({
+//     method: "GET",
+//     url: `/api/answers/`,
+//     data: { answer },
+//   });
+// };
+
 export const postAnswer = (answer) => {
   return $.ajax({
     method: "POST",
@@ -20,3 +29,11 @@ export const deleteAnswer = (answerId) => {
     url: `/api/answers/${answerId}`,
   });
 };
+
+export const fetchQuestionAnswers = (questionId) => {
+  return $.ajax({
+    method: "GET",
+    url: `/api/questions/${questionId}/answers`
+  });
+};
+

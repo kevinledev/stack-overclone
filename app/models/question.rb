@@ -17,7 +17,7 @@ class Question < ApplicationRecord
     class_name: :User
 
   has_many :answers,
-    foreign_key: :answerer_id,
+    foreign_key: :question_id,
     class_name: :Answer
 
 end

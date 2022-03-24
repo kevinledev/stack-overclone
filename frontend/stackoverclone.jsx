@@ -5,8 +5,9 @@ import Root from "./components/Root";
 
 import { signup, login, logout } from "./actions/session_actions";
 
-import {
+import { fetchQuestions } from "./util/question_api_util";
 
+import {
   postAnswer,
   updateAnswer,
   deleteAnswer,
@@ -39,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.signup = signup;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+
+  window.fetchQuestions = fetchQuestions;
 
   //testing answer actions
   window.postAnswer = postAnswer;

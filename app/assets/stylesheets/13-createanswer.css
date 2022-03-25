@@ -15,13 +15,14 @@
   border: 1px solid hsl(210,8%,75%);
   padding: 10px;
   margin-bottom: 12px;
-  resize: none;
+  resize: vertical;
   font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
   color: #0c0d0e;
   font-size: 15px;
   line-height: 20px;
   height: 172px;
   tab-size: 4;
+
 }
 .ea-body-container textarea:focus{
   border-color: #62E51D;

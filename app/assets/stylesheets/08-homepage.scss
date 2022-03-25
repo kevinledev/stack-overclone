@@ -26,8 +26,8 @@
 	top: 0;
 	left: 0;
 	z-index: -10;
-
 }
+
 
 .right-hook {	
 	background-color: #EBEBEB;
@@ -144,6 +144,10 @@
 	margin-right: 39px;
 }
 
+.info-cards__left img {
+	margin-bottom: 16px;
+}
+
 .info-cards__left button {
 	font-family: 'Source Sans Pro',sans-serif;
 	font-weight: 700;
@@ -212,6 +216,20 @@
 	margin-bottom: 19px;
 	margin-left: 39px;
 	margin-right: 39px;
+}
+
+.personal-links{
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	font-size: 36px;
+	color: black;
+	padding: 70px 0px;
+}
+
+.personal-links a{
+	text-decoration: none;
+	color: black;
 }
 
 .info-cards__right button {

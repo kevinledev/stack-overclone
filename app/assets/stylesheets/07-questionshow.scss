@@ -62,7 +62,8 @@
   .question-show-body-text{
     color: #232629;
     font-size: 15px;
-    line-height: 23px;
+    line-height: 20px;
+    white-space: pre-wrap;
   }
 
   .question-show-sub-body{
@@ -154,7 +155,8 @@
   padding-top: 16px;
   font-size: 15px;
   color: #232629;
-  line-height: 23px;
+  line-height: 20px;
+  white-space: pre-wrap;
 }
 
 .answer-sub-body {

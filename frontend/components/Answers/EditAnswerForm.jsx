@@ -28,14 +28,14 @@ export default class EditAnswerForm extends React.Component {
           <div className="edit-question-form-container">
             <div className="edit-question-form">
               <label className="edita-body-container">
-                <div className="ea-input-headings">Edit your answer</div>
+                <div className="ea-input-headings">Editing answer</div>
                 <textarea
                   spellcheck="false"
                   value={this.state.body}
                   onChange={this.updateBody}
                 />
                 <div className="question-edit-preview">
-                  <div className="ea-input-headings">Preview</div>
+                  {/* <div className="ea-input-headings">Preview</div> */}
                   <h2>{this.state.body}</h2>
                 </div>
               </label>

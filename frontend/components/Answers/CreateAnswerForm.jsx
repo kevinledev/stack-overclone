@@ -37,10 +37,6 @@ export default class CreateAnswerForm extends React.Component {
               // value=""
               onChange={this.updateBody}
             />
-            {/* <div className="answer-edit-preview">
-                  <h1 className="eq-input-headings">Preview</h1>
-                  <h2>{this.state.body}</h2>
-                </div> */}
           </label>
 
           <div className="answer-show-options">

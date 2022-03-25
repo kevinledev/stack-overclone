@@ -34,12 +34,13 @@ export default class Sidebar extends React.Component {
             <span>
               <b className="make-bold">Stack Overclone for Teams</b>
               <span className="grey-this">
-                - Collaborate and share knowledge with a a private group.
+                &nbsp;- Collaborate and share knowledge with a a private group.
               </span>
             </span>
             <img src={window.teamsfree}></img>
-            <a href="https://stackoverflow.com/teams/create/free?utm_source=so-owned&utm_medium=side-bar&utm_campaign=campaign-38&utm_content=cta"></a>
-            <div className="link-to-msteams">Create a free Team</div>
+            <a href="https://stackoverflow.com/teams/create/free?utm_source=so-owned&utm_medium=side-bar&utm_campaign=campaign-38&utm_content=cta">
+              <button className="link-to-msteams">Create a free Team</button>
+            </a>
             <span className="whatisteams">
               <a
                 href="https://stackoverflow.co/teams/"

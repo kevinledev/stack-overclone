@@ -34,15 +34,91 @@ const Homepage = () => {
           </div>
         </div>
 
+        <div className="left-diagonal-windows">
+          <div className="ldwl"></div>
+          <div className="ldwr"></div>
+        </div>
+        <div className="right-diagonal-windows">
+          <div className="rdwl"></div>
+          <div className="rdwr"></div>
+        </div>
+
+        <div className="textlines-art">
+          <div className="join-tl">
+            <div className="textline1"></div>
+            <div className="textline2"></div>
+          </div>
+          <div className="textline3"></div>
+          <div className="join-tl">
+            <div className="textline4"></div>
+            <div className="textline4"></div>
+          </div>
+          <div className="textline1"></div>
+          <div className="textline1"></div>
+          <div className="textline1"></div>
+          <div className="textline3"></div>
+          <div className="join-tl">
+            <div className="textline2"></div>
+            <div className="textline1"></div>
+          </div>
+          <div className="join-tl">
+            <div className="textline4"></div>
+            <div className="textline2"></div>
+          </div>
+          <div className="join-tl">
+            <div className="textline2"></div>
+            <div className="textline1"></div>
+          </div>
+          <div className="textline3"></div>
+          <div className="textline5"></div>
+        </div>
+
+        <div className="left-diagonal-windows">
+          <div className="ldwl"></div>
+          <div className="ldwr"></div>
+        </div>
+        <div className="right-diagonal-windows">
+          <div className="rdwl"></div>
+          <div className="rdwr"></div>
+        </div>
+
+        <div className="textlines-art-2">
+          <div className="rtextline5"></div>
+          <div className="rtextline3"></div>
+          <div className="join-tl">
+            <div className="rtextline2"></div>
+            <div className="rtextline1"></div>
+          </div>
+          <div className="join-tl">
+            <div className="rtextline4"></div>
+            <div className="rtextline2"></div>
+          </div>
+          <div className="join-tl">
+            <div className="rtextline2"></div>
+            <div className="rtextline1"></div>
+          </div>
+          <div className="rtextline3"></div>
+          <div className="join-tl">
+            <div className="rtextline1"></div>
+            <div className="rtextline2"></div>
+          </div>
+          <div className="rtextline3"></div>
+          <div className="join-tl">
+            <div className="rtextline4"></div>
+            <div className="rtextline4"></div>
+          </div>
+          <div className="rtextline1"></div>
+          <div className="rtextline1"></div>
+          <div className="rtextline1"></div>
+        </div>
+
         <div className="welcome-text-container">
           <h1>
             Every <span>developer</span> has a
           </h1>
           <h1>tab open to Stack Overclone</h1>
         </div>
-        <div className="dash-thing">
-
-        </div>
+        <div className="dash-thing"></div>
         <div className="static-container">
           <div className="static-container-el">
             <h4>100+ trillion</h4>

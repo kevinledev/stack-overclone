@@ -25,7 +25,14 @@ const Homepage = () => {
                 Find the best answer to your technical questions, help others
                 answers theirs
               </p>
-              <button>this goes somewhere</button>
+
+          <a href="https://www.linkedin.com/in/kvnle/" >
+            <i id="linkedin" className="fa fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/kevinledev" >          
+            <i className="fa fa-github"></i>
+          </a>
+
             </div>
           </div>
           <div className="speech-bubbles">
@@ -98,18 +105,18 @@ const Homepage = () => {
             <div className="rtextline1"></div>
           </div>
           <div className="rtextline3"></div>
+          <div className="rtextline1"></div>
+          <div className="rtextline1"></div>
+          <div className="rtextline1"></div>
+          <div className="join-tl">
+            <div className="rtextline4"></div>
+            <div className="rtextline4"></div>
+          </div>
           <div className="join-tl">
             <div className="rtextline1"></div>
             <div className="rtextline2"></div>
           </div>
           <div className="rtextline3"></div>
-          <div className="join-tl">
-            <div className="rtextline4"></div>
-            <div className="rtextline4"></div>
-          </div>
-          <div className="rtextline1"></div>
-          <div className="rtextline1"></div>
-          <div className="rtextline1"></div>
         </div>
 
         <div className="welcome-text-container">
@@ -137,40 +144,6 @@ const Homepage = () => {
             <p>Stack Overclone for Teams instances active every day</p>
           </div>
         </div>
-
-        {/* <div className="big-info-cards">
-          <div className="big-info__left">
-            <h2>Stack Over flow logo</h2>
-            <img className="logo-main"></img>
-            <h1>
-              A public platform building the definitive collection of coding
-              questions & answers
-            </h1>
-            <p>
-              A commjnity-based space to fint and contribute answers to technial
-              callage, and one of the most popular websites in the world.
-            </p>
-            <button>Join the community</button>
-          </div>
-          <div className="big-info__right">
-            <h2>Stack Over flow Teams</h2>
-            <img className="teams-main" />
-            <h1>
-              A private collaboration & knowledge sharing SaaS platform for
-              companies
-            </h1>
-            <p>
-              A web-based platform to increate prodicutivity, decrease cycle
-              times, accelarate time to makret, and protect institional
-              knowledge.
-            </p>
-            <p>Getting start</p>
-            <div className="buttons-container">
-              <button>For large organizations</button>
-              <button>For small teams</button>
-            </div>
-          </div> */}
-        {/* </div> */}
       </div>
     </section>
   );

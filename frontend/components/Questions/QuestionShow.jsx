@@ -25,7 +25,7 @@ class QuestionShow extends React.Component {
   }
 
   toggleEditQuestion() {
-    console.log(this.state.editingQuestion);
+    // console.log(this.state.editingQuestion);
     this.state.editingQuestion
       ? this.setState({ editingQuestion: false })
       : this.setState({ editingQuestion: true });
@@ -33,39 +33,7 @@ class QuestionShow extends React.Component {
 
   render() {
     const { editingQuestion } = this.state;
-    const { question, currentUserId, answers, deleteAnswer } = this.props;
-
-
-    // const questionShowOptions =
-    //   !editingQuestion && question && currentUserId === question.asker_id ? (
-    //     <div className="question-show-sub-body">
-    //       <div className="question-show-options">
-    //         <button onClick={this.toggleEditQuestion}>Edit</button>
-    //         <button
-    //           className="question-show-delete-button"
-    //           onClick={this.handleDelete}
-    //         >
-    //           Delete
-    //         </button>
-    //       </div>
-    //       <div className="asker-details">
-    //         <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
-    //         <Link to={`/users/${question.asker.id}`}>
-    //           {question.asker.username}
-    //         </Link>
-    //       </div>
-    //     </div>
-    //   ) : !question ? null : (
-    //     <div className="question-show-sub-body">
-    //       <div className="question-show-options"></div>
-    //       <div className="asker-details">
-    //         <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
-    //         <Link to={`/users/${question.asker.id}`}>
-    //           {question.asker.username}
-    //         </Link>
-    //       </div>
-    //     </div>
-    //   );
+    const { question, currentUserId, answers, deleteAnswer, updateAnswer } = this.props;
 
     const questionShowOptions = !question ? null : currentUserId !==
       question.asker.id ? (
@@ -138,6 +106,7 @@ class QuestionShow extends React.Component {
         {answers.map((a) => (
           <AnswerItem
             answer={a}
+            updateAnswer={updateAnswer}
             deleteAnswer={deleteAnswer}
             currentUserId={currentUserId}
           />

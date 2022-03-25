@@ -1,0 +1,42 @@
+.answer-item{
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E3E6E8;
+}
+
+.answer-show-sub-body{
+  margin-top: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ea-input-headings {
+  margin: 4px 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0c0d0e;
+  line-height: 20px;
+}
+
+.edita-body-container textarea{
+  width: 97%;
+
+  border-radius: 3px;
+  color: hsl(210,8%,25%);
+  border: 1px solid hsl(210,8%,75%);
+  padding: 10px;
+  margin-bottom: 12px;
+  resize: none;
+  font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+  color: #0c0d0e;
+  font-size: 15px;
+  line-height: 20px;
+  height: 100px;
+  tab-size: 4;
+}
+.edita-body-container textarea:focus{
+  border-color: #62E51D;
+  outline: 1px solid transparent;
+  box-shadow: 0px 0px 3px 3px #62E51D66;
+}

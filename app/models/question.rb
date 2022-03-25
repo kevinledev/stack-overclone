@@ -20,4 +20,5 @@ class Question < ApplicationRecord
     foreign_key: :question_id,
     class_name: :Answer
 
+  
 end

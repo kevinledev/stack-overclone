@@ -1,1 +1,1 @@
-json.extract! user, :id, :username, :email, :questions, :answers
+json.extract! user, :id, :username, :question_ids, :answer_ids

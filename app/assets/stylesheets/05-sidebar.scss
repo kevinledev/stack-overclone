@@ -58,6 +58,10 @@
   padding-left: 8px;
   padding-right: 6px;
 }
+.sidebar-questions-link, .sidebar-users-link:hover{
+  color: black;
+  cursor: pointer;
+}
 
 .sidebar-questions-link img{
   opacity: 60%;

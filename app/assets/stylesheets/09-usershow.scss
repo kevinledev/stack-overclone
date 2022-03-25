@@ -9,3 +9,28 @@
   box-sizing: border-box;
   border-right: 1px solid #d6d9dc;
 }
+
+.user-show-username{
+  display: flex;
+  flex-direction: row;
+  font-size: 27px;
+  color: #232629;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.user-show-id {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  color: #232629;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+}

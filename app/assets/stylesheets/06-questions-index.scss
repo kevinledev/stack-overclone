@@ -69,7 +69,12 @@
 .questionindex-item-title {
   font-size: 17px;
   color: #0c0d0e;
+  // color: #62E51D;
   text-decoration: none;
+}
+.questionindex-item-title:hover{
+  cursor: pointer;
+  color: #62E51D;
 }
 
 .questionindex-item-body {

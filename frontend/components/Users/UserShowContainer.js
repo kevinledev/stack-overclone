@@ -6,9 +6,8 @@ const mapStateToProps = (state, ownProps) => {
   let currentUserId = state.session.currentUserId;
   return {
     user: state.entities.users[ownProps.match.params.userId],
-    thisUsersQuestions: Object.values(state.entities.questions).filter(
-      (q) => q.asker_id === parseInt(currentUserId)
-    ),
+    questions: Object.values(state.entities.questions).filter(
+      (q) => q.asker_id === parseInt(currentUserId)),
   };
 }
 

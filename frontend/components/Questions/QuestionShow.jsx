@@ -35,6 +35,7 @@ class QuestionShow extends React.Component {
     const { editingQuestion } = this.state;
     const { question, currentUserId, answers, deleteAnswer } = this.props;
 
+
     // const questionShowOptions =
     //   !editingQuestion && question && currentUserId === question.asker_id ? (
     //     <div className="question-show-sub-body">
@@ -67,11 +68,11 @@ class QuestionShow extends React.Component {
     //   );
 
     const questionShowOptions = !question ? null : currentUserId !==
-      question.asker_id ? (
+      question.asker.id ? (
       <div className="question-show-sub-body">
         <div className="question-show-options"></div>
         <div className="asker-details">
-          <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
+          <h1>asked&nbsp;on {question.createdAt.slice(0, 10)}</h1>
           <Link to={`/users/${question.asker.id}`}>
             {question.asker.username}
           </Link>
@@ -90,7 +91,7 @@ class QuestionShow extends React.Component {
           </button>
         </div>
         <div className="asker-details">
-          <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
+          <h1>asked&nbsp;on {question.createdAt.slice(0, 10)}</h1>
           <Link to={`/users/${question.asker.id}`}>
             {question.asker.username}
           </Link>
@@ -113,11 +114,11 @@ class QuestionShow extends React.Component {
           <div className="question-show-details">
             <h4 className="question-show-details-key">Asked&nbsp;&nbsp;</h4>
             <h4 className="question-show-details-value">
-              {question.created_at.slice(0, 10)}
+              {question.createdAt.slice(0, 10)}
             </h4>
             <h4 className="question-show-details-key">Modified&nbsp;&nbsp;</h4>
             <h4 className="question-show-details-value">
-              {question.updated_at.slice(0, 10)}
+              {question.updatedAt.slice(0, 10)}
             </h4>
           </div>
         </div>

@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
   let currentQuestionId = ownProps.match.params.questionId;
   return {
     question: state.entities.questions[currentQuestionId],
-    answers: Object.values(state.entities.answers).filter(a => a.question_id === parseInt(currentQuestionId)),
+    answers: Object.values(state.entities.answers).filter(a => a.questionId === parseInt(currentQuestionId)),
     currentUserId: state.session.currentUserId,
   };
 };

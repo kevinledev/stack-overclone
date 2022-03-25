@@ -27,7 +27,7 @@ export default class QuestionsIndexItem extends React.Component {
             >
               {question.asker.username}
             </Link>
-            &nbsp;asked&nbsp;on {question.created_at.slice(0, 10)}
+            &nbsp;asked&nbsp;on {question.createdAt.slice(0, 10)}
           </span>
         </div>
       </div>

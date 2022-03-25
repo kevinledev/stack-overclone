@@ -9,7 +9,7 @@ export default class AnswerItem extends React.Component {
   render() {
     const { answer, deleteAnswer, currentUserId } = this.props;
     const answerDisplayOptions =
-      answer && currentUserId === answer.answerer_id ? (
+      answer && currentUserId === answer.answerer.id ? (
         <div className="question-show-options">
           <Link to={`/`}>Edit</Link>
           <button
@@ -30,8 +30,8 @@ export default class AnswerItem extends React.Component {
           {answerDisplayOptions}
           <div className="answer-details">
             <div className="answer-timestamp">
-              answered&nbsp;{answer.created_at.slice(0, 10)}&nbsp;at&nbsp;
-            {answer.created_at.slice(11,16)}</div>
+              answered&nbsp;{answer.createdAt.slice(0, 10)}&nbsp;at&nbsp;
+            {answer.createdAt.slice(11,16)}</div>
             <Link to={`/users/${answer.answerer.id}`}>
               {answer.answerer.username}
             </Link>

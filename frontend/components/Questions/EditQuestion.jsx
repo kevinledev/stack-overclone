@@ -86,7 +86,7 @@ export default class EditQuestion extends React.Component {
                 </button>
               </div>
               <div className="asker-details">
-                <h1>asked&nbsp;on {question.created_at.slice(0, 10)}</h1>
+                <h1>asked&nbsp;on {question.createdAt.slice(0, 10)}</h1>
                 <Link to={`/users/${question.asker.id}`}>
                   {question.asker.username}
                 </Link>

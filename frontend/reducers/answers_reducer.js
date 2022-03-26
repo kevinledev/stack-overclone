@@ -10,6 +10,7 @@ const answersReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ANSWERS:
       return Object.assign({}, state, action.payload.answers);
+
     case RECEIVE_ANSWER:
       return Object.assign({}, { [action.answer.id]: action.answer });
     case REMOVE_ANSWER:

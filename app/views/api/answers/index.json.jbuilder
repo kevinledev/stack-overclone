@@ -17,14 +17,14 @@ json.answers do
   end
 end
 
-# json.answerer do
-#   @answers.each do |answer|
-#     json.set answer.answerer.id do
-#       json.id answer.answerer.id
-#       json.username answer.answerer.username
-#     end
-#   end
-# end
+json.answerer do
+  @answers.each do |answer|
+    json.set! answer.answerer.id do
+      json.id answer.answerer.id
+      json.username answer.answerer.username
+    end
+  end
+end
 
 # json.question do
 #   @answer.each do |answer|

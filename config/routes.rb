@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :show, :create, :update]
 
     resources :questions, only: [:index, :show, :create, :update, :destroy]
+    resources :questions do
+      resources :answers, only: [:index]
+    end
 
 
     resources :answers, only: [:index, :create, :update, :destroy]

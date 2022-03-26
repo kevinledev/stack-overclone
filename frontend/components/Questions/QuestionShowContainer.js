@@ -29,11 +29,11 @@ const mapDispatchToProps = (dispatch) => {
     fetchQuestion: (questionId) => dispatch(fetchQuestion(questionId)),
     updateQuestion: (question) => dispatch(updateQuestion(question)),
     deleteQuestion: (questionId) => dispatch(deleteQuestion(questionId)),
-    fetchQuestionAnswers: (questionId) =>
-      dispatch(fetchQuestionAnswers(questionId)),
     updateAnswer: (answer) => dispatch(updateAnswer(answer)),
     deleteAnswer: (answerId) => dispatch(deleteAnswer(answerId)),
-    fetchAnswers: () => dispatch(fetchAnswers())
+    fetchAnswers: () => dispatch(fetchAnswers()),
+    fetchQuestionAnswers: (questionId) =>
+      dispatch(fetchQuestionAnswers(questionId)),
   };
 };
 

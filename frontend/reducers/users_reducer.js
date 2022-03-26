@@ -1,6 +1,7 @@
 import { RECEIVE_QUESTIONS, RECEIVE_QUESTION } from "../actions/questions_actions";
 import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 import { RECEIVE_USER, RECEIVE_USERS } from "../actions/users_actions";
+import { RECEIVE_ANSWERS } from "../actions/answers_actions";
 
 const usersReducer = (state = {}, action) => {
 
@@ -16,6 +17,9 @@ const usersReducer = (state = {}, action) => {
       return Object.assign({}, state, action.payload.users)
     case RECEIVE_QUESTION:
       return Object.assign({}, state, action.payload.asker)
+    case RECEIVE_ANSWERS:
+      debugger
+      return Object.assign({}, state, action.payload.answerer);
     default:
       return state;
   }

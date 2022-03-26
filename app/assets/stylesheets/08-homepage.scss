@@ -15,6 +15,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	margin-top: 18px;
 }
 
 .left-hook {
@@ -159,6 +160,10 @@
 	background-color:#62e51d;
 	color: white;
 }
+.info-cards__left button:hover{
+	cursor:pointer;
+	background-color: #52c416 ;
+}
 
 
 .speech-bubbles{
@@ -188,7 +193,7 @@
 	height: 32px;
 	clip-path: polygon(18px 0, 32px 0, 0 40px, 0 38px, 0 0, 18px 0);
 	border-radius: 0 5px 0;
-	background-color: rgb(235,235,235);
+	background-color: #dadada;
 
 }
 
@@ -198,13 +203,18 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
-	padding: 64px 24px;
+	padding: 24px 24px;
 	width: 394px;
 	border-radius: 5px;
-	background-color: rgb(235,235,235);
+	background-color: #dadada;
 	margin-left: 16px;
-	gap: 12px;
+
 }
+
+.saturn {
+	margin-bottom: 16px;
+}
+
 .info-cards__right p {
 	font-family: 'Source Sans Pro',sans-serif;
 
@@ -230,19 +240,29 @@
 	display: flex;
 	flex-direction: row;
 	gap:32px;
-	font-size: 42px;
-	color: black;
+	font-size: 28px;
+	color: white;
+	background-color: black;
+	padding: 8px 36px;
+	border-radius: 5px;
+}
+.personal-links i{
+	color: white;
+}
+.personal-links i:hover{
+	cursor:pointer;
+	color:#858585;
 }
 
 .linkedin-home{
-	padding-right: 16px;
+	padding-right:2px;
 }
 
-.angellist-home{
-	font-size: 36px;
-	margin-top: 4px;
-	margin-right: 6px;
-}
+// .angellist-home{
+// 	font-size: 36px;
+// 	margin-top: 4px;
+// 	margin-right: 6px;
+// }
 
 .info-cards__right a{
 	text-decoration: none;
@@ -274,13 +294,17 @@
 	line-height: 72px;
 	font-family: 'Roboto Slab';
 	font-weight: 600;
-	padding-bottom: 64px;
+	// margin-bottom: 64px;
 }
 .welcome-text-container span{
 	color:#62e51d;
 }
+.welcomebottom{
+	margin-bottom: 62px;
+}
 
 .dash-thing{
+	// margin-top: 64px;
 	width: 64px;
 	height: 8px;
 	background-color:hsl(210,8%,45%); 
@@ -289,6 +313,7 @@
 }
 
 .static-container{
+	margin-top: 27px;
 	width: 948px;
 	display:flex;
 	flex-direction: row;
@@ -298,8 +323,8 @@
 
 .static-container-el {
 		width: 231px;
-		padding-top: 32px;
-		padding-bottom: 128px;
+		// padding-top: 32px;
+		// padding-bottom: 128px;
 }
 
 .static-container-el h4{
@@ -308,7 +333,7 @@
 	font-weight: 500;
 	font-size: 21px;
 	text-align: center;
-	margin-bottom: 4px;
+	margin-bottom: 8px;
 }
 
 .static-container-el p {

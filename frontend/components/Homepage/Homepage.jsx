@@ -21,15 +21,23 @@ const Homepage = () => {
             </div>
 
             <div className="info-cards__right">
-              <div className="personal-links-top">
+              <img className="saturn" src={window.homepageSaturn}></img>
+              <p>Want a secure, private space for your technical knowledge?</p>
+              {/* <div className="personal-links-top">
                 <a href="https://github.com/kevinledev">
                   <i className="fa fa-github"></i>
                 </a>
-              </div>
+              </div> */}
               <div className="personal-links">
-                <a className="linkedin-home" href="https://www.linkedin.com/in/kvnle/">
+                <a href="https://github.com/kevinledev">
+                  <i className="fa fa-github"></i>
+                </a>
+                <a
+                  className="linkedin-home"
+                  href="https://www.linkedin.com/in/kvnle/"
+                >
                   <i id="linkedin" className="fa fa-linkedin"></i>
-                </a >
+                </a>
                 <div className="angellist-home">
                   <i class="fa fa-angellist"></i>
                 </div>
@@ -123,9 +131,9 @@ const Homepage = () => {
 
         <div className="welcome-text-container">
           <h1>
-            Every <span>developer</span> has a
+            Every <span>time traveler</span> has a
           </h1>
-          <h1>tab open to Stack Overclone</h1>
+          <h1 className="welcomebottom">tab open to Stack Overclone</h1>
         </div>
         <div className="dash-thing"></div>
         <div className="static-container">

@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     
     resources :users, only: [:index, :show, :create, :update]
+    resources :users do
+      resources :answers, only: [:index]
+    end
+
     resources :questions, only: [:index, :show, :create, :update, :destroy]
     resources :questions do 
       resources :answers, only: [:index]

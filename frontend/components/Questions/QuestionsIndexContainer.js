@@ -7,7 +7,8 @@ import QuestionsIndex from "./QuestionsIndex";
 
 const mapStateToProps = (state) => {
   return {
-    questions: Object.values(state.entities.questions)
+    questions: Object.values(state.entities.questions),
+    users: state.entities.users,
   }
 }
 

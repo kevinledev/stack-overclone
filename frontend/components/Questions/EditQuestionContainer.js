@@ -4,9 +4,10 @@ import { fetchQuestion, updateQuestion } from "../../actions/questions_actions";
 import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state, ownProps) => {
-
+  let currentUserId = state.session.currentUserId;
   return {
     question: state.entities.questions[ownProps.match.params.questionId],
+    asker: state.entities.users[currentUserId]
   };
 };
 

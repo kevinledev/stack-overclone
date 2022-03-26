@@ -13,7 +13,7 @@ export default class QuestionsIndex extends React.Component {
   
 
   render() {
-    const { questions, deleteQuestion } = this.props;
+    const { questions, users } = this.props;
 
     return (
       <div className="main-container">
@@ -27,7 +27,7 @@ export default class QuestionsIndex extends React.Component {
           <h2>{questions.length} questions</h2>
           <div className="question-index-wrapper">
             {questions.map((q) => (
-              <QuestionsIndexItem question={q} />
+              <QuestionsIndexItem question={q} asker={users[q.askerId]}/>
             ))}
           </div>
         </div>

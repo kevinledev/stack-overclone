@@ -4,17 +4,18 @@ export const RECEIVE_QUESTIONS = "RECEIVE_QUESTIONS";
 export const RECEIVE_QUESTION = "RECEIVE_QUESTION";
 export const REMOVE_QUESTION = "REMOVE_QUESTION";
 
-const receiveQuestions = (questions) => {
+const receiveQuestions = (payload) => {
   return {
     type: RECEIVE_QUESTIONS,
-    questions: questions
+    payload
   };
 };
 
-const receiveQuestion = (question) => {
+// takes in the question data AND asker data(to store in users slice)
+const receiveQuestion = (payload) => {
   return {
     type: RECEIVE_QUESTION,
-    question: question
+    payload
   };
 };
 

@@ -7,7 +7,8 @@ export default class QuestionsIndexItem extends React.Component {
   }
 
   render() {
-    const { question } = this.props;
+    const { question, asker } = this.props;
+
     return (
       <div className="question-index-item">
         <div className="questionindex-title-wrapper">
@@ -22,10 +23,10 @@ export default class QuestionsIndexItem extends React.Component {
         <div className="questionindex-item-details">
           <span className="questionindex-item-asker">
             <Link
-              to={`/users/${question.asker.id}`}
+              to={`/users/${question.askerId}`}
               className="questionindex-item-asker-link"
             >
-              {question.asker.username}
+              {asker.username}
             </Link>
             &nbsp;asked&nbsp;on {question.createdAt.slice(0, 10)}
           </span>

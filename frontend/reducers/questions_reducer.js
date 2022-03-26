@@ -9,9 +9,10 @@ const questionsReducer = (state={}, action) => {
   let newState = Object.assign({}, state);
   switch(action.type) {
     case RECEIVE_QUESTIONS:
-      return Object.assign({}, state, action.questions);
+      return Object.assign({}, state, action.payload.questions);
     case RECEIVE_QUESTION:
-      return Object.assign({}, { [action.question.id]: action.question });
+      // return Object.assign({}, { [action.question.id]: action.question });
+      return action.payload.question;
     case REMOVE_QUESTION:
       let nextState = Object.assign({}, state);
       delete nextState[action.questionId]

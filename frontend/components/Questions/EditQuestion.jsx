@@ -37,7 +37,7 @@ export default class EditQuestion extends React.Component {
   }
 
   render() {
-    const { question } = this.props;
+    const { question, asker } = this.props;
 
     if (!question) return null;
     return (
@@ -50,12 +50,12 @@ export default class EditQuestion extends React.Component {
                   <h1 className="eq-input-headings">Title</h1>
                 </div>
 
-                  <input
-                    type="text"
-                    value={this.state.title}
-                    onChange={this.updateTitle}className="eq-title-input"
-                  />
-
+                <input
+                  type="text"
+                  value={this.state.title}
+                  onChange={this.updateTitle}
+                  className="eq-title-input"
+                />
               </label>
               <label className="eq-body-container">
                 <h1 className="eq-input-headings">Body</h1>
@@ -87,8 +87,8 @@ export default class EditQuestion extends React.Component {
               </div>
               <div className="asker-details">
                 <h1>asked&nbsp;on {question.createdAt.slice(0, 10)}</h1>
-                <Link to={`/users/${question.asker.id}`}>
-                  {question.asker.username}
+                <Link to={`/users/${question.askerId}`}>
+                  {asker.username}
                 </Link>
               </div>
             </div>

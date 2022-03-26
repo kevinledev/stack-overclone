@@ -33,16 +33,16 @@ class QuestionShow extends React.Component {
 
   render() {
     const { editingQuestion } = this.state;
-    const { question, currentUserId, answers, deleteAnswer, updateAnswer } = this.props;
+    const { question, currentUserId, answers, deleteAnswer, updateAnswer, users } = this.props;
 
     const questionShowOptions = !question ? null : currentUserId !==
-      question.asker.id ? (
+      question.askerId ? (
       <div className="question-show-sub-body">
         <div className="question-show-options"></div>
         <div className="asker-details">
           <h1>asked&nbsp;on {question.createdAt.slice(0, 10)}</h1>
-          <Link to={`/users/${question.asker.id}`}>
-            {question.asker.username}
+          <Link to={`/users/${question.askerId}`}>
+            {users[question.askerId].username}
           </Link>
         </div>
       </div>
@@ -60,8 +60,8 @@ class QuestionShow extends React.Component {
         </div>
         <div className="asker-details">
           <h1>asked&nbsp;on {question.createdAt.slice(0, 10)}</h1>
-          <Link to={`/users/${question.asker.id}`}>
-            {question.asker.username}
+          <Link to={`/users/${question.askerId}`}>
+            {users[question.askerId].username}
           </Link>
         </div>
       </div>

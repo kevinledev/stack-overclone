@@ -1,12 +1,13 @@
 class Api::AnswersController < ApplicationController
 
   def index
-    if params[:user_id]
-      @answers = User.find(params[:user_id]).answers
-    elsif params[:question_id]
-      @answers = Question.find(params[:question_id]).answers
-    # @answers = Answer.find_by(question_id: params[:question_id])
-    end 
+    @answers = Answer.all
+    # if params[:user_id]
+    #   @answers = User.find(params[:user_id]).answers
+    # elsif params[:question_id]
+    #   @answers = Question.find(params[:question_id]).answers
+    # # @answers = Answer.find_by(question_id: params[:question_id])
+    # end 
     render :index
   end
   

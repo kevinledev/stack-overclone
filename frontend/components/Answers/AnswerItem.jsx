@@ -22,17 +22,12 @@ export default class AnswerItem extends React.Component {
 
   render() {
     const { editingAnswer } = this.state;
-    const { answer, currentUserId, updateAnswer } = this.props;
+    const { answer, currentUserId, updateAnswer, answererUsername } = this.props;
 
     const answerDisplayOptions =
-      currentUserId === answer.answerer.id ? (
+      currentUserId === answer.answererId ? (
         editingAnswer ? (
-
-            <EditAnswerForm
-              answer={answer}
-              updateAnswer={updateAnswer}
-            />
-
+          <EditAnswerForm answer={answer} updateAnswer={updateAnswer} answererUsername={answererUsername}/>
         ) : (
           <div className="question-show-sub-body">
             <div className="question-show-options">
@@ -49,9 +44,7 @@ export default class AnswerItem extends React.Component {
                 answered&nbsp;{answer.createdAt.slice(0, 10)}&nbsp;at&nbsp;
                 {answer.createdAt.slice(11, 16)}
               </div>
-              <Link to={`/users/${answer.answerer.id}`}>
-                {answer.answerer.username}
-              </Link>
+              <Link to={`/users/${answer.answererId}`}>{answererUsername}</Link>
             </div>
           </div>
         )
@@ -63,9 +56,7 @@ export default class AnswerItem extends React.Component {
               answered&nbsp;{answer.createdAt.slice(0, 10)}&nbsp;at&nbsp;
               {answer.createdAt.slice(11, 16)}
             </div>
-            <Link to={`/users/${answer.answerer.id}`}>
-              {answer.answerer.username}
-            </Link>
+            <Link to={`/users/${answer.answererId}`}>{answererUsername}</Link>
           </div>
         </div>
       );

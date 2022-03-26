@@ -15,7 +15,8 @@ class QuestionShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchQuestion(this.props.match.params.questionId);
-    this.props.fetchQuestionAnswers(this.props.match.params.questionId);
+    // this.props.fetchQuestionAnswers(this.props.match.params.questionId);
+    this.props.fetchAnswers();
   }
 
   handleDelete() {
@@ -106,6 +107,7 @@ class QuestionShow extends React.Component {
         {answers.map((a) => (
           <AnswerItem
             answer={a}
+            answererUsername={users[question.askerId].username}
             updateAnswer={updateAnswer}
             deleteAnswer={deleteAnswer}
             currentUserId={currentUserId}

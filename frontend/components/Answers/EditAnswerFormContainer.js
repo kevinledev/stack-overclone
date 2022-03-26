@@ -6,6 +6,7 @@ import EditAnswerForm from "./EditAnswerForm";
 const mapStateToProps = (state, ownProps) => {
   return {
     answer: state.entities.answers[ownProps.match.params.questionId],
+    answerer: state.entitites.user[state.entities.answers[ownProps.match.params.questionId].answerer.id],
   };
 };
 

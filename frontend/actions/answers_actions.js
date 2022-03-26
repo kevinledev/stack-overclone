@@ -3,10 +3,10 @@ export const RECEIVE_ANSWERS = "RECEIVE_ANSWERS"
 export const RECEIVE_ANSWER = "RECEIVE_ANSWER"
 export const REMOVE_ANSWER = "REMOVE_ANSWER"
 
-const receiveAnswers = (answers) => {
+const receiveAnswers = (payload) => {
   return {
     type: RECEIVE_ANSWERS,
-    answers
+    payload
   };
 };
 
@@ -26,6 +26,12 @@ const removeAnswer = (answerId) => {
 
 export const fetchQuestionAnswers = (questionId) => (dispatch) => {
   return AnswerApiUtil.fetchQuestionAnswers(questionId).then((answers) =>
+    dispatch(receiveAnswers(answers))
+  );
+};
+
+export const fetchAnswers = () => (dispatch) => {
+  return AnswerApiUtil.fetchAnswers().then((answers) =>
     dispatch(receiveAnswers(answers))
   );
 };

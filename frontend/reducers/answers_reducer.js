@@ -9,7 +9,7 @@ const answersReducer = (state = {}, action) => {
   let newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_ANSWERS:
-      return Object.assign({}, state, action.answers);
+      return Object.assign({}, state, action.payload.answers);
     case RECEIVE_ANSWER:
       return Object.assign({}, { [action.answer.id]: action.answer });
     case REMOVE_ANSWER:

@@ -8,13 +8,12 @@ import {
 import {
   updateAnswer,
   deleteAnswer,
-  fetchQuestionAnswers,
+  fetchQuestionAnswers, fetchAnswers
 } from "../../actions/answers_actions";
 import QuestionShow from "./QuestionShow";
 
 const mapStateToProps = (state, ownProps) => {
   let currentQuestionId = ownProps.match.params.questionId;
-
   return {
     question: state.entities.questions[currentQuestionId],
     answers: Object.values(state.entities.answers).filter(
@@ -34,6 +33,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(fetchQuestionAnswers(questionId)),
     updateAnswer: (answer) => dispatch(updateAnswer(answer)),
     deleteAnswer: (answerId) => dispatch(deleteAnswer(answerId)),
+    fetchAnswers: () => dispatch(fetchAnswers())
   };
 };
 

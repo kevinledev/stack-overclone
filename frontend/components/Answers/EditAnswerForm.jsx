@@ -20,7 +20,7 @@ export default class EditAnswerForm extends React.Component {
 
   render() {
     if (!this.props) return null; // does it take time for props to pass through
-    const { answer } = this.props;
+    const { answer, answererUsername } = this.props;
 
     return (
       <div className="edit-question">
@@ -59,8 +59,8 @@ export default class EditAnswerForm extends React.Component {
                   answered&nbsp;{answer.createdAt.slice(0, 10)}&nbsp;at&nbsp;
                   {answer.createdAt.slice(11, 16)}
                 </div>
-                <Link to={`/users/${answer.answerer.id}`}>
-                  {answer.answerer.username}
+                <Link to={`/users/${answer.answererId}`}>
+                  {answererUsername}
                 </Link>
               </div>
             </div>

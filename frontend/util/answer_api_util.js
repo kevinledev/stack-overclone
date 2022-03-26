@@ -37,3 +37,10 @@ export const fetchQuestionAnswers = (questionId) => {
   });
 };
 
+export const fetchAnswers = () => {
+  return $.ajax({
+    method: "GET",
+    url: `/api/answers`
+  });
+};
+

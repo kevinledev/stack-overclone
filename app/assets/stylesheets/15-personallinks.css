@@ -1,0 +1,40 @@
+.personal-links-container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.floating-plinks {
+  position: absolute;
+  left: 36px;
+  top: 24px;
+  font-size: 28px;
+}
+
+.fixed-links{
+  position:fixed;
+    display: flex;
+  flex-direction: column;
+}
+
+
+.fixed-links #linkedin{
+  margin-top: 2px;
+  margin-bottom:8px;
+  color: black;
+}
+
+.fixed-links #github{
+  margin-bottom: 15px;
+  color: black;
+}
+
+.fixed-links #angellist{
+  margin-left: 1.5px;
+  color: black;
+}
+
+
+
+
+

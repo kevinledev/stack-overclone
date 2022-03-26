@@ -31,7 +31,7 @@ export default class CreateAnswerForm extends React.Component {
       <div className="edit-answer">
         <form onSubmit={this.handleSubmit} className="edit-answer-form">
           <label className="ea-body-container">
-            <h1 className="ea-input-headings">Your Answer</h1>
+            <h1 className="your-answer-heading">Your Answer</h1>
             <textarea
               spellcheck="false"
               // value=""

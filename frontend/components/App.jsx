@@ -11,7 +11,7 @@ import UsersIndexContainer from "./Users/UsersIndexContainer";
 import Sidebar from "./Sidebar/Sidebar";
 import CreateQuestionContainer from "./Questions/CreateQuestionContainer";
 import Homepage from "./Homepage/Homepage";
-import EditQuestionContainer from "./Questions/EditQuestionContainer";
+import PersonalLinks from "./PersonalLinks/PersonalLinks";
 
 const App = () => (
   <div className="app">
@@ -29,7 +29,6 @@ const App = () => (
       <Route exact path="/" component={Homepage} />
       <Route exact path="/users" component={Sidebar} />
       <Route exact path="/questions" component={Sidebar} />
-
       <Route exact path="/questions/:questionId" component={Sidebar} />
       <Route exact path="/users/:userId" component={Sidebar} />
 
@@ -49,6 +48,12 @@ const App = () => (
         path="/ask-question"
         component={CreateQuestionContainer}
       />
+
+      <Route exact path="/questions" component={PersonalLinks} />
+      <Route exact path="/users" component={PersonalLinks} />
+      <Route exact path="/questions" component={PersonalLinks} />
+      <Route exact path="/questions/:questionId" component={PersonalLinks} />
+      <Route exact path="/users/:userId" component={PersonalLinks} />
     </div>
   </div>
 );

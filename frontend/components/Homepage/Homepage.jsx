@@ -21,14 +21,20 @@ const Homepage = () => {
             </div>
 
             <div className="info-cards__right">
-              <div className="personal-links">
-              <a href="https://www.linkedin.com/in/kvnle/">
-                <i id="linkedin" className="fa fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/kevinledev">
-                <i className="fa fa-github"></i>
-              </a>
+              <div className="personal-links-top">
+                <a href="https://github.com/kevinledev">
+                  <i className="fa fa-github"></i>
+                </a>
               </div>
+              <div className="personal-links">
+                <a className="linkedin-home" href="https://www.linkedin.com/in/kvnle/">
+                  <i id="linkedin" className="fa fa-linkedin"></i>
+                </a >
+                <div className="angellist-home">
+                  <i class="fa fa-angellist"></i>
+                </div>
+              </div>
+              {/* <p>View my developer links</p> */}
             </div>
           </div>
           <div className="speech-bubbles">

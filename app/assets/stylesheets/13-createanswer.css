@@ -45,3 +45,11 @@
   background-color: black;
   cursor: pointer;
 }
+
+.your-answer-heading {
+  margin: 4px 2px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #0c0d0e;
+  line-height: 20px;
+}

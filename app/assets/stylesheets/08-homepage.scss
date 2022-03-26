@@ -198,11 +198,12 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
-	padding: 24px;
+	padding: 64px 24px;
 	width: 394px;
 	border-radius: 5px;
 	background-color: rgb(235,235,235);
 	margin-left: 16px;
+	gap: 12px;
 }
 .info-cards__right p {
 	font-family: 'Source Sans Pro',sans-serif;
@@ -218,16 +219,32 @@
 	margin-right: 39px;
 }
 
-.personal-links{
+.personal-links-top{
 	display: flex;
 	flex-direction: row;
 	gap: 20px;
-	font-size: 36px;
+	font-size: 42px;
 	color: black;
-	padding: 70px 0px;
+}
+.personal-links{
+	display: flex;
+	flex-direction: row;
+	gap:32px;
+	font-size: 42px;
+	color: black;
 }
 
-.personal-links a{
+.linkedin-home{
+	padding-right: 16px;
+}
+
+.angellist-home{
+	font-size: 36px;
+	margin-top: 4px;
+	margin-right: 6px;
+}
+
+.info-cards__right a{
 	text-decoration: none;
 	color: black;
 }

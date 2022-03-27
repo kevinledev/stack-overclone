@@ -1,7 +1,8 @@
 import React from "react";
 import GreetingContainer from "./Greeting/GreetingContainer";
-import Search from "./Search/Search";
+// import Search from "./Search/Search";
 import { Link } from "react-router-dom";
+import SearchContainer from "./Search/SearchContainer";
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export default class NavBar extends React.Component {
               <img src={window.logoTransparent} height="32px"></img>
             </Link>
 
-            <Search />
+            <SearchContainer />
             <GreetingContainer />
           </div>
         </div>

@@ -18,7 +18,6 @@ const usersReducer = (state = {}, action) => {
     case RECEIVE_QUESTION:
       return Object.assign({}, state, action.payload.asker)
     case RECEIVE_ANSWERS:
-      debugger
       return Object.assign({}, state, action.payload.answerer);
     default:
       return state;

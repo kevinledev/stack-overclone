@@ -1,3 +1,4 @@
+import { CLEAR_ENTITY } from "../actions/entitites_actions";
 import {
   RECEIVE_QUESTIONS,
   RECEIVE_QUESTION,
@@ -17,6 +18,8 @@ const questionsReducer = (state={}, action) => {
       let nextState = Object.assign({}, state);
       delete nextState[action.questionId]
       return nextState;
+    case CLEAR_ENTITY:
+      return {}
     default:
       return state;
   }

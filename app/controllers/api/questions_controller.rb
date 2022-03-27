@@ -2,8 +2,20 @@ class Api::QuestionsController < ApplicationController
   before_action :require_logged_in, only: [:create, :destroy]
 
   def index
-    @questions = Question.all
-    render :index
+
+    if params[:searchField]
+      @questions = []
+      questions = Question.all
+      questions.each do |question|
+        if question.body.downcase.include?(params[:searchField].downcase) || question.title.downcase.include?(params[:searchField].downcase)
+          @questions.push(question)
+        end
+      end
+    else
+      @questions = Question.all
+      render :index
+    end
+    
   end
 
   def show

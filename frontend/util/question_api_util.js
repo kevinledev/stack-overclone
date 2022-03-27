@@ -34,3 +34,11 @@ export const deleteQuestion = (questionId) => {
     url: `/api/questions/${questionId}`,
   });
 };
+
+export const searchQuestions = (searchField) => {
+  return $.ajax({
+    method: "GET",
+    url: "/api/questions",
+    data: { searchField },
+  });
+};

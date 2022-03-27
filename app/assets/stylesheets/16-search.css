@@ -1,0 +1,18 @@
+.search-results{
+    background-color: white;
+    width: 777px;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    padding-top: 24px;
+    box-sizing: border-box;
+    border-right: 1px solid #d6d9dc;
+}
+
+.search-index-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  width: 777px;
+}

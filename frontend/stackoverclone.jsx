@@ -6,6 +6,7 @@ import Root from "./components/Root";
 import { signup, login, logout } from "./actions/session_actions";
 
 import { fetchQuestions } from "./util/question_api_util";
+import { clearEntity } from "./actions/entitites_actions";
 
 import {
   fetchQuestionAnswers,
@@ -49,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.updateAnswer = updateAnswer;
   window.deleteAnswer = deleteAnswer;
   window.fetchQuestionAnswers = fetchQuestionAnswers;
+
+  window.clearEntity = clearEntity;
 
   //testing fetch users
   window.fetchUsers = fetchUsers;

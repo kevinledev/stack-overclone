@@ -1,6 +1,119 @@
 .footer-container{
   z-index: 20000;
-  width: 100%;
+  width: inherit;
   background-color: #F1F2F3;
   /* height: 200px; */
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Liberation Sans",sans-serif;
+  padding: 16px 8px 16px 8px;
+}
+
+.footercenter{
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.footer-left {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  margin-left: 12px;
+}
+
+.stackoverclone-link{
+  margin-bottom: 9px;
+}
+
+
+.main-footer-links {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+
+.main-footer-links ul {
+  color: #3b4045;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-footer-links a {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  color: hsl(210,8%,35%);
+  text-decoration: none;
+}
+.main-footer-links a:hover{
+  cursor:pointer;
+  color: black;
+}
+.stackoverclone-link a {
+  font-weight: 700;
+  color: #0c0d0e;
+  text-decoration: none;
+}
+
+.dev-links-container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-right: 50px;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  gap: 32px;
+}
+
+.copyright{
+  font-size: 11px;
+  margin-top: 31px;
+  color: #9fa6ad;
+}
+
+
+.dev-links{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+
+
+.dev-links ul {
+  color: #3b4045;
+  display: flex;
+  flex-direction: column;
+}
+
+.dev-links a {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  color: hsl(210,8%,35%);
+  text-decoration: none;
+}
+.dev-links a:hover{
+  cursor:pointer;
+  color: black;
+}
+
+.dev-links h1{
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.footer-userslink{
+  padding-left: 0.5px;
+}
+
+.footer-ghlink{
+  padding-left: 0.5px;
 }

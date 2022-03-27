@@ -7,7 +7,7 @@ json.questions do
       json.body question.body
       json.createdAt question.created_at
       json.updatedAt question.updated_at
-
+      json.answerIds question.answer_ids
 
       # json.asker question.asker, :id, :username
       # json.extract! question, :id, :title, :body, :created_at, :updated_at

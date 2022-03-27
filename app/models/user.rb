@@ -25,6 +25,8 @@ class User < ApplicationRecord
     foreign_key: :answerer_id,
     class_name: :Answer
 
+  has_many :votes, inverse_of: :voter
+
   attr_reader :password
 
   def self.find_by_credentials(username, password)

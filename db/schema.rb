@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_23_222323) do
+ActiveRecord::Schema.define(version: 2022_03_27_190705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2022_03_23_222323) do
     t.integer "question_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "score", default: 0
     t.index ["answerer_id"], name: "index_answers_on_answerer_id"
     t.index ["body"], name: "index_answers_on_body"
     t.index ["question_id"], name: "index_answers_on_question_id"
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(version: 2022_03_23_222323) do
     t.integer "asker_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "score", default: 0
     t.index ["asker_id"], name: "index_questions_on_asker_id"
     t.index ["body"], name: "index_questions_on_body"
     t.index ["title"], name: "index_questions_on_title"
@@ -47,6 +49,16 @@ ActiveRecord::Schema.define(version: 2022_03_23_222323) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer "voter_id", null: false
+    t.integer "voteable_id", null: false
+    t.string "voteable_type", null: false
+    t.integer "value", null: false
+    t.index ["voteable_id", "voteable_type"], name: "index_votes_on_voteable_id_and_voteable_type"
+    t.index ["voter_id", "voteable_id", "voteable_type"], name: "index_votes_on_voter_id_and_voteable_id_and_voteable_type", unique: true
+    t.index ["voter_id"], name: "index_votes_on_voter_id"
   end
 
 end

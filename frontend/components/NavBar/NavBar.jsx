@@ -2,7 +2,7 @@ import React from "react";
 import GreetingContainer from "./Greeting/GreetingContainer";
 // import Search from "./Search/Search";
 import { Link } from "react-router-dom";
-import SearchContainer from "./Search/SearchContainer";
+import SearchBarContainer from "./SearchBar/SearchBarContainer";
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -18,8 +18,7 @@ export default class NavBar extends React.Component {
             <Link className={"link-to-home"} to={`/`}>
               <img src={window.logoTransparent} height="32px"></img>
             </Link>
-
-            <SearchContainer />
+            <SearchBarContainer />
             <GreetingContainer />
           </div>
         </div>

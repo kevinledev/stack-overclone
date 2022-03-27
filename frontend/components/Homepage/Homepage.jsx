@@ -133,7 +133,7 @@ const Homepage = () => {
 
         <div className="welcome-text-container">
           <h1>
-            Every <span>time traveler</span> has a
+            Every <span>developer</span> has a
           </h1>
           <h1 className="welcomebottom">tab open to Stack Overclone</h1>
         </div>

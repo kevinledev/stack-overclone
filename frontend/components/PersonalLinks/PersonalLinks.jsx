@@ -11,7 +11,7 @@ const PersonalLinks = () => {
         <a id="github" href="https://github.com/kevinledev">
           <i className="fa fa-github"></i>
         </a>
-        <i id="angellist" class="fa fa-angellist"></i>
+        {/* <i id="angellist" class="fa fa-angellist"></i> */}
         </div>
       </div>
     </div>

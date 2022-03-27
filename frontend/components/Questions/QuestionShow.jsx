@@ -102,9 +102,16 @@ class QuestionShow extends React.Component {
       <></>
     );
 
+    const amtAnswers =
+      answers.length === 1 ? (
+        <h1>1 answer</h1>
+      ) : (
+        <h1>{answers.length} questions</h1>
+      );
+
     const answerDisplay = answers ? (
       <div className="question-answers-wrapper">
-        <h1>{answers.length} Answers</h1>
+        {amtAnswers}
         {answers.map((a) => (
           <AnswerItem
             answer={a}

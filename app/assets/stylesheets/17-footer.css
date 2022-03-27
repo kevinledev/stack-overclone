@@ -1,0 +1,6 @@
+.footer-container{
+  z-index: 20000;
+  width: 100%;
+  background-color: #F1F2F3;
+  /* height: 200px; */
+}

@@ -14,6 +14,7 @@ import Homepage from "./Homepage/Homepage";
 import PersonalLinks from "./PersonalLinks/PersonalLinks";
 import SearchResults from "./Search/SearchResults";
 import SearchResultsContainer from "./Search/SearchResultsContainer";
+import Footer from "./Footer/Footer";
 
 const App = () => (
   <div className="app">
@@ -52,7 +53,7 @@ const App = () => (
         component={CreateQuestionContainer}
       />
 
-      <Route exact path="/search" component={SearchResultsContainer}/>
+      <Route exact path="/search" component={SearchResultsContainer} />
 
       <Route exact path="/questions" component={PersonalLinks} />
       <Route exact path="/search" component={PersonalLinks} />
@@ -60,6 +61,12 @@ const App = () => (
       <Route exact path="/questions/:questionId" component={PersonalLinks} />
       <Route exact path="/users/:userId" component={PersonalLinks} />
     </div>
+      <Route exact path="/" component={Footer} />
+      <Route exact path="/search" component={Footer} />
+      <Route exact path="/users" component={Footer} />
+      <Route exact path="/questions" component={Footer} />
+      <Route exact path="/questions/:questionId" component={Footer} />
+      <Route exact path="/users/:userId" component={Footer} />
   </div>
 );
 

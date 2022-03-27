@@ -30,17 +30,19 @@ const Homepage = () => {
               </div> */}
               <div className="personal-links">
                 <a href="https://github.com/kevinledev">
-                  <i className="fa fa-github"></i>
+                  {/* <i className="fa fa-github"></i> */}
+                  Github
                 </a>
                 <a
                   className="linkedin-home"
                   href="https://www.linkedin.com/in/kvnle/"
                 >
-                  <i id="linkedin" className="fa fa-linkedin"></i>
+                  {/* <i id="linkedin" className="fa fa-linkedin"></i> */}
+                  LinkedIn
                 </a>
-                <div className="angellist-home">
+                {/* <div className="angellist-home">
                   <i class="fa fa-angellist"></i>
-                </div>
+                </div> */}
               </div>
               {/* <p>View my developer links</p> */}
             </div>

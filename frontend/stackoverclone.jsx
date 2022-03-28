@@ -16,6 +16,7 @@ import {
 } from "./actions/answers_actions";
 
 import {fetchUsers} from './actions/users_actions'
+import { downvoteQuestion, upvoteQuestion } from "./util/vote_api_util";
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -55,6 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //testing fetch users
   window.fetchUsers = fetchUsers;
+
+  //testing question votes
+  window.upvoteQuestion = upvoteQuestion;
+  window.downvoteQuestion = downvoteQuestion;
 
   ReactDOM.render(<Root store={store} />, root);
 });

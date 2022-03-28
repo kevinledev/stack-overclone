@@ -19,6 +19,17 @@ json.asker do
   end
 end
 
+json.votes do 
+  @question.votes.each do |vote|
+    json.set! vote.id do
+      json.voterId vote.voter_id
+      json.voteableId vote.voteable_id
+      json.voteableType vote.voteable_type
+      json.value vote.value
+    end
+  end
+end
+
 # json.extract! @question, 
 #   :id, 
 #   :title, 

@@ -60,6 +60,21 @@ class Api::QuestionsController < ApplicationController
     end
   end
 
+  def vote(val)
+    @question = Question.find(params[:id])
+    @vote = @question.votes.find_or_initialize_by(voter: current_user)
+    @vote.update(value: val)
+    render :show
+  end
+
+  def downvote
+      vote(-1)
+  end
+
+  def upvote
+      vote(1)
+  end
+
   private
   def question_params
     params.require(:question).permit(:title, :body)

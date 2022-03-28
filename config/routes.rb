@@ -18,12 +18,8 @@ Rails.application.routes.draw do
     end
 
 
-    resources :answers, only: [:index, :create, :update, :destroy] do
-      member do
-        post 'upvote'
-        post 'downvote'
-      end
-    end
+    resources :answers, only: [:index, :create, :update, :destroy]
+
   end
   
   root to: 'static_pages#root'

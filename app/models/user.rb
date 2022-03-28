@@ -25,7 +25,9 @@ class User < ApplicationRecord
     foreign_key: :answerer_id,
     class_name: :Answer
 
-  has_many :votes, inverse_of: :voter
+  has_many :votes,
+    foreign_key: :voter_id,
+    class_name: :User
 
   attr_reader :password
 

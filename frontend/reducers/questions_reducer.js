@@ -5,6 +5,8 @@ import {
   REMOVE_QUESTION
 } from "../actions/questions_actions"
 
+import { RECEIVE_VOTE } from "../actions/votes_action";
+
 const questionsReducer = (state={}, action) => {
   Object.freeze(state);
   let newState = Object.assign({}, state);
@@ -15,9 +17,12 @@ const questionsReducer = (state={}, action) => {
       // return Object.assign({}, { [action.question.id]: action.question });
       return action.payload.question;
     case REMOVE_QUESTION:
-      let nextState = Object.assign({}, state);
-      delete nextState[action.questionId]
-      return nextState;
+      delete newState[action.questionId]
+      return newState;
+    case RECEIVE_VOTE:
+
+      newState = Object.assign({}, state, action.payload.votes);
+      return newState
     case CLEAR_ENTITY:
       return {}
     default:

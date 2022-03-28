@@ -40,8 +40,9 @@ class QuestionShow extends React.Component {
       answers,
       deleteAnswer,
       updateAnswer,
-      users,
+      users
     } = this.props;
+
 
     const questionShowOptions = !question ? null : currentUserId !==
       question.askerId ? (
@@ -101,13 +102,9 @@ class QuestionShow extends React.Component {
 
         <div className="question-show-body-container">
           <div className="question-show-body-left">
-
-              <div class="uparrow">
-              </div>
-
-            <h1>0</h1>
-            <div class="downarrow">
-            </div>
+            <div class="uparrow"></div>
+            <h1>{question.voteScore}</h1>
+            <div class="downarrow"></div>
           </div>
           <div className="question-show-body-right">
             <div className="question-show-body-text">{question.body}</div>

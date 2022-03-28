@@ -16,7 +16,7 @@ import {
 } from "./actions/answers_actions";
 
 import {fetchUsers} from './actions/users_actions'
-import { downvoteQuestion, upvoteQuestion } from "./util/vote_api_util";
+import { downvoteQuestion, upvoteQuestion } from "./actions/votes_action"
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");

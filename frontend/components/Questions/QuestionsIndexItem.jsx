@@ -28,7 +28,7 @@ export default class QuestionsIndexItem extends React.Component {
       <div className="question-index-item">
           <div className="question-index-item-counts">
             <div className="qi-score">
-              # votes
+              {question.voteScore} votes
             </div>
             {numAnswers}
           </div>

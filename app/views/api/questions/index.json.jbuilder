@@ -9,8 +9,22 @@ json.questions do
       json.updatedAt question.updated_at
       json.answerIds question.answer_ids
 
-      # json.asker question.asker, :id, :username
-      # json.extract! question, :id, :title, :body, :created_at, :updated_at
+
+      voteSum = 0
+      question.votes.each do |vote|
+        voteSum += vote.value
+        json.votes do
+          json.set! vote.id do
+            json.id vote.id
+            json.voterId vote.voter_id
+            json.voteableId vote.voteable_id
+            # json.voteableType vote.voteable_type
+            json.value vote.value
+          end
+        end
+      end
+      json.voteScore voteSum
+
     end
   end
 end

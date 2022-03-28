@@ -84,6 +84,17 @@
     cursor: pointer;
   }
 
+  .uparrow_activated {
+    width: 0;
+    height: 0;
+    border-width: 0 16px 16px 16px;
+    border-color: transparent transparent #62E51D transparent;
+    border-style: solid;
+  }
+  .uparrow_activated:hover{
+    cursor: pointer;
+  }
+
   .downarrow{
 	width: 0;
 	height: 0;
@@ -93,6 +104,18 @@
 	transform: rotate(180deg);
   }
   .downarrow:hover{
+    cursor: pointer;
+  }
+  
+  .downarrow_activated{
+	width: 0;
+	height: 0;
+	border-width: 0 16px 16px 16px;
+	border-color: transparent transparent #62E51D transparent;
+	border-style: solid;
+	transform: rotate(180deg);
+  }
+  .downarrow_activated:hover{
     cursor: pointer;
   }
 
@@ -243,3 +266,4 @@
   font-size: 13px;
   color: #62E51D;
 }
+

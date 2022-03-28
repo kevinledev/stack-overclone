@@ -40,7 +40,8 @@ class QuestionShow extends React.Component {
       answers,
       deleteAnswer,
       updateAnswer,
-      users
+      users,
+      currentUserVote
     } = this.props;
 
 
@@ -79,6 +80,8 @@ class QuestionShow extends React.Component {
 
     const editQuestionForm = editingQuestion ? <EditQuestionContainer /> : null;
 
+
+ 
     const questionDisplay = question ? (
       <div className="question-show">
         <div className="question-show-heading">
@@ -102,9 +105,17 @@ class QuestionShow extends React.Component {
 
         <div className="question-show-body-container">
           <div className="question-show-body-left">
-            <div class="uparrow"></div>
+            <div
+              className={
+                currentUserVote === 1 ? "uparrow_activated" : "uparrow"
+              }
+            ></div>
             <h1>{question.voteScore}</h1>
-            <div class="downarrow"></div>
+            <div
+              className={
+                currentUserVote === -1 ? "downarrow_activated" : "downarrow"
+              }
+            ></div>
           </div>
           <div className="question-show-body-right">
             <div className="question-show-body-text">{question.body}</div>

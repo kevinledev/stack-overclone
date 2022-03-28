@@ -20,7 +20,6 @@ const questionsReducer = (state={}, action) => {
       delete newState[action.questionId]
       return newState;
     case RECEIVE_VOTE:
-
       newState = Object.assign({}, state, action.payload.votes);
       return newState
     case CLEAR_ENTITY:

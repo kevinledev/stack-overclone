@@ -1,5 +1,4 @@
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
 import {
   fetchQuestion,
   deleteQuestion,
@@ -14,14 +13,23 @@ import QuestionShow from "./QuestionShow";
 
 const mapStateToProps = (state, ownProps) => {
   let currentQuestionId = ownProps.match.params.questionId;
-  return {
-    question: state.entities.questions[currentQuestionId],
+  let question = state.entities.questions[currentQuestionId];
+  
+  let returnObject = {
+    question: question,
     answers: Object.values(state.entities.answers).filter(
       (a) => a.questionId === parseInt(currentQuestionId)
     ),
     currentUserId: state.session.currentUserId,
     users: state.entities.users,
   };
+
+  if (question) {
+    returnObject.votes = question.votes
+    returnObject.currentUserVote = question.currentUserVote
+  }
+
+  return returnObject;
 };
 
 const mapDispatchToProps = (dispatch) => {

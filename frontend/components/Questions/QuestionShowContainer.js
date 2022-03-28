@@ -19,38 +19,22 @@ import {
 
 const mapStateToProps = (state, ownProps) => {
   let currentQuestionId = ownProps.match.params.questionId;
-  let question = state.entities.questions[currentQuestionId];
-  let currentUserId = state.session.currentUserId;
 
-  let voteScore = 0;
-  let currentUserVote;
-  if (question) {
-    Object.values(question.votes).forEach((vote) => {
-      voteScore += vote.value
-
-      if (vote.voterId === currentUserId){
-        
-        currentUserVote = vote.value;
-      }
-    })
-  }
-
+  const answers = state.entities.answers ? (
+    Object.values(state.entities.answers).filter(
+      (a) => a.questionId === parseInt(currentQuestionId)
+    )
+  ) : (
+    []
+  )
 
   let returnObject = {
-    question: question,
-    answers: Object.values(state.entities.answers).filter(
-      (a) => a.questionId === parseInt(currentQuestionId)
-    ),
+    question: state.entities.questions[currentQuestionId],
+    answers: answers,
     currentUserId: state.session.currentUserId,
     users: state.entities.users,
   };
 
-  if (question) {
-    returnObject["voteScore"] = voteScore;
-    returnObject.currentUserVote = currentUserVote;
-  }
-
- 
   return returnObject;
 };
 
@@ -64,9 +48,9 @@ const mapDispatchToProps = (dispatch) => {
     fetchAnswers: () => dispatch(fetchAnswers()),
     fetchQuestionAnswers: (questionId) =>
       dispatch(fetchQuestionAnswers(questionId)),
-    upvote: (questionId) => dispatch(upvoteQuestion(questionId)),
-    downvote: (questionId) => dispatch(downvoteQuestion(questionId)),
-    unvote: (questionId) => dispatch(unvoteQuestion(questionId))
+    // upvote: (questionId) => dispatch(upvoteQuestion(questionId)),
+    // downvote: (questionId) => dispatch(downvoteQuestion(questionId)),
+    // unvote: (questionId) => dispatch(unvoteQuestion(questionId))
   };
 };
 

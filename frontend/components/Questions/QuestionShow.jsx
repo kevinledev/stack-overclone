@@ -5,6 +5,8 @@ import CreateAnswerFormContainer from "../Answers/CreateAnswerFormContainer";
 
 import EditQuestionContainer from "./EditQuestionContainer";
 
+import QuestionShowVoteContainer from "./QuestionShowVoteContainer";
+
 class QuestionShow extends React.Component {
   constructor(props) {
     super(props);
@@ -20,14 +22,8 @@ class QuestionShow extends React.Component {
   componentDidMount() {
     this.props.fetchQuestion(this.props.match.params.questionId);
     this.props.fetchQuestionAnswers(this.props.match.params.questionId);
-    // this.setState({currentUserVote: this.props.currentUservote})
   }
 
-  // componentDidUpdate(){
-  //   if (this.state.currentUserVote !== this.props.currentUserVote){
-  //     this.setState({currentUserVote: this.state.currentUserVote})
-  //   }
-  // }
 
   handleVote(val) {
     let currentUserVote = this.props.currentUserVote;
@@ -36,17 +32,17 @@ class QuestionShow extends React.Component {
     if (currentUserVote === val) {
       if (val === 1) {
         this.props.unvote(currentQuestionId);
-        this.setState({ currentUserVote: this.props.voteScore - 1 });
+        this.setState({ currentUserVote: 0 });
       } else {
         this.props.unvote(currentQuestionId);
-        this.setState({ currentUserVote: this.props.voteScore + 1 });
+        this.setState({ currentUserVote: 0 });
       }
     } else if (val === 1) {
       this.props.upvote(currentQuestionId);
-      this.setState({ currentUserVote: 1 + this.props.voteScore });
+      this.setState({ currentUserVote: 1 });
     } else {
       this.props.downvote(currentQuestionId);
-      this.setState({ currentUserVote: -1 + this.props.voteScore });
+      this.setState({ currentUserVote: -1  });
     }
   }
 
@@ -142,7 +138,7 @@ class QuestionShow extends React.Component {
         </div>
 
         <div className="question-show-body-container">
-          <div className="question-show-body-left">
+          {/* <div className="question-show-body-left">
             <div
               className={
                 this.state.currentUserVote === 1
@@ -162,7 +158,10 @@ class QuestionShow extends React.Component {
               }
               onClick={() => this.handleVote(-1)}
             ></div>
-          </div>
+          </div> */}
+          <QuestionShowVoteContainer
+          />
+
           <div className="question-show-body-right">
             <div className="question-show-body-text">{question.body}</div>
             {editQuestionForm}
@@ -181,7 +180,7 @@ class QuestionShow extends React.Component {
         <h1>{answers.length} Answers</h1>
       );
 
-    const answerDisplay = answers ? (
+    const answerDisplay = answers.length > 0 ? (
       <div className="question-answers-wrapper">
         {amtAnswers}
         {answers.map((a) => (

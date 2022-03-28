@@ -34,8 +34,14 @@ class QuestionShow extends React.Component {
 
   render() {
     const { editingQuestion } = this.state;
-    const { question, currentUserId, answers, deleteAnswer, updateAnswer, users } = this.props;
-
+    const {
+      question,
+      currentUserId,
+      answers,
+      deleteAnswer,
+      updateAnswer,
+      users,
+    } = this.props;
 
     const questionShowOptions = !question ? null : currentUserId !==
       question.askerId ? (
@@ -92,10 +98,22 @@ class QuestionShow extends React.Component {
             </h4>
           </div>
         </div>
+
         <div className="question-show-body-container">
-          <div className="question-show-body-text">{question.body}</div>
-          {editQuestionForm}
-          {questionShowOptions}
+          <div className="question-show-body-left">
+
+              <div class="uparrow">
+              </div>
+
+            <h1>0</h1>
+            <div class="downarrow">
+            </div>
+          </div>
+          <div className="question-show-body-right">
+            <div className="question-show-body-text">{question.body}</div>
+            {editQuestionForm}
+            {questionShowOptions}
+          </div>
         </div>
       </div>
     ) : (
@@ -104,9 +122,9 @@ class QuestionShow extends React.Component {
 
     const amtAnswers =
       answers.length === 1 ? (
-        <h1>1 answer</h1>
+        <h1>1 Answer</h1>
       ) : (
-        <h1>{answers.length} questions</h1>
+        <h1>{answers.length} Answers</h1>
       );
 
     const answerDisplay = answers ? (
@@ -123,8 +141,6 @@ class QuestionShow extends React.Component {
         ))}
       </div>
     ) : null;
-
-
 
     return (
       <div className="question-show-container">

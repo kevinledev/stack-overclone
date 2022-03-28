@@ -15,7 +15,6 @@ const mapStateToProps = (state, ownProps) => {
   let question = state.entities.questions[currentQuestionId];
   let currentUserId = state.session.currentUserId;
 
-
   let voteScore = 0;
   let currentUserVote = 0;
   if (question.votes) {

@@ -20,7 +20,22 @@ import {
 const mapStateToProps = (state, ownProps) => {
   let currentQuestionId = ownProps.match.params.questionId;
   let question = state.entities.questions[currentQuestionId];
-  
+  let currentUserId = state.session.currentUserId;
+
+  let voteScore = 0;
+  let currentUserVote;
+  if (question) {
+    Object.values(question.votes).forEach((vote) => {
+      voteScore += vote.value
+
+      if (vote.voterId === currentUserId){
+        
+        currentUserVote = vote.value;
+      }
+    })
+  }
+
+
   let returnObject = {
     question: question,
     answers: Object.values(state.entities.answers).filter(
@@ -31,10 +46,11 @@ const mapStateToProps = (state, ownProps) => {
   };
 
   if (question) {
-    returnObject.voteScore = question.voteScore
-    returnObject.currentUserVote = question.currentUserVote
+    returnObject["voteScore"] = voteScore;
+    returnObject.currentUserVote = currentUserVote;
   }
 
+ 
   return returnObject;
 };
 

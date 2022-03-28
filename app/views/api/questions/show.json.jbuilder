@@ -10,25 +10,27 @@ json.question do
     json.updatedAt @question.created_at
     json.answerIds @question.answer_ids
 
-    vote_sum = 0
-    current_user_vote = 0 
+    # vote_sum = 0
+    # current_user_vote = 0 
     @question.votes.each do |vote|
-      if vote.voter_id == current_user.id
-        current_user_vote = vote.value
-      end
-      vote_sum += vote.value
-      # json.votes do
-      #   json.set! vote.id do
-      #     json.id vote.id
-      #     json.voterId vote.voter_id
-      #     json.voteableId vote.voteable_id
-      #     # json.voteableType vote.voteable_type
-      #     json.value vote.value
-      #   end
+      # if vote.voter_id == current_user.id
+      #   current_user_vote = vote.value
       # end
+      # vote_sum += vote.value
+
+      json.votes do
+        json.set! vote.id do
+          json.id vote.id
+          json.voterId vote.voter_id
+          json.voteableId vote.voteable_id
+          # json.voteableType vote.voteable_type
+          json.value vote.value
+        end
+      end
+
     end
-    json.voteScore vote_sum
-    json.currentUserVote current_user_vote
+    # json.voteScore vote_sum
+    # json.currentUserVote current_user_vote
   end
 end
 

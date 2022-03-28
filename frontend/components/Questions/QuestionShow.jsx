@@ -8,14 +8,16 @@ import EditQuestionContainer from "./EditQuestionContainer";
 class QuestionShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { editingQuestion: false };
+    this.state = {
+      editingQuestion: false
+    };
     this.handleDelete = this.handleDelete.bind(this);
     this.toggleEditQuestion = this.toggleEditQuestion.bind(this);
+    // this.handleVote = this.handleVote.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchQuestion(this.props.match.params.questionId);
-    // this.props.fetchAnswers();
     this.props.fetchQuestionAnswers(this.props.match.params.questionId);
   }
 
@@ -32,6 +34,27 @@ class QuestionShow extends React.Component {
       : this.setState({ editingQuestion: true });
   }
 
+  handleVote(val) {
+    let currentUserVote = this.props.currentUserVote;
+    let currentQuestionId = this.props.question.id;
+
+    if (currentUserVote === val) {
+      this.props.unvote(currentQuestionId);
+    } else if (val === 1) {
+      this.props.upvote(currentQuestionId);
+    } else {
+      this.props.downvote(currentQuestionId);
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState !== this.state) {
+      this.setState( {voteScore: this.state.voteScore })
+    }
+  }
+
+
+
   render() {
     const { editingQuestion } = this.state;
     const {
@@ -41,8 +64,9 @@ class QuestionShow extends React.Component {
       deleteAnswer,
       updateAnswer,
       users,
-      currentUserVote
+      currentUserVote,
     } = this.props;
+
 
 
     const questionShowOptions = !question ? null : currentUserId !==
@@ -81,7 +105,10 @@ class QuestionShow extends React.Component {
     const editQuestionForm = editingQuestion ? <EditQuestionContainer /> : null;
 
 
- 
+    const voteScoreDisplay = this.state.voteScore ? (
+      <h1>{this.state.voteScore}</h1>
+    ) : 0;
+
     const questionDisplay = question ? (
       <div className="question-show">
         <div className="question-show-heading">
@@ -109,12 +136,16 @@ class QuestionShow extends React.Component {
               className={
                 currentUserVote === 1 ? "uparrow_activated" : "uparrow"
               }
+              onClick={() => this.handleVote(1)}
             ></div>
-            <h1>{question.voteScore}</h1>
+            {voteScoreDisplay}
+
+
             <div
               className={
                 currentUserVote === -1 ? "downarrow_activated" : "downarrow"
               }
+              onClick={() => this.handleVote(-1)}
             ></div>
           </div>
           <div className="question-show-body-right">

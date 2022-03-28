@@ -11,3 +11,11 @@ export const downvoteQuestion = (questionId) => {
     url: `/api/questions/${questionId}/downvote`
   })
 }
+
+export const unvoteQuestion = (questionId) => {
+  return $.ajax({
+    method: "POST",
+    url: `/api/questions/${questionId}/unvote`
+  })
+}
+

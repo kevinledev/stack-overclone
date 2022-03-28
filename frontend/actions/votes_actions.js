@@ -20,3 +20,9 @@ export const downvoteQuestion = (questionId) => (dispatch) => {
     dispatch(receiveVote(vote));
   });
 };
+
+export const unvoteQuestion = (questionId) => (dispatch) => {
+  return VoteApiUtil.unvoteQuestion(questionId).then((vote) => {
+    dispatch(receiveVote(vote));
+  });
+};

@@ -10,6 +10,12 @@ import {
   fetchQuestionAnswers, fetchAnswers
 } from "../../actions/answers_actions";
 import QuestionShow from "./QuestionShow";
+import {
+  upvoteQuestion,
+  downvoteQuestion,
+  unvoteQuestion
+} from "../../actions/votes_actions";
+
 
 const mapStateToProps = (state, ownProps) => {
   let currentQuestionId = ownProps.match.params.questionId;
@@ -25,7 +31,7 @@ const mapStateToProps = (state, ownProps) => {
   };
 
   if (question) {
-    returnObject.votes = question.votes
+    returnObject.voteScore = question.voteScore
     returnObject.currentUserVote = question.currentUserVote
   }
 
@@ -42,6 +48,9 @@ const mapDispatchToProps = (dispatch) => {
     fetchAnswers: () => dispatch(fetchAnswers()),
     fetchQuestionAnswers: (questionId) =>
       dispatch(fetchQuestionAnswers(questionId)),
+    upvote: (questionId) => dispatch(upvoteQuestion(questionId)),
+    downvote: (questionId) => dispatch(downvoteQuestion(questionId)),
+    unvote: (questionId) => dispatch(unvoteQuestion(questionId))
   };
 };
 

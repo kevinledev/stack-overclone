@@ -16,12 +16,10 @@ import {
 } from "./actions/answers_actions";
 
 import {fetchUsers} from './actions/users_actions'
-import { downvoteQuestion, upvoteQuestion } from "./actions/votes_action"
+import { downvoteQuestion, upvoteQuestion } from "./actions/votes_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
-
-  // const store = configureStore();
 
   let store;
   if (window.currentUser) {

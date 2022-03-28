@@ -67,11 +67,15 @@ class Api::QuestionsController < ApplicationController
   end
 
   def downvote
-      vote(-1)
+    vote(-1)
   end
 
   def upvote
-      vote(1)
+    vote(1)
+  end
+
+  def unvote 
+    vote(0)
   end
 
   private

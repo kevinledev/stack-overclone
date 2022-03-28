@@ -5,7 +5,7 @@ import {
   REMOVE_QUESTION
 } from "../actions/questions_actions"
 
-import { RECEIVE_VOTE } from "../actions/votes_action";
+import { RECEIVE_VOTE } from "../actions/votes_actions";
 
 const questionsReducer = (state={}, action) => {
   Object.freeze(state);

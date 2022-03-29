@@ -17,3 +17,23 @@
   width: 100%;
   width: 777px;
 }
+
+.no-results-searchfield {
+  font-weight: 700;
+}
+
+
+.search-index-wrapper h3 {
+  font-size: 17px;
+  color: #232629;
+  margin-bottom: 14px;
+  /* width: 100%; */
+  padding-left: 24px;
+  text-align: center;
+}
+
+.search-index-wrapper p {
+  font-size: 13px;
+  color: #232629;
+  margin-top: 8px;
+}

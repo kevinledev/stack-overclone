@@ -63,8 +63,16 @@ export default class SearchResults extends React.Component {
             <button className="ask-question">Ask Question</button>
           </Link>
         </div>
-        <h2>No questions match search</h2>
-        <div style={{width:"777px"}}></div>
+        <div className="search-index-wrapper">
+          <h3>
+            We couldn't find anything for{" "}
+            <span className="no-results-searchfield">
+              {this.props.searchField}
+            </span>
+            <p>Try different or less specific keywords.</p>
+          </h3>
+        </div>
+        <div style={{ width: "777px" }}></div>
       </div>
     );
     return <div className="main-container">{searchResultsDisplay}</div>;

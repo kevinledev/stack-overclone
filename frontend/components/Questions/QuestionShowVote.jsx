@@ -17,22 +17,22 @@ export default class QuestionShowVote extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    // if (this.state.voteScore === undefined && this.props.voteScore !== undefined) {
-    //   const currentUserVote = this.props.currentUserVote
-    //     ? this.props.currentUserVote
-    //     : 0;
-    //   this.setState({
-    //     voteScore: this.props.voteScore - currentUserVote,
-    //     currentUserVote,
-    //   });
-    // }
-
-    if (prevProps !== this.props) {
+    if (this.state.voteScore === undefined && this.props.voteScore !== undefined) {
+      const currentUserVote = this.props.currentUserVote
+        ? this.props.currentUserVote
+        : 0;
       this.setState({
-        voteScore: this.props.question.voteScore,
-        currentUserVote: this.props.currentUserVote,
+        voteScore: this.props.voteScore,
+        currentUserVote,
       });
     }
+
+    // if (prevProps !== this.props) {
+    //   this.setState({
+    //     voteScore: this.props.question.voteScore,
+    //     currentUserVote: this.props.currentUserVote,
+    //   });
+    // }
   }
 
   handleVote(val) {
@@ -48,11 +48,31 @@ export default class QuestionShowVote extends React.Component {
       this.props.downvote(currentQuestionId);
       this.setState({ currentUserVote: -1 });
     }
-    window.location.reload();
+
   }
 
 
+  
+  
+  
   render() {
+
+    let voteScoreDisplay;
+    const {currentUserVote} = this.state;
+    const question = this.props.question;
+    if (question && currentUserVote && currentUserVote !== question.currentUserVote) {
+      if (currentUserVote === 1) {
+        voteScoreDisplay = question.voteScore + 1;
+      }
+      if (currentUserVote === -1) {
+        voteScoreDisplay = question.voteScore - 1;
+      }
+    } else {
+      voteScoreDisplay = this.state.voteScore
+    }
+
+
+
     return (
       <div className="question-show-body-left">
         <div
@@ -61,7 +81,7 @@ export default class QuestionShowVote extends React.Component {
           }
           onClick={() => this.handleVote(1)}
         ></div>
-        {this.state.currentUserVote}
+        {voteScoreDisplay}
         <div
           className={
             this.state.currentUserVote === -1

@@ -77,8 +77,10 @@ class Api::QuestionsController < ApplicationController
   end
 
   def unvote 
-    vote(0)
-
+    @question = Question.find(params[:id])
+    @vote = @question.votes.find_by(voter: current_user)
+    @vote.destroy!
+    render :show
   end
 
   private

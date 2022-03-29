@@ -18,8 +18,13 @@ Rails.application.routes.draw do
       resources :answers, only: [:index]
     end
 
-
-    resources :answers, only: [:index, :create, :update, :destroy]
+    resources :answers, only: [:index, :create, :update, :destroy] do
+      member do
+        post 'upvote'
+        post 'downvote'
+        post 'unvote'
+      end
+    end
 
   end
   

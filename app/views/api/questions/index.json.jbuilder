@@ -1,4 +1,4 @@
-json.questions do
+gjson.questions do
   @questions.each do |question|
     json.set! question.id do 
       json.askerId question.asker_id

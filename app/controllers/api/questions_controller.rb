@@ -68,7 +68,6 @@ class Api::QuestionsController < ApplicationController
 
   def downvote
     vote(-1)
-
   end
 
   def upvote

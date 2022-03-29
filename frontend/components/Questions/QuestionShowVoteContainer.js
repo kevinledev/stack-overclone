@@ -1,13 +1,12 @@
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-import { fetchQuestion } from "../../actions/questions_actions";
-
 import {
   upvoteQuestion,
   downvoteQuestion,
   unvoteQuestion,
 } from "../../actions/votes_actions";
+
 import QuestionShowVote from "./QuestionShowVote";
 
 const mapStateToProps = (state, ownProps) => {
@@ -25,25 +24,22 @@ const mapStateToProps = (state, ownProps) => {
       }
     });
   }
-  let returnObject = {
+  return {
     question: question,
     currentUserId: state.session.currentUserId,
     users: state.entities.users,
+    voteScore: voteScore,
+    currentUserVote: currentUserVote
   };
 
-  if (question) {
-    returnObject["voteScore"] = voteScore;
-    returnObject.currentUserVote = currentUserVote;
-  }
-
-
-
-  return returnObject;
+  // if (question) {
+  //   returnObject["voteScore"] = voteScore;
+  //   returnObject.currentUserVote = currentUserVote;
+  // }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // fetchQuestion: (questionId) => dispatch(fetchQuestion(questionId)),
     upvote: (questionId) => dispatch(upvoteQuestion(questionId)),
     downvote: (questionId) => dispatch(downvoteQuestion(questionId)),
     unvote: (questionId) => dispatch(unvoteQuestion(questionId)),

@@ -13,66 +13,56 @@ export default class QuestionShowVote extends React.Component {
   componentDidMount() {
     this.setState({
       currentUserVote: this.props.currentUserVote,
+      voteScore: this.props.voteScore,
     });
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.state.voteScore === undefined && this.props.voteScore !== undefined) {
-      const currentUserVote = this.props.currentUserVote
-        ? this.props.currentUserVote
-        : 0;
-      this.setState({
-        voteScore: this.props.voteScore,
-        currentUserVote,
-      });
-    }
-
-    // if (prevProps !== this.props) {
-    //   this.setState({
-    //     voteScore: this.props.question.voteScore,
-    //     currentUserVote: this.props.currentUserVote,
-    //   });
-    // }
   }
 
   handleVote(val) {
     let currentQuestionId = this.props.question.id;
-
     if (val === this.state.currentUserVote) {
-      this.props.unvote(currentQuestionId);
-      this.setState({ currentUserVote: 0 });
+      if (val === 1) {
+        this.props.unvote(currentQuestionId);
+        this.setState({
+          currentUserVote: 0,
+          voteScore: this.state.voteScore - 1
+        });
+      } else {
+        this.props.unvote(currentQuestionId);
+        this.setState({
+          currentUserVote: 0,
+          voteScore: this.state.voteScore + 1
+        });
+      }
+    } else if (val === -1 * this.state.currentUserVote){
+      if (val === 1) { // hitting an upvote from a downvote
+        this.props.upvote(currentQuestionId);
+        this.setState({
+          currentUserVote: 1,
+          voteScore: this.state.voteScore + 2,
+        });
+      } else { //hitting a downvote from an upvote
+        this.props.downvote(currentQuestionId);
+        this.setState({
+          currentUserVote: -1,
+          voteScore: this.state.voteScore - 2,
+        });
+      }
     } else if (val === 1) {
-      this.props.upvote(currentQuestionId);
-      this.setState({ currentUserVote: 1 });
+      this.props.upvote(currentQuestionId).then();
+      this.setState({
+        currentUserVote: 1,
+        voteScore: this.state.voteScore + 1,
+      });
     } else {
       this.props.downvote(currentQuestionId);
-      this.setState({ currentUserVote: -1 });
+      this.setState({
+        currentUserVote: -1,
+        voteScore: this.state.voteScore - 1,
+      });
     }
-
   }
 
-
-  
-  
-  
   render() {
-
-    let voteScoreDisplay;
-    const {currentUserVote} = this.state;
-    const question = this.props.question;
-    if (question && currentUserVote && currentUserVote !== question.currentUserVote) {
-      if (currentUserVote === 1) {
-        voteScoreDisplay = question.voteScore + 1;
-      }
-      if (currentUserVote === -1) {
-        voteScoreDisplay = question.voteScore - 1;
-      }
-    } else {
-      voteScoreDisplay = this.state.voteScore
-    }
-
-
-
     return (
       <div className="question-show-body-left">
         <div
@@ -81,7 +71,7 @@ export default class QuestionShowVote extends React.Component {
           }
           onClick={() => this.handleVote(1)}
         ></div>
-        {voteScoreDisplay}
+        {this.state.voteScore}
         <div
           className={
             this.state.currentUserVote === -1

@@ -53,7 +53,6 @@ class QuestionShow extends React.Component {
   }
 
   toggleEditQuestion() {
-    // console.log(this.state.editingQuestion);
     this.state.editingQuestion
       ? this.setState({ editingQuestion: false })
       : this.setState({ editingQuestion: true });
@@ -138,27 +137,6 @@ class QuestionShow extends React.Component {
         </div>
 
         <div className="question-show-body-container">
-          {/* <div className="question-show-body-left">
-            <div
-              className={
-                this.state.currentUserVote === 1
-                  ? "uparrow_activated"
-                  : "uparrow"
-              }
-              onClick={() => this.handleVote(1)}
-            ></div>
-            {voteScoreDisplay}
-
-            <div
-              className={
-                this.state.currentUserVote === -1 ||
-                this.props.currentUserVote === -1
-                  ? "downarrow_activated"
-                  : "downarrow"
-              }
-              onClick={() => this.handleVote(-1)}
-            ></div>
-          </div> */}
           <QuestionShowVoteContainer
           />
 

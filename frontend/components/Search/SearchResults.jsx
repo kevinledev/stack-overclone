@@ -14,14 +14,16 @@ export default class SearchResults extends React.Component {
       this.props.searchQuestions(this.props.searchField).then(() => 
       this.setState({ questions:this.props.questions }))
     }
+    window.scrollTo(0,0)
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.searchField && this.props.searchField !== prevProps.searchField) {
       this.props
-        .searchQuestions(this.props.searchField)
-        .then(() => this.setState({ questions: this.props.questions }));
+      .searchQuestions(this.props.searchField)
+      .then(() => this.setState({ questions: this.props.questions }));
     }
+    window.scrollTo(0, 0);
   }
 
 

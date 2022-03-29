@@ -8,6 +8,7 @@ export default class UsersIndex extends React.Component {
 
   componentDidMount(){
     this.props.fetchUsers();
+    window.scrollTo(0, 0);
   }
 
   render() {

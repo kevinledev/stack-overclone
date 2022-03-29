@@ -1,4 +1,4 @@
-gjson.questions do
+json.questions do
   @questions.each do |question|
     json.set! question.id do 
       json.askerId question.asker_id
@@ -18,13 +18,11 @@ gjson.questions do
             json.id vote.id
             json.voterId vote.voter_id
             json.voteableId vote.voteable_id
-            # json.voteableType vote.voteable_type
             json.value vote.value
           end
         end
       end
       json.voteScore voteSum
-
     end
   end
 end

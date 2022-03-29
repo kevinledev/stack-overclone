@@ -24,14 +24,16 @@ export default class QuestionsIndexItem extends React.Component {
         )
       );
 
+  
+
     return (
       <div className="question-index-item">
-          <div className="question-index-item-counts">
-            <div className="qi-score">
-              {question.voteScore} votes
-            </div>
-            {numAnswers}
+        <div className="question-index-item-counts">
+          <div className="qi-score">
+            {question.voteScore} {question.voteScore ? "vote" : "votes"}
           </div>
+          {numAnswers}
+        </div>
         <div className="question-index-item-main-container">
           <div className="questionindex-title-wrapper">
             <Link

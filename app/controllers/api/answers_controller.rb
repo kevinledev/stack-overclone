@@ -48,8 +48,8 @@ class Api::AnswersController < ApplicationController
   end
 
   def vote(val)
-    @question = Question.find(params[:id])
-    @vote = @question.votes.find_or_initialize_by(voter: current_user)
+    @answer = Answer.find(params[:id])
+    @vote = @answer.votes.find_or_initialize_by(voter: current_user)
     @vote.update(value: val)
     render :show
   end
@@ -63,8 +63,8 @@ class Api::AnswersController < ApplicationController
   end
 
   def unvote 
-    @question = Question.find(params[:id])
-    @vote = @question.votes.find_by(voter: current_user)
+    @answer = Answer.find(params[:id])
+    @vote = @answer.votes.find_by(voter: current_user)
     @vote.destroy!
     render :show
   end

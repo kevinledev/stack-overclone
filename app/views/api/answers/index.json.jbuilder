@@ -13,6 +13,20 @@ json.answers do
       json.answererId answer.answerer.id
       json.createdAt answer.created_at
       json.updatedAt answer.updated_at
+
+      vote_sum = 0
+      answer.votes.each do |vote|
+        vote_sum += vote.value
+        json.votes do
+          json.set! vote.id do
+            json.id vote.id
+            json.voterId vote.voter_id
+            json.voteableId vote.voteable_id
+            json.value vote.value
+          end
+        end
+      end
+      json.voteScore vote_sum
     end
   end
 end

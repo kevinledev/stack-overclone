@@ -13,37 +13,13 @@ class QuestionShow extends React.Component {
     this.state = {
       editingQuestion: false,
     };
-
     this.handleDelete = this.handleDelete.bind(this);
     this.toggleEditQuestion = this.toggleEditQuestion.bind(this);
-    this.handleVote = this.handleVote.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchQuestion(this.props.match.params.questionId);
     this.props.fetchQuestionAnswers(this.props.match.params.questionId);
-  }
-
-
-  handleVote(val) {
-    let currentUserVote = this.props.currentUserVote;
-    let currentQuestionId = this.props.question.id;
-
-    if (currentUserVote === val) {
-      if (val === 1) {
-        this.props.unvote(currentQuestionId);
-        this.setState({ currentUserVote: 0 });
-      } else {
-        this.props.unvote(currentQuestionId);
-        this.setState({ currentUserVote: 0 });
-      }
-    } else if (val === 1) {
-      this.props.upvote(currentQuestionId);
-      this.setState({ currentUserVote: 1 });
-    } else {
-      this.props.downvote(currentQuestionId);
-      this.setState({ currentUserVote: -1  });
-    }
   }
 
   handleDelete() {
@@ -65,13 +41,9 @@ class QuestionShow extends React.Component {
       answers,
       currentUserId,
       users,
-      voteScore,
-      currentUserVote,
       deleteAnswer,
       updateAnswer,
     } = this.props;
-
-
 
 
     const questionShowOptions = !question ? null : currentUserId !==
@@ -109,11 +81,6 @@ class QuestionShow extends React.Component {
 
     const editQuestionForm = editingQuestion ? <EditQuestionContainer /> : null;
 
-    const voteScoreDisplay = this.state.currentUserVote ? (
-      <h2>{this.state.currentUserVote + voteScore}</h2>
-    ) : (
-      <h2>{voteScore}</h2>
-    );
 
     const questionDisplay = question ? (
       <div className="question-show">

@@ -29,13 +29,8 @@ const mapStateToProps = (state, ownProps) => {
     currentUserId: state.session.currentUserId,
     users: state.entities.users,
     voteScore: voteScore,
-    currentUserVote: currentUserVote
+    highlightVote: currentUserVote
   };
-
-  // if (question) {
-  //   returnObject["voteScore"] = voteScore;
-  //   returnObject.currentUserVote = currentUserVote;
-  // }
 };
 
 const mapDispatchToProps = (dispatch) => {

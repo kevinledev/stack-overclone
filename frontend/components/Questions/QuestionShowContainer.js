@@ -10,11 +10,6 @@ import {
   fetchQuestionAnswers, fetchAnswers
 } from "../../actions/answers_actions";
 import QuestionShow from "./QuestionShow";
-import {
-  upvoteQuestion,
-  downvoteQuestion,
-  unvoteQuestion
-} from "../../actions/votes_actions";
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -28,14 +23,12 @@ const mapStateToProps = (state, ownProps) => {
     []
   )
 
-  let returnObject = {
+  return {
     question: state.entities.questions[currentQuestionId],
     answers: answers,
     currentUserId: state.session.currentUserId,
     users: state.entities.users,
   };
-
-  return returnObject;
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -48,9 +41,6 @@ const mapDispatchToProps = (dispatch) => {
     fetchAnswers: () => dispatch(fetchAnswers()),
     fetchQuestionAnswers: (questionId) =>
       dispatch(fetchQuestionAnswers(questionId)),
-    // upvote: (questionId) => dispatch(upvoteQuestion(questionId)),
-    // downvote: (questionId) => dispatch(downvoteQuestion(questionId)),
-    // unvote: (questionId) => dispatch(unvoteQuestion(questionId))
   };
 };
 

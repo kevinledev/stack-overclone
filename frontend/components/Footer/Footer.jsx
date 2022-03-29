@@ -15,7 +15,9 @@ const Footer = () => {
             </div>
             <ul>
               <Link to={`/questions`}>Questions</Link>
-              <Link to={`/users`} className="footer-userslink">Users</Link>
+              <Link to={`/users`} className="footer-userslink">
+                Users
+              </Link>
             </ul>
           </div>
         </div>
@@ -23,12 +25,14 @@ const Footer = () => {
           <div className="dev-links">
             <h1>DEVELOPER</h1>
             <ul>
-              <a>LinkedIn</a>
-              <a className="footer-ghlink">Github</a>
+              <a href="https://www.linkedin.com/in/kevinledev/">LinkedIn</a>
+              <a href="https://github.com/kevinledev" className="footer-ghlink">
+                Github
+              </a>
             </ul>
           </div>
           <div className="copyright">
-            &copy; 2022, Kevin Le. All rights reserved.
+            &copy; 2022 Stack Overclone. All rights reserved.
           </div>
         </div>
       </div>

@@ -33,14 +33,13 @@ export default class Login extends React.Component {
 
   loginDemo(e) {
     e.preventDefault();
-    this.setState({ username: "clone37" });
-    this.setState({ password: "09f84231f90j30irvoiqrvjwh3209hd#@!@#F!@dhuiw" });
-    dispatch(
-      login({
-        username: "clone37",
+    this.setState({ username: "Clone37", password: "09f84231f90j30irvoiqrvjwh3209hd#@!@#F!@dhuiw" });
+    this.props
+      .processForm({
+        username: "Clone37",
         password: "09f84231f90j30irvoiqrvjwh3209hd#@!@#F!@dhuiw",
       })
-    ).then(() => this.props.history.push("/questions"));
+      .then(() => this.props.history.push("/questions"));
   }
 
   componentDidMount() {

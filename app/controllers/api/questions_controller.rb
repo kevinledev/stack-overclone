@@ -72,7 +72,6 @@ class Api::QuestionsController < ApplicationController
 
   def upvote
     vote(1)
-
   end
 
   def unvote 

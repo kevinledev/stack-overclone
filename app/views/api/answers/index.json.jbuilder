@@ -17,14 +17,14 @@ json.answers do
       vote_sum = 0
       answer.votes.each do |vote|
         vote_sum += vote.value
-        json.votes do
-          json.set! vote.id do
-            json.id vote.id
-            json.voterId vote.voter_id
-            json.voteableId vote.voteable_id
-            json.value vote.value
-          end
-        end
+        # json.votes do
+        #   json.set! vote.id do
+        #     json.id vote.id
+        #     json.voterId vote.voter_id
+        #     json.voteableId vote.voteable_id
+        #     json.value vote.value
+        #   end
+        # end
       end
       json.voteScore vote_sum
     end
@@ -36,6 +36,20 @@ json.answerer do
     json.set! answer.answerer.id do
       json.id answer.answerer.id
       json.username answer.answerer.username
+    end
+  end
+end
+
+json.votes do 
+  @answers.each do |answer|
+    answer.votes.each do |vote|
+      json.set! vote.id do
+        json.id vote.id
+        json.voterId vote.voter_id
+        json.voteableId vote.voteable_id
+        json.voteableType vote.voteable_type
+        json.value vote.value
+      end
     end
   end
 end

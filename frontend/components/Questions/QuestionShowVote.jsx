@@ -6,15 +6,27 @@ export default class QuestionShowVote extends React.Component {
     super(props);
     this.state = {
       highlightVote: this.props.highlightVote,
+      voteScore: this.props.voteScore,
     };
     this.handleVote = this.handleVote.bind(this);
   }
 
   componentDidMount() {
+
     this.setState({
       highlightVote: this.props.highlightVote,
       voteScore: this.props.voteScore,
     });
+  }
+
+  componentDidUpdate(prevProps) {
+
+    if (prevProps !== this.props) {
+      this.setState({ 
+        voteScore: this.props.voteScore,
+        highlightVote: this.props.highlightVote
+       })
+    }
   }
 
   handleVote(val) {

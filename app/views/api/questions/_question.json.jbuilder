@@ -4,6 +4,7 @@ json.extract! question,
 :body, 
 :created_at, 
 :updated_at,
-:answer_ids
+:answer_ids,
+:current_user
 #associations
 

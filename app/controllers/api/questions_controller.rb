@@ -77,8 +77,8 @@ class Api::QuestionsController < ApplicationController
   def unvote 
     @question = Question.find(params[:id])
     @vote = @question.votes.find_by(voter: current_user)
+    render json: @vote.id
     @vote.destroy!
-    render :show
   end
 
   private

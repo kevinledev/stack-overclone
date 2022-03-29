@@ -13,14 +13,14 @@ json.question do
     vote_sum = 0
     @question.votes.each do |vote|
       vote_sum += vote.value
-      # json.votes do
-      #   json.set! vote.id do
-      #     json.id vote.id
-      #     json.voterId vote.voter_id
-      #     json.voteableId vote.voteable_id
-      #     json.value vote.value
-      #   end
-      # end
+      json.votes do
+        json.set! vote.id do
+          json.id vote.id
+          json.voterId vote.voter_id
+          json.voteableId vote.voteable_id
+          json.value vote.value
+        end
+      end
     end
     json.voteScore vote_sum
   end
@@ -33,17 +33,17 @@ json.asker do
   end
 end
 
-# json.votes do 
-#   @question.votes.each do |vote|
-#     json.set! vote.id do
-#       json.id vote.id
-#       json.voterId vote.voter_id
-#       json.voteableId vote.voteable_id
-#       json.voteableType vote.voteable_type
-#       json.value vote.value
-#     end
-#   end
-# end
+json.votes do 
+  @question.votes.each do |vote|
+    json.set! vote.id do
+      json.id vote.id
+      json.voterId vote.voter_id
+      json.voteableId vote.voteable_id
+      json.voteableType vote.voteable_type
+      json.value vote.value
+    end
+  end
+end
 
 # json.extract! @question, 
 #   :id, 

@@ -19,9 +19,9 @@ const questionsReducer = (state={}, action) => {
     case REMOVE_QUESTION:
       delete newState[action.questionId]
       return newState;
-    case RECEIVE_VOTE:
-      newState = Object.assign({}, state, action.payload.votes);
-      return newState
+    // case RECEIVE_VOTE:
+    //   newState = Object.assign({}, state, action.payload.votes);
+    //   return newState
     case CLEAR_ENTITY:
       return {}
     default:

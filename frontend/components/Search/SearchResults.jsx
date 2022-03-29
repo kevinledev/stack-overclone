@@ -5,8 +5,11 @@ import QuestionsIndexItem from '../Questions/QuestionsIndexItem';
 export default class SearchResults extends React.Component {
   constructor(props) {
     super(props)
-
-    this.state = { }
+    this.state = ({ 
+      questions: this.props.questions,
+      searchField: ""
+     })
+    // this.state = { }
   }
 
   componentDidMount() {
@@ -69,7 +72,9 @@ export default class SearchResults extends React.Component {
           <h3>
             We couldn't find anything for{" "}
             <span className="no-results-searchfield">
-              {this.props.searchField}
+              {this.props.searchField
+                ? this.props.searchField
+                : "''"}
             </span>
             <p>Try different or less specific keywords.</p>
           </h3>

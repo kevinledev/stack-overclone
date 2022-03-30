@@ -16,14 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 
   let voteScore = 0;
   let currentUserVote = 0;
-  // if (question.votes) {
-  //   Object.values(question.votes).forEach((vote) => {
-  //     voteScore += vote.value;
-  //     if (vote.voterId === currentUserId) {
-  //       currentUserVote = vote.value;
-  //     }
-  //   });
-  // }
+
   if (state.entities.votes) {
     Object.values(state.entities.votes).forEach((vote) => {
       if (vote.voteableType === "Question" && vote.voteableId === question.id){

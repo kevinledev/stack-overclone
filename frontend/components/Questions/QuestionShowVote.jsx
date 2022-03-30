@@ -11,7 +11,6 @@ export default class QuestionShowVote extends React.Component {
   }
 
   componentDidMount() {
-
     this.setState({
       highlightVote: this.props.highlightVote,
       voteScore: this.props.voteScore,
@@ -19,7 +18,6 @@ export default class QuestionShowVote extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-
     if (prevProps !== this.props) {
       this.setState({ 
         voteScore: this.props.voteScore,
@@ -29,6 +27,7 @@ export default class QuestionShowVote extends React.Component {
   }
 
   handleVote(val) {
+    if (!this.props.currentUserId) return;
     let currentQuestionId = this.props.question.id;
     if (val === this.state.highlightVote) {
       // clicking upvote while already upvoted => destroy vote
@@ -89,16 +88,16 @@ export default class QuestionShowVote extends React.Component {
       <div className="question-show-body-left">
         <div
           className={
-            this.state.highlightVote === 1 ? "uparrow_activated" : "uparrow"
+            this.state.highlightVote === 1 ? "uparrow_activated" : !this.props.currentUserId ? "uparrow_loggedout" : "uparrow"
           }
           onClick={() => this.handleVote(1)}
         ></div>
-        {this.state.voteScore}
+        {this.props.voteScore}
         <div
           className={
             this.state.highlightVote === -1
               ? "downarrow_activated"
-              : "downarrow"
+              : !this.state.currentUserId ? "downarrow_loggedout" : "downarrow"
           }
           onClick={() => this.handleVote(-1)}
         ></div>

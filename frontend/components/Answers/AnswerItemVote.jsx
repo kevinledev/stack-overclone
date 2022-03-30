@@ -27,6 +27,7 @@ export default class AnswerItemVote extends React.Component {
   }
 
   handleVote(val) {
+    if (!this.state.currentUserId) return;
     let currentQuestionId = this.props.answer.id;
     if (val === this.state.highlightVote) {
       if (val === 1) {
@@ -76,7 +77,11 @@ export default class AnswerItemVote extends React.Component {
       <div className="answer-show-body-left">
         <div
           className={
-            this.state.highlightVote === 1 ? "uparrow_activated" : "uparrow"
+            this.state.highlightVote === 1
+              ? "uparrow_activated"
+              : !this.props.currentUserId
+              ? "uparrow_loggedout"
+              : "uparrow"
           }
           onClick={() => this.handleVote(1)}
         ></div>
@@ -85,6 +90,8 @@ export default class AnswerItemVote extends React.Component {
           className={
             this.state.highlightVote === -1
               ? "downarrow_activated"
+              : !this.props.currentUserId
+              ? "downarrow_loggedout"
               : "downarrow"
           }
           onClick={() => this.handleVote(-1)}

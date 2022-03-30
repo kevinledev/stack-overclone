@@ -41,13 +41,15 @@ a {text-decoration:none;}
 
 
 .main-container{
-  height: 100%;
-  max-width: 777px;
+  height: inherit;
+  max-width: 775px;
   display:flex;
   flex-direction: row;
   justify-content: flex-start;
-  background-color:#F8F9F9;
-  margin-bottom: 80px;
+  background-color:white;
+  padding-bottom: 80px;
+  border-right: 1px solid #d6d9dc;
+  border-left: 1px solid #d6d9dc;
 }
 
 .app-block{

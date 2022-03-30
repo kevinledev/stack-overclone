@@ -34,3 +34,21 @@ export const unvoteQuestion = (questionId) => (dispatch) => {
     dispatch(removeVote(voteId));
   });
 };
+
+export const upvoteAnswer = (answerId) => (dispatch) => {
+  return VoteApiUtil.upvoteAnswer(answerId).then((vote) => {
+    dispatch(receiveVote(vote));
+  });
+};
+
+export const downvoteAnswer = (answerId) => (dispatch) => {
+  return VoteApiUtil.downvoteAnswer(answerId).then((vote) => {
+    dispatch(receiveVote(vote));
+  });
+};
+
+export const unvoteAnswer = (answerId) => (dispatch) => {
+  return VoteApiUtil.unvoteAnswer(answerId).then((voteId) => {
+    dispatch(removeVote(voteId));
+  });
+};

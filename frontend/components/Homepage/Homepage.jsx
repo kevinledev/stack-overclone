@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const Homepage = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -163,6 +162,11 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+      <div className="negative-curve"></div>
+        <div className="bottom-cards">
+          <div className="bottom-card-left"></div>
+          <div className="bottom-card-right"></div>
+        </div>
     </section>
   );
 };

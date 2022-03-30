@@ -1,8 +1,7 @@
 .homepage-container {
 	position: relative;
 	z-index: 25;
-	// max-width: 1790px;
-	// max-width: 1553px;
+
 	max-width: 1297+96px;
 	min-width: 1000px;
 	width: 100%;
@@ -20,7 +19,7 @@
 
 .left-hook {
 	background-color: #AFF18C;
-	// background-color:  #d1f7bd;
+
 	border-bottom-left-radius: 13%;
 	width: 70px;
 	height: 60px;
@@ -112,6 +111,9 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+	padding-bottom: 100px;
 }
 .info-cards {
 	width: 1000px;
@@ -129,7 +131,7 @@
 	border-radius: 5px;
 	width: 394px;
 	padding: 24px;
-	// background-color:  #aff18c;
+
 	background-color:  #d1f7bd ;
 	margin-right: 16px;
 }
@@ -182,7 +184,7 @@
 	height: 32px;
 	clip-path: polygon(18px 0, 32px 0, 0 40px, 0 38px, 0 0, 18px 0);
 	border-radius: 0 5px 0;
-	// background-color: #aff18c;
+
 	background-color:  #d1f7bd ;
 	transform: scaleX(-1);
 
@@ -258,11 +260,7 @@
 	padding-right:2px;
 }
 
-// .angellist-home{
-// 	font-size: 36px;
-// 	margin-top: 4px;
-// 	margin-right: 6px;
-// }
+
 
 .info-cards__right a{
 	text-decoration: none;
@@ -280,7 +278,7 @@
 	background-color:#272728;
 	color: white;
 
-	//temporary remove later
+
 	margin: 25px 0px;
 }
 
@@ -294,7 +292,7 @@
 	line-height: 72px;
 	font-family: 'Roboto Slab';
 	font-weight: 600;
-	// margin-bottom: 64px;
+
 }
 .welcome-text-container span{
 	color:#62e51d;
@@ -304,12 +302,11 @@
 }
 
 .dash-thing{
-	// margin-top: 64px;
-	width: 64px;
-	height: 8px;
-	background-color:hsl(210,8%,45%); 
-	border-radius: 1000px;
-	margin-bottom: 40px;
+width: 64px;
+    height: 8px;
+    background-color: #6a737c;
+    border-radius: 1000px;
+    margin-bottom: 38px;
 }
 
 .static-container{
@@ -318,12 +315,12 @@
 	display:flex;
 	flex-direction: row;
 	justify-content: center;
-	// align-items: center;
+
 }
 
 .static-container-el {
 		width: 231px;
-		// padding-top: 32px;
+
 		padding-bottom: 128px;
 }
 
@@ -459,4 +456,31 @@
 	opacity: 10%;
 	border-radius: 2px;
 	margin-bottom: 10px;
+}
+
+
+
+
+.bottom-cards{
+	z-index:12;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+  margin-top: -161px;
+}
+
+
+
+.negative-curve{
+    z-index: 2;
+    background-color: #F7F8F8;
+    position: absolute;
+    bottom: 210px;
+    width: 1513px;
+    height: 260px;
+    border-radius: 50%;
+    margin-bottom: 359px;
+    left: -18px;
 }

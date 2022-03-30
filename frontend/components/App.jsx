@@ -61,12 +61,15 @@ const App = () => (
       <Route exact path="/questions/:questionId" component={PersonalLinks} />
       <Route exact path="/users/:userId" component={PersonalLinks} />
     </div>
+
+    <div className="footer">
       <Route exact path="/" component={Footer} />
       <Route exact path="/search" component={Footer} />
       <Route exact path="/users" component={Footer} />
       <Route exact path="/questions" component={Footer} />
       <Route exact path="/questions/:questionId" component={Footer} />
       <Route exact path="/users/:userId" component={Footer} />
+    </div>
   </div>
 );
 

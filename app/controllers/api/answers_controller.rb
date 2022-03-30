@@ -51,7 +51,7 @@ class Api::AnswersController < ApplicationController
     @answer = Answer.find(params[:id])
     @vote = @answer.votes.find_or_initialize_by(voter: current_user)
     @vote.update(value: val)
-    render :show
+    render :index
   end
 
   def downvote
@@ -65,8 +65,8 @@ class Api::AnswersController < ApplicationController
   def unvote 
     @answer = Answer.find(params[:id])
     @vote = @answer.votes.find_by(voter: current_user)
+    render json: @vote.id
     @vote.destroy!
-    render :show
   end
 
   private

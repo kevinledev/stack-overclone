@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import EditAnswerForm from "./EditAnswerForm";
+import AnswerItemVoteContainer from "./AnswerItemVoteContainer";
 
 export default class AnswerItem extends React.Component {
   constructor(props) {
@@ -63,8 +64,13 @@ export default class AnswerItem extends React.Component {
 
     return (
       <div className="answer-item">
-        <div className="answer-body">{answer.body}</div>
-        <div className="question-sub-body">{answerDisplayOptions}</div>
+        <div className="answer-body-left">
+          <AnswerItemVoteContainer answer={answer}/>
+        </div>
+        <div className="answer-body-right">
+          <div className="answer-body">{answer.body}</div>
+          <div className="question-sub-body">{answerDisplayOptions}</div>
+        </div>
       </div>
     );
   }

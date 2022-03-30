@@ -70,7 +70,7 @@
     flex-direction: column;
     align-items: center;
     gap: 19px;
-    margin-left: 1px;
+    margin-left: 2px;
   }
 
   .uparrow{
@@ -160,7 +160,6 @@
     padding-top: 4px;
     font-size: 13px;
     color:#838c95;
-    margin-left: 4px;
   }
 
   .question-show-options button{
@@ -228,11 +227,11 @@
 .question-answers-wrapper h1{
   font-size: 19px;
   color: #232629;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .answer-body {
-  padding-top: 16px;
+  margin-top: 3px;
   font-size: 15px;
   color: #232629;
   line-height: 20px;

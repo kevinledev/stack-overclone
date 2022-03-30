@@ -11,7 +11,6 @@ export const receiveVote = (payload) => {
 };
 
 export const removeVote = (voteId) => {
-  debugger
   return {
     type: REMOVE_VOTE,
     voteId

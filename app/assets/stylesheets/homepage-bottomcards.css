@@ -1,23 +1,62 @@
 .bottom-card-left{
 	width: 520px;
 	height: 848px;
-
 	margin: 0px 16px 16px 16px;
 	border-radius: 7px;
   background-image: linear-gradient(
-  0deg,
-  hsl(99deg 78% 85%) 0%,
-  hsl(99deg 79% 87%) 32%,
-  hsl(99deg 79% 89%) 43%,
-  hsl(99deg 79% 90%) 52%,
-  hsl(98deg 79% 92%) 58%,
-  hsl(98deg 80% 94%) 64%,
-  hsl(98deg 80% 95%) 69%,
-  hsl(98deg 80% 97%) 75%,
-  hsl(98deg 80% 98%) 82%,
-  hsl(0deg 0% 100%) 100%
-);
+    0deg,
+    hsl(99deg 78% 85%) 0%,
+    hsl(99deg 79% 87%) 32%,
+    hsl(99deg 79% 89%) 43%,
+    hsl(99deg 79% 90%) 52%,
+    hsl(98deg 79% 92%) 58%,
+    hsl(98deg 80% 94%) 64%,
+    hsl(98deg 80% 95%) 69%,
+    hsl(98deg 80% 97%) 75%,
+    hsl(98deg 80% 98%) 82%,
+    hsl(0deg 0% 100%) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 0 12px 11px rgb(0 0 0 / 4%),
+  0 100px 80px rgb(0 0 0 / 7%);
 }
+
+.react-logo{
+    height: 120px;
+    padding-bottom: 2px;
+}
+
+.redux-logo{
+height: 115px;
+
+padding-bottom: 5px;
+}
+
+.ruby-logo{
+    height: 99px;
+    padding: 10px;
+    padding-top: 11px;
+}
+
+.postgres-logo{
+    height: 114px;
+    padding-top: 5px;
+}
+
+.bottom-card-left span{
+  font-size: 40px;
+  font-family: 'Roboto Slab';
+  font-weight: 600;
+  color: black;
+}
+
+
+
+
 .bottom-card-right{
 
 	width: 520px;
@@ -39,4 +78,10 @@ background-image: linear-gradient(
   hsl(344deg 0% 98%) 82%,
   hsl(0deg 0% 100%) 100%
 );
+display: flex;
+flex-direction: column;
+align-items: center;
+
+  box-shadow: 0 12px 11px rgb(0 0 0 / 4%),
+  0 100px 80px rgb(0 0 0 / 7%);
 }

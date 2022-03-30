@@ -99,7 +99,7 @@
 
 .homepage-main {
 	max-width: 1950px;
-	max-height: 800px;
+
     margin-left: auto;
     margin-right: auto;
 	border-radius: 7px;
@@ -306,7 +306,7 @@ width: 64px;
     height: 8px;
     background-color: #6a737c;
     border-radius: 1000px;
-    margin-bottom: 38px;
+    margin-bottom: 16px;
 }
 
 .static-container{
@@ -315,20 +315,24 @@ width: 64px;
 	display:flex;
 	flex-direction: row;
 	justify-content: center;
-
+	padding-bottom: 16px;
 }
 
 .static-container-el {
 		width: 231px;
 
 		padding-bottom: 128px;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+
 }
 
 .static-container-el h4{
 	color:#f8f9f9;
 	font-family: 'Roboto Slab';
 	font-weight: 500;
-	font-size: 21px;
+	font-size: 24px;
 	text-align: center;
 	margin-bottom: 8px;
 }

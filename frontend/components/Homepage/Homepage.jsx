@@ -145,28 +145,39 @@ const Homepage = () => {
         <div className="dash-thing"></div>
         <div className="static-container">
           <div className="static-container-el">
-            <h4>100+ trillion</h4>
-            <p>monthly visitors to Stack Overclone</p>
+            {/* <h4>100+ trillion</h4>
+            <p>monthly visitors to Stack Overclone</p> */}
+            <img className="react-logo" src={window.reactLogo}></img>
+            <h4>React</h4>
           </div>
           <div className="static-container-el">
-            <h4>45+ quadrillion</h4>
-            <p>Times a developer got help since 2042</p>
+            {/* <h4>45+ quadrillion</h4>
+            <p>Times a developer got help since 2042</p> */}
+            <img src={window.reduxLogo} className="redux-logo"></img>
+            <h4>Redux</h4>
           </div>
           <div className="static-container-el">
-            <h4>1790% ROI</h4>
-            <p>from companies using Stack Overclone for Teams</p>
+            {/* <h4>1790% ROI</h4>
+            <p>from companies using Stack Overclone for Teams</p> */}
+            <img className="ruby-logo" src={window.rubyLogo}></img>
+            <h4>Ruby on Rails</h4>
           </div>
           <div className="static-container-el">
-            <h4>500,000+</h4>
-            <p>Stack Overclone for Teams instances active every day</p>
+            {/* <h4>500,000+</h4>
+            <p>Stack Overclone for Teams instances active every day</p> */}
+            <img src={window.postgresLogo} className="postgres-logo"></img>
+            <h4>PostgreSQL</h4>
           </div>
         </div>
       </div>
       <div className="negative-curve"></div>
-        <div className="bottom-cards">
-          <div className="bottom-card-left"></div>
-          <div className="bottom-card-right"></div>
+      <div className="bottom-cards">
+        <div className="bottom-card-left">
+          <span></span>
+          <img className="react-logo" src={window.reactHomepage}></img>
         </div>
+        <div className="bottom-card-right"></div>
+      </div>
     </section>
   );
 };

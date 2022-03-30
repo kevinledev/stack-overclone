@@ -27,7 +27,7 @@ export default class AnswerItemVote extends React.Component {
   }
 
   handleVote(val) {
-    if (!this.state.currentUserId) return;
+    if (!this.props.currentUserId) return;
     let currentQuestionId = this.props.answer.id;
     if (val === this.state.highlightVote) {
       if (val === 1) {

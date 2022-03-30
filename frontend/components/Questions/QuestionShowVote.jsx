@@ -97,7 +97,7 @@ export default class QuestionShowVote extends React.Component {
           className={
             this.state.highlightVote === -1
               ? "downarrow_activated"
-              : !this.state.currentUserId ? "downarrow_loggedout" : "downarrow"
+              : !this.props.currentUserId ? "downarrow_loggedout" : "downarrow"
           }
           onClick={() => this.handleVote(-1)}
         ></div>

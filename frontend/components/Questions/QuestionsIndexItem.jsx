@@ -30,7 +30,7 @@ export default class QuestionsIndexItem extends React.Component {
       <div className="question-index-item">
         <div className="question-index-item-counts">
           <div className="qi-score">
-            {question.voteScore} {question.voteScore ? "vote" : "votes"}
+            {question.voteScore} {question.voteScore !== 1 ? "votes" : "vote"}
           </div>
           {numAnswers}
         </div>

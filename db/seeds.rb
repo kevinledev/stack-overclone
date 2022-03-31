@@ -71,6 +71,13 @@ q2 = Question.create!(
   body: "Hello world I am Clone 36 and I am posting my first message on Stack Overclone.",
   asker_id: clone6.id)
 
+  q2vote = Vote.create!(
+  voteable_id: q2.id,
+  voteable_type: "Question",
+  voter_id: clone0.id,
+  value: 26
+) 
+
     q2a1 = Answer.create!(
       question_id: q2.id,
       body: "Welcome to the world of Stack Overclone",
@@ -91,6 +98,13 @@ q3 = Question.create!(
   title: "How do I add two numbers in Javascript?",
   body: "Please help me I've been up all night and I can't find out how to add two numbers together. I really want to find out the sum of 5 + 10.",
   asker_id: clone17.id)
+
+  q3vote = Vote.create!(
+  voteable_id: q3.id,
+  voteable_type: "Question",
+  voter_id: clone0.id,
+  value: 3
+) 
       q3a1 = Answer.create!(
         question_id: q3.id,
         body: "Hmm.. tough question. Not sure if you're gonna get an answer for that soon.",
@@ -102,6 +116,13 @@ q4 = Question.create!(
   title: "How do I redirect to the same webpage in my Javascript app??",
   body: "How can I redirect the user from one page to the same page using JQuery or vanilla Javascript?",
   asker_id: clone17.id)
+
+  q4vote = Vote.create!(
+  voteable_id: q4.id,
+  voteable_type: "Question",
+  voter_id: clone0.id,
+  value: 3
+) 
 
     q4a1 = Answer.create!(
       question_id: q4.id,
@@ -120,6 +141,13 @@ q5 = Question.create!(
   title:"How do I get the balance of an account in Ethereum?",
   body: "How can I programmatically discover how much ETH is in a given account on the Ethereum blockchain?",
   asker_id: clone11.id)
+
+  q5vote = Vote.create!(
+  voteable_id: q5.id,
+  voteable_type: "Question",
+  voter_id: clone0.id,
+  value: 6
+) 
 
     q5a1 = Answer.create!(
       question_id: q5.id,
@@ -142,9 +170,16 @@ q6 = Question.create!(
   body:"I’m going to be straight up with you! in my own humble opinion without being sentimental of course, without offending anyone who thinks differently from my own point of view, but also by looking into this matter with a distinct perspective, I would like to say I have nothing to say.",
   asker_id: clone8.id)
 
+  q6vote = Vote.create!(
+  voteable_id: q6.id,
+  voteable_type: "Question",
+  voter_id: clone0.id,
+  value: 5
+) 
+
     q6a1= Answer.create!(
       question_id: q6.id,
-      body: "lol! i got trolled!!!!!!",
+      body: "nice",
       answerer_id: clone15.id
     )
 
@@ -154,14 +189,26 @@ q6 = Question.create!(
       answerer_id: dogelonmars.id
     )
 
-
+    
+  q8 = Question.create!(
+    title: "How to render timers on map function, each starting on different dates and updating every minute?",
+    body: "I'm making an order taking app and I need to render the order name and how long it takes to cook. Each order has the time it was sent to the kitchen, I need to give each order a timer that displays how many minutes it's taking to prepare.
+    \nI know I need to use useState to use the Set to update and useEffect to , but if I use both inside a function, it becomes a hook, and apparently I can't use that hook inside the map callback.",
+    asker_id: clone10.id
+    )
+    
+  
 q7 = Question.create!(
-  title: "How to build a linux based custom OS with GUI for Raspberry Pi 3B+",
-  body:"I am new to embedded linux, in order to learn how to build custom linux based OS from scratch I have decided to use buildroot.
-  \nI want to build a GUI based OS RaspberryPi 3B+ (or 3B) similar to that of Raspbian OS, from scratch. How do I go about this?
-  \nBy googling, I was able to find a few resources that teach how to build a non-GUI based minimal OS, and could not find any for GUI based.
-  \nLooking for information and/or resources on how I can do this.",
+  title: "How do I undo the most recent commit in Git?",
+  body:"I accidentally committed the wrong files to git, but I didn't push the commit to the server yet.
+  \nHow can I undo those commits from the local repository?",
   asker_id: zezima.id)
+q7vote = Vote.create!(
+  voteable_id: q7.id,
+  voteable_type: "Question",
+  voter_id: clone0.id,
+  value: 26
+) 
 
     q7a1 = Answer.create!(
       question_id: q7.id,
@@ -175,11 +222,91 @@ q7 = Question.create!(
       answerer_id: clone5.id
     )
 
-q8 = Question.create!(
-  title: "How to render timers on map function, each starting on different dates and updating every minute?",
-  body: "I'm making an order taking app and I need to render the order name and how long it takes to cook. Each order has the time it was sent to the kitchen, I need to give each order a timer that displays how many minutes it's taking to prepare.
-  \nI know I need to use useState to use the Set to update and useEffect to , but if I use both inside a function, it becomes a hook, and apparently I can't use that hook inside the map callback.",
-  asker_id: clone10.id
+    q7a3 = Answer.create!(
+      question_id: q7.id,
+      body: "You can either do\n'git reset --hard'\nif you want to delete the commit and never see any traces of it again.
+        \n You can also do\n'git reset'\nif you want to undo the commit, but keep changes that you made.",
+      answerer_id: clone16.id
+    )
+
+q9 = Question.create!(
+    title: "How can I vertically center a div for all browsers using CSS?",
+  body:"I want to center a div vertically with CSS. I don't want tables or JavaScript, but only pure CSS. I found some solutions, but all of them are missing Internet Explorer 6 support.\n\nHow can I center a div vertically in all major browsers, including Internet Explorer 6?",
+  asker_id: clone16.id
+)
+q9vote = Vote.create!(
+  voteable_id: q9.id,
+  voteable_type: "Question",
+  voter_id: clone0.id,
+  value: 1
+) 
+    
+    q9a1 = Answer.create!(
+      question_id: q9.id,
+      body:"The simplest way would be the following three lines of CSS:\n\n1) position: relative\n2)top: 50%\n3)transform: translateY(-50%)\n\nTry this out!",
+      answerer_id:clone9.id
+    )
+
+
+q10 = Question.create!(
+  title: "What is the purpose of this website?",
+  body: "Every time I ask a question I never get any answers. I thought this was the most popular site to ask a question and get help for my technical problems - this site is a joke!",
+  asker_id: clone3.id,
+)
+q10vote = Vote.create!(
+  voteable_id: q10.id,
+  voteable_type: "Question",
+  voter_id: clone0.id,
+  value: -8
+) 
+
+q11 = Question.create!(
+  title: "How can I remove a specific item from an array?",
+  body: "How do I remove a specific value from an array? Something like:\n\narray.remove(value);  // removes all elements with value\n\nI have to use JavaScript.",
+  asker_id: clone15.id
+)
+q11vote = Vote.create!(
+  voteable_id: q11.id,
+  voteable_type: "Question",
+  voter_id: clone0.id,
+  value: 11
+) 
+    q11a1 = Answer.create!(
+      question_id: q11.id,
+      body: "Find the index of the array element that you have to remove, and then remove that index with splice().",
+      answerer_id: clone9.id
+    )
+
+    q11a2 = Answer.create!(
+      question_id: q11.id,
+      body: "To remove an element of an array at index i:\n\narray.splice(i, 1);\n\nIf you want to remove a single element at index i but you don't want the other element indices to change:\n\n delete array[i];",
+      answerer_id: clone20.id
+    )
+
+q12 = Question.create!(
+  title: "Difference between npx and npm?",
+  body: "I have just started learning React. If I have to install the skeleton project I have to type 'npx create-react-app my-app' in the command-line.
+  \n\n I was wondering why does the Facebook in Github have 'npx create-react-app my-app' rather than 'npm create-react-app my-app' ?",
+  asker_id: clone8.id
 )
 
+q12vote = Vote.create!(
+  voteable_id: q12.id,
+  voteable_type: "Question",
+  voter_id: clone0.id,
+  value: 8
+) 
 
+  q12a1 = Answer.create!(
+    question_id: q12.id,
+    body: "NPM - Manages packages but doesn't make any life easy executing any.\nNPX - A tool for executing Node packages
+    \n\nNPM by itself does not simply run any package. It doesn't run any package as a matter of fact. If you want to run a package using NPM, you must specify that package in your package.json file.
+    \n\nWhen executables are installed via NPM packages, NPM links to them:
+    \n\n1. local installs have 'links' created at ./node_modules/.bin/ directory.
+    \n2. global installs have 'links' created from the global bin/ directory (e.g. /usr/local/bin) on Linux or at %AppData%/npm on Windows.",
+    answerer_id: clone24.id
+  )
+
+
+      
+      

@@ -173,10 +173,52 @@ const Homepage = () => {
       <div className="negative-curve"></div>
       <div className="bottom-cards">
         <div className="bottom-card-left">
-          <span></span>
-          <img className="react-logo" src={window.reactHomepage}></img>
+          <img src={window.logoTransparent} className="bottom-so-logo"></img>
+          <img className="bottom-globe" src={window.homeGlobe}></img>
+          <h1>
+            A public platform building the definitive collection of coding
+            questions & answers
+          </h1>
+          <h2>
+            A community-based space to find and contribute answers to technical
+            challenges, and one of the most popular websites in the world.
+          </h2>
+          <Link to={`/login`} className="join-community">
+            <button className="joincomm-button">Join the community</button>
+          </Link>
+          <h3>
+            or <Link to={`/questions`}>search content</Link>
+          </h3>
         </div>
-        <div className="bottom-card-right"></div>
+        <div className="bottom-card-right">
+          <div className="bottom-so-forteams">
+            <img src={window.loginLogo} className="img-forteams"></img>
+            <div className="forteams_div">&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+            <div className="forteams_text">FOR TEAMS</div>
+          </div>
+          <img src={window.orgImg} className="bottom-org"></img>
+          <h1>
+            A private collaboration &#38; knowledge sharing SaaS platform for
+            companies
+          </h1>
+          <h2>
+            A web-based platform to increase productivity, decrease cycle times,
+            accelerate time to market, and protect institutional knowledge.
+          </h2>
+          <div className="getstarted">
+            <div className="getstartedline"></div>
+            <span>Get started</span>
+            <div className="getstartedline"></div>
+          </div>
+          <div className="bottom-card-right-buttons">
+            <a href="https://stackoverflow.co/explore-teams/">
+              <button className="for-large-org">For large organizations</button>
+            </a>
+            <a href="https://stackoverflow.co/teams/">
+              <button className="for-small-teams">For small teams</button>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

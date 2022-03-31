@@ -83,15 +83,33 @@ q2 = Question.create!(
       body: "Welcome to the world of Stack Overclone",
       answerer_id: clone4.id
     )
-    q2a3 = Answer.create!(
+    q2a1vote = Vote.create!(
+      voteable_id: q2a1.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 26
+    )
+    q2a2 = Answer.create!(
       question_id: q2.id,
       body: "Welcome to the world of Stack Overclone. Clone 16 here.",
       answerer_id: clone16.id
+    )
+    q2a2vote = Vote.create!(
+      voteable_id: q2a2.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 26
     )
     q2a3 = Answer.create!(
       question_id: q2.id,
       body: "Welcome to the world of Stack Overclone. Clone 8 here.",
       answerer_id: clone8.id
+    )
+    q2a3vote = Vote.create!(
+      voteable_id: q2a3.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 26
     )
 
 q3 = Question.create!(
@@ -110,6 +128,12 @@ q3 = Question.create!(
         body: "Hmm.. tough question. Not sure if you're gonna get an answer for that soon.",
         answerer_id: clone15.id
       )
+      q3a1vote = Vote.create!(
+      voteable_id: q3a1.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: -3
+    )
 
 
 q4 = Question.create!(
@@ -129,10 +153,22 @@ q4 = Question.create!(
       body: "My answer to this question is hello world",
       answerer_id: kevin.id
     )
+    q4a1vote = Vote.create!(
+      voteable_id: q4a1.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 2
+    )
     q4a2 = Answer.create!(
       question_id: q4.id,
       body: "JQuery is not needed - window.location.replace() will best simulate an HTTP redirect.",
       answerer_id: clone6.id
+    )
+    q4a2vote = Vote.create!(
+      voteable_id: q4a2.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 2
     )
 
 
@@ -157,11 +193,23 @@ q5 = Question.create!(
       \nconsole.log('balance = : ', await web3.eth.getBalance(accounts[0]));",
       answerer_id: clone13.id
     )
+    q5a1vote = Vote.create!(
+      voteable_id: q5a1.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 8
+    )
 
     q5a2 = Answer.create!(
       question_id: q5.id,
       body: "My answer to this question is hello world",
       answerer_id: clone14.id
+    )
+    q5a2vote = Vote.create!(
+      voteable_id: q5a2.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 13
     )
 
 
@@ -182,12 +230,24 @@ q6 = Question.create!(
       body: "nice",
       answerer_id: clone15.id
     )
+    q6a1vote = Vote.create!(
+      voteable_id: q6a1.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 3
+    )
 
     q6a2= Answer.create!(
       question_id: q6.id,
       body: "I am Dogelon. Dogelon Mars. Join me and together we will reach the stars.",
       answerer_id: dogelonmars.id
     )
+    q6a2vote = Vote.create!(
+      voteable_id: q6a2.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 99999
+    ) 
 
     
   q8 = Question.create!(
@@ -221,6 +281,12 @@ q7vote = Vote.create!(
       body: "check out stackoverflow.com",
       answerer_id: clone5.id
     )
+    q7a2vote = Vote.create!(
+      voteable_id: q7a2.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: -2
+    ) 
 
     q7a3 = Answer.create!(
       question_id: q7.id,
@@ -228,6 +294,12 @@ q7vote = Vote.create!(
         \n You can also do\n'git reset'\nif you want to undo the commit, but keep changes that you made.",
       answerer_id: clone16.id
     )
+    q7a3vote = Vote.create!(
+      voteable_id: q7a3.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 10
+    ) 
 
 q9 = Question.create!(
     title: "How can I vertically center a div for all browsers using CSS?",
@@ -246,6 +318,12 @@ q9vote = Vote.create!(
       body:"The simplest way would be the following three lines of CSS:\n\n1) position: relative\n2)top: 50%\n3)transform: translateY(-50%)\n\nTry this out!",
       answerer_id:clone9.id
     )
+    q9a1vote = Vote.create!(
+      voteable_id: q9a1.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 1
+    ) 
 
 
 q10 = Question.create!(
@@ -276,12 +354,24 @@ q11vote = Vote.create!(
       body: "Find the index of the array element that you have to remove, and then remove that index with splice().",
       answerer_id: clone9.id
     )
+    q11a1vote = Vote.create!(
+      voteable_id: q11a1.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 3
+    ) 
 
     q11a2 = Answer.create!(
       question_id: q11.id,
       body: "To remove an element of an array at index i:\n\narray.splice(i, 1);\n\nIf you want to remove a single element at index i but you don't want the other element indices to change:\n\n delete array[i];",
       answerer_id: clone20.id
     )
+    q11a2vote = Vote.create!(
+      voteable_id: q11a2.id,
+      voteable_type: "Answer",
+      voter_id: clone0.id,
+      value: 3
+    ) 
 
 q12 = Question.create!(
   title: "Difference between npx and npm?",
@@ -306,6 +396,13 @@ q12vote = Vote.create!(
     \n2. global installs have 'links' created from the global bin/ directory (e.g. /usr/local/bin) on Linux or at %AppData%/npm on Windows.",
     answerer_id: clone24.id
   )
+
+  q12a1vote = Vote.create!(
+  voteable_id: q12a1.id,
+  voteable_type: "Answer",
+  voter_id: clone0.id,
+  value: 4
+) 
 
 
       

@@ -15,7 +15,7 @@ class Api::QuestionsController < ApplicationController
       render :index
     end
   end
-
+    
   def show
     @question = Question.find(params[:id])
     if @question

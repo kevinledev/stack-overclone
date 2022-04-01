@@ -8,8 +8,6 @@
   // border-right-width: 1px;
   padding-top: 24px;
   box-sizing: border-box;
-  // border-right: 1px solid rgb(214,217,220);
-  // border-left: 1px solid rgb(214,217,220);
 }
 
 .question-index-wrapper{
@@ -31,7 +29,7 @@
 }
 
 .ask-question {
-  box-shadow: inset 0px 1px 0px 0px rgb(122, 122, 123);
+  box-shadow: inset 0px 1px 0px 0px #7a7a7b;
   width: 103px;
   height: 37.78px;
   background-color: #272728;
@@ -86,8 +84,8 @@
 }
 
 .qi-answers-nonzero{
-  color: rgb(98,229,29);
-  border: 1px solid rgb(98,229,29);
+  color: #62e51d;
+  border: 1px solid #62e51d;
   padding: 2px 4px;
   border-radius: 3px;
 }
@@ -142,5 +140,5 @@
 
 .questionindex-item-asker-link{
   text-decoration: none;
-  color:rgb(98,229,29);
+  color:#62e51d;
 }

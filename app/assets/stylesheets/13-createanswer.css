@@ -11,8 +11,8 @@
 .ea-body-container textarea{
   width: calc(97%);
   border-radius: 3px;
-  color: hsl(210,8%,25%);
-  border: 1px solid hsl(210,8%,75%);
+  color: #0c0d0e;
+  border: 1px solid #babfc4;
   padding: 10px;
   margin-bottom: 12px;
   resize: vertical;

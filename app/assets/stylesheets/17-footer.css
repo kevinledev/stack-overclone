@@ -61,7 +61,7 @@
   height: 24px;
   display: flex;
   align-items: center;
-  color: hsl(210,8%,35%);
+  color: #6a737c;
   text-decoration: none;
 }
 .main-footer-links a:hover{
@@ -109,7 +109,7 @@
   height: 24px;
   display: flex;
   align-items: center;
-  color: hsl(210,8%,35%);
+  color: #6a737c;
   text-decoration: none;
 }
 .dev-links a:hover{

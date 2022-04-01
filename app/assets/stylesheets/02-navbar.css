@@ -5,15 +5,16 @@
   /* // background-image: linear-gradient(to right, #5afe04, BLACK); */
   background-image: linear-gradient(
     90deg,
-    hsla(99deg 99% 51%) 0%,
-    hsla(99deg 99% 44%) 21%,
-    hsla(99deg 99% 38%) 30%,
-    hsla(99deg 99% 32%) 38%,
-    hsla(99deg 98% 25%) 46%,
-    hsla(99deg 100% 19%) 54%,
-    hsla(99deg 100% 13%) 63%,
-    hsla(99deg 100% 6%) 74%,
-    hsla(0deg 0% 0%) 100%
+    #64e51f 0%,
+    #44cc00 19%,
+    #15b300 28%,
+    #009900 35%,
+    #008000 42%,
+    #006b00 49%,
+    #005200 56%,
+    #003d00 64%,
+    #002900 75%,
+    #000000 100%
   );
 }
 
@@ -34,14 +35,13 @@
   top: 0px;
   width: 100%;
   background-color: #f8f9f9;
-/* background-color: black; */
   position: fixed;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
-    0 2px 8px hsla(0, 0%, 0%, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.05),
+    0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .nav-items {
@@ -100,7 +100,7 @@
   padding-bottom: 2px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    margin-left: 18px;
+  margin-left: 18px;
 }
 .login-button:hover {
   background-color: lightgrey;
@@ -131,9 +131,8 @@
 }
 
 .search-input {
-
   width: 100%;
-  height: 27.5px;
+  height: 28.5px;
   font-size: 13px;
   color: #3b4045;
   border: 1px solid transparent;
@@ -148,7 +147,6 @@
 }
 
 ::placeholder {
-
   opacity: 0.5;
   font-size: 13px;
 }
@@ -164,7 +162,6 @@
   margin-right: 52px;
   margin-left: 4px;
 }
-
 
 .my-profile-container {
   position: relative;

@@ -6,7 +6,7 @@
   height: 200px;
   width: auto;
   min-width: 164px;
-  box-shadow: 0px 0px 0px hsla(210, 8%, 5%, 5%);
+  box-shadow: 0px 0px 0px #0c0d0e0d;
   box-sizing: border-box;
   background-color:#F8F9F9;
   width:164px;

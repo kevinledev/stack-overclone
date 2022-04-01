@@ -5,16 +5,16 @@
 	border-radius: 7px;
   background-image: linear-gradient(
     0deg,
-    hsla(99deg 78% 85%) 0%,
-    hsla(99deg 79% 87%) 32%,
-    hsla(99deg 79% 89%) 43%,
-    hsla(99deg 79% 90%) 52%,
-    hsla(98deg 79% 92%) 58%,
-    hsla(98deg 80% 94%) 64%,
-    hsla(98deg 80% 95%) 69%,
-    hsla(98deg 80% 97%) 75%,
-    hsla(98deg 80% 98%) 82%,
-    hsla(0deg 0% 100%) 100%
+    #d0f7bb 0%,
+    #d6f7c4 32%,
+    #dcf9cd 43%,
+    #dffad1 52%,
+    #e6fbda 58%,
+    #ecfce3 64%,
+    #f0fce8 69%,
+    #f6fdf1 75%,
+    #f9fef6 82%,
+    #ffffff 100%
   );
 
   display: flex;
@@ -78,16 +78,16 @@ padding-bottom: 5px;
 
 background-image: linear-gradient(
   0deg,
-  hsl(0deg 0% 85%) 0%,
-  hsl(344deg 0% 87%) 32%,
-  hsl(344deg 0% 89%) 43%,
-  hsl(344deg 0% 90%) 52%,
-  hsl(344deg 0% 92%) 58%,
-  hsl(344deg 0% 93%) 64%,
-  hsl(344deg 0% 95%) 69%,
-  hsl(344deg 0% 97%) 75%,
-  hsl(344deg 0% 98%) 82%,
-  hsl(0deg 0% 100%) 100%
+  #d9d9d9 0%,
+  #dedede 32%,
+  #e3e3e3 43%,
+  #e6e6e6 52%,
+  #ebebeb 58%,
+  #ededed 64%,
+  #f2f2f2 69%,
+  #f7f7f7 75%,
+  #fafafa 82%,
+  #ffffff 100%
 );
 display: flex;
 flex-direction: column;

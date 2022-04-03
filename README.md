@@ -16,7 +16,7 @@ Stack Overclone is a pixel-perfect clone of the popular q&a site for programmers
 * upvote/downvote questions and answers
 * search for specific questions
 
-Feel free to make an account, browse questions, or ask a question on Stack Overclone, the robot clones will get to your question as soon as possible.
+Feel free to make an account, browse questions, or ask a question on Stack Overclone, the robot clones will respond to your question as soon as possible.
 
 
 ## Technologies

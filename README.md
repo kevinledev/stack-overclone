@@ -29,4 +29,4 @@ Feel free to create an account, browse questions, or ask a question on Stack Ove
 
 ## Coming Soon
 * user profile pages that displays the user's questions asked and answers
-* custom code blocks when asking / answering questions
+* custom code snippets for questions and answers

@@ -17,3 +17,12 @@ Stack Overclone is a pixel-perfect clone of the popular q&a site for programmers
 * search for specific questions
 
 Feel free to create an account, browse questions, or ask a question on Stack Overclone, no guarantees that you'll get a response!
+
+
+## Technologies
+* React
+* Redux
+* Ruby on Rails
+* PostgreSQL
+* Webpack
+* CSS

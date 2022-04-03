@@ -16,4 +16,4 @@ Stack Overclone is a pixel-perfect clone of the popular q&a site for programmers
 * upvote/downvote questions and answers
 * search for specific questions
 
-Feel free to create and account and post your questions on Stack Overclone, no guarantees that you'll get a response!
+Feel free to create an account, browse questions, or ask a question on Stack Overclone, no guarantees that you'll get a response!

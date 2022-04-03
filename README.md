@@ -1,25 +1,32 @@
-# README
+<p align="center">
+<img src="https://user-images.githubusercontent.com/96442866/161406299-29bd4320-0939-45ce-8f68-1e4230709418.png"/></p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+<p align="center">
+<a href="https://stackoverclone.herokuapp.com/#/">LIVE SITE</a>
+</p>
 
-* Ruby version
+## Overview
 
-* System dependencies
+Stack Overclone is a pixel-perfect clone of the popular q&a site for programmers Stack Overflow, only difference being the green logo. Similarly to Stack Overflow, users have the ability to:
+* create an account / login
+* post questions
+* answer questions
+* edit/delete their questions and answers
+* upvote/downvote questions and answers
+* search for specific questions
 
-* Configuration
+Feel free to make an account, browse questions, or ask a question on Stack Overclone, the robot clones on the site will get to you as soon as possible.
 
-* Database creation
 
-* Database initialization
+## Technologies
+* React
+* Redux
+* Ruby on Rails
+* PostgreSQL
+* Webpack
+* CSS
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# stack-overclone
+## Coming Soon
+* user profile pages that displays the user's questions asked and answers
+* custom code snippets for questions and answers

@@ -10,8 +10,7 @@
 
 Stack Overclone is a pixel-perfect clone of the popular q&a site for programmers Stack Overflow, only difference being the green logo. Similarly to Stack Overflow, users have the ability to:
 * create an account / login
-* post questions
-* answer questions
+* post and answer questions
 * edit/delete their questions and answers
 * upvote/downvote questions and answers
 * search for specific questions

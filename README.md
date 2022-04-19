@@ -55,6 +55,6 @@ Also, when editing the question, the user can see a preview of their edited ques
               </label>
 ```
 
-## Coming Soon
+## In Progress
 * user profile pages that displays the user's questions asked and answers
 * custom code snippets for questions and answers

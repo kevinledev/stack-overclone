@@ -36,7 +36,6 @@ Stack Overclone contains some features that improve from Stack Overflow's curren
       
       
      const editQuestionForm = editingQuestion ? <EditQuestionContainer /> : null;
-  }
 ```
 
 

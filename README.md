@@ -26,6 +26,20 @@ Feel free to make an account, browse questions, or ask a question on Stack Overc
 * Webpack
 * CSS
 
+## Code Highlights
+Stack Overclone contains some features that improve from Stack Overflow's current user experience. On the real Stack Overflow site, to edit your question, Stack Overflow takes you to a separate page. Here, I decided to add the edit form directly on the page to improve the user experience.
+
+```  toggleEditQuestion() {
+    this.state.editingQuestion
+      ? this.setState({ editingQuestion: false })
+      : this.setState({ editingQuestion: true });
+      
+      
+     const editQuestionForm = editingQuestion ? <EditQuestionContainer /> : null;
+  }
+```
+
+
 ## Coming Soon
 * user profile pages that displays the user's questions asked and answers
 * custom code snippets for questions and answers

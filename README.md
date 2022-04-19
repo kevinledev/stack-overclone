@@ -27,7 +27,7 @@ Feel free to make an account, browse questions, or ask a question on Stack Overc
 * CSS
 
 ## Code Highlights
-Stack Overclone contains some features that improve from Stack Overflow's current user experience. On the real Stack Overflow site, to edit your question, Stack Overflow takes you to a separate page. Here, I decided to add the edit form directly on the page to improve the user experience.
+Stack Overclone contains some features that improve from Stack Overflow's current user experience. On the real Stack Overflow site, to edit your question, Stack Overflow takes you to a separate page. Here, I've added the edit form directly on the page to improve the user experience.
 
 ```  toggleEditQuestion() {
     this.state.editingQuestion
@@ -38,6 +38,22 @@ Stack Overclone contains some features that improve from Stack Overflow's curren
      const editQuestionForm = editingQuestion ? <EditQuestionContainer /> : null;
 ```
 
+Also, when editing the question, the user can see a preview of their edited question before posting, and compare to the unedited version, all on the same page.
+```
+ <label className="eq-body-container">
+                <h1 className="eq-input-headings">Body</h1>
+                <textarea
+                  spellcheck="false"
+                  value={this.state.body}
+                  // value=""
+                  onChange={this.updateBody}
+                />
+                <div className="question-edit-preview">
+                  <h1 className="eq-input-headings">Preview</h1>
+                  <h2>{this.state.body}</h2>
+                </div>
+              </label>
+```
 
 ## Coming Soon
 * user profile pages that displays the user's questions asked and answers

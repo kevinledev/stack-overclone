@@ -1,0 +1,31 @@
+
+steps:
+
+# Decrypt Rails Master key file
+- name: gcr.io/cloud-builders/gcloud
+  args: ["kms", "decrypt", "--ciphertext-file=./config/master.key.enc", 
+         "--plaintext-file=./config/master.key",
+         "--location=us-central1","--keyring=photo-album", 
+        "--key=rails_master_key"]
+
+# Decrypt Photo Album service account credentials
+- name: gcr.io/cloud-builders/gcloud
+  args: ["kms", "decrypt", "--ciphertext-file=./config/photo_album_runner.key.enc", 
+         "--plaintext-file=./config/photo_album_runner.key",
+         "--location=us-central1","--keyring=photo-album", 
+         "--key=photo_album_runner_key"]
+
+# Build image with tag 'latest' and pass decrypted Rails DB password as argument
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag', 'gcr.io/$PROJECT_ID/photo_album:latest', 
+         '--build-arg', 'DB_PWD', '.']
+  secretEnv: ['DB_PWD']
+
+# Push new image to Google Container Registry       
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/photo_album:latest']
+
+secrets:
+- kmsKeyName: projects/project_id/locations/us-west2/keyRings/photo-album/cryptoKeys/db_pwd_key
+  secretEnv:
+    DB_PWD: euInzBvPbCQQHkkzexdyWUzAKcOqMCjHUzYCCmyVIWnwIQLaNi

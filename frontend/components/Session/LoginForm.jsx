@@ -94,6 +94,7 @@ export default class Login extends React.Component {
             <span>
               Are you an employer?
               <a
+                target="_blank"
                 className="login-to-signup-link"
                 href="https://www.linkedin.com/in/kevinledev/"
               >

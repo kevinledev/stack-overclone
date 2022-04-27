@@ -38,11 +38,15 @@ export default class Sidebar extends React.Component {
               </span>
             </span>
             <img src={window.teamsfree}></img>
-            <a href="https://stackoverflow.com/teams/create/free?utm_source=so-owned&utm_medium=side-bar&utm_campaign=campaign-38&utm_content=cta">
+            <a
+              target="_blank"
+              href="https://stackoverflow.com/teams/create/free?utm_source=so-owned&utm_medium=side-bar&utm_campaign=campaign-38&utm_content=cta"
+            >
               <button className="link-to-msteams">Create a free Team</button>
             </a>
             <span className="whatisteams">
               <a
+                target="_blank"
                 href="https://stackoverflow.co/teams/"
                 className="whatisteamslink"
               >

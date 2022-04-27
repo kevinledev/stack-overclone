@@ -25,8 +25,14 @@ const Footer = () => {
           <div className="dev-links">
             <h1>DEVELOPER</h1>
             <ul>
-              <a href="https://www.linkedin.com/in/kevinledev/">LinkedIn</a>
-              <a href="https://github.com/kevinledev" className="footer-ghlink">
+              <a target="_blank" href="https://www.linkedin.com/in/kevinledev/">
+                LinkedIn
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/kevinledev"
+                className="footer-ghlink"
+              >
                 Github
               </a>
             </ul>

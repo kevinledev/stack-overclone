@@ -34,11 +34,12 @@ const Homepage = () => {
                 </a>
               </div> */}
               <div className="personal-links">
-                <a href="https://github.com/kevinledev">
+                <a target="_blank" href="https://github.com/kevinledev">
                   {/* <i className="fa fa-github"></i> */}
                   Github
                 </a>
                 <a
+                  target="_blank"
                   className="linkedin-home"
                   href="https://www.linkedin.com/in/kvnle/"
                 >
@@ -211,10 +212,10 @@ const Homepage = () => {
             <div className="getstartedline"></div>
           </div>
           <div className="bottom-card-right-buttons">
-            <a href="https://stackoverflow.co/explore-teams/">
+            <a target="_blank" href="https://stackoverflow.co/explore-teams/">
               <button className="for-large-org">For large organizations</button>
             </a>
-            <a href="https://stackoverflow.co/teams/">
+            <a target="_blank" href="https://stackoverflow.co/teams/">
               <button className="for-small-teams">For small teams</button>
             </a>
           </div>

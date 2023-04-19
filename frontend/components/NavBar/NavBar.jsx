@@ -1,6 +1,5 @@
 import React from "react";
 import GreetingContainer from "./Greeting/GreetingContainer";
-// import Search from "./Search/Search";
 import { Link } from "react-router-dom";
 import SearchBarContainer from "./SearchBar/SearchBarContainer";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import LoginFormContainer from "./Session/LoginFormContainer";
 import SignupFormContainer from "./Session/SignupFormContainer";
@@ -12,7 +12,6 @@ import Sidebar from "./Sidebar/Sidebar";
 import CreateQuestionContainer from "./Questions/CreateQuestionContainer";
 import Homepage from "./Homepage/Homepage";
 import PersonalLinks from "./PersonalLinks/PersonalLinks";
-import SearchResults from "./Search/SearchResults";
 import SearchResultsContainer from "./Search/SearchResultsContainer";
 import Footer from "./Footer/Footer";
 

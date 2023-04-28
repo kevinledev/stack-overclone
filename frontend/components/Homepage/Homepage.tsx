@@ -1,27 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-
-const ROLES_FOR_ANIMATION = [
-  "developer",
-  "data scientist",
-  "system admin",
-  "mobile developer",
-  "game developer",
-];
 
 const Homepage = () => {
- const [currentRole, setCurrentRole] = React.useState(ROLES_FOR_ANIMATION[0]);
-
-  React.useEffect(() => {
-    let i = 1;
-    const interval = setInterval(() => {
-      setCurrentRole(ROLES_FOR_ANIMATION[i]);
-      i = (i + 1) % ROLES_FOR_ANIMATION.length;
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="homepage-container">
@@ -44,33 +24,18 @@ const Homepage = () => {
             <div className="info-cards__right">
               <img className="saturn" src={window.homepageSaturn}></img>
               <p>Want a secure, private space for your technical knowledge?</p>
-              {/* <div className="personal-links-top">
-                <a href="https://github.com/kevinledev">
-                  <i className="fa fa-github"></i>
+              <div className="personal-links">
+                <a target="_blank" href="https://github.com/kevinledev">
+                  Github
                 </a>
-              </div> */}
-              <div className="p-links-buttons">
-                <div className="personal-links">
-                  <a target="_blank" href="https://github.com/kevinledev">
-                    {/* <i className="fa fa-github"></i> */}
-                    Github
-                  </a>
-                </div>
-                <div className="personal-links">
-                  <a
-                    target="_blank"
-                    className="linkedin-home"
-                    href="https://www.linkedin.com/in/kvnle/"
-                  >
-                    {/* <i id="linkedin" className="fa fa-linkedin"></i> */}
-                    LinkedIn
-                  </a>
-                  {/* <div className="angellist-home">
-                  <i class="fa fa-angellist"></i>
-                </div> */}
-                </div>
+                <a
+                  target="_blank"
+                  className="linkedin-home"
+                  href="https://www.linkedin.com/in/kvnle/"
+                >
+                  LinkedIn
+                </a>
               </div>
-              {/* <p>View my developer links</p> */}
             </div>
           </div>
           <div className="speech-bubbles">
@@ -158,12 +123,8 @@ const Homepage = () => {
         </div>
 
         <div className="welcome-text-container">
-          <h1 className="top-row">
-            <h5 className="left-text">Every</h5>
-            <span key={currentRole} className="current-role">
-              {currentRole}
-            </span>
-            <h5 className="right-text">has a</h5>
+          <h1>
+            Every <span>developer</span> has a
           </h1>
           <h1 className="welcomebottom">tab open to Stack Overclone</h1>
         </div>
@@ -182,8 +143,6 @@ const Homepage = () => {
             <h4>Ruby on Rails</h4>
           </div>
           <div className="static-container-el">
-            {/* <h4>500,000+</h4>
-            <p>Stack Overclone for Teams instances active every day</p> */}
             <img src={window.postgresLogo} className="postgres-logo"></img>
             <h4>PostgreSQL</h4>
           </div>

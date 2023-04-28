@@ -488,3 +488,35 @@ width: 64px;
     margin-bottom: 359px;
     left: -12px;
 }
+
+.p-links-buttons{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap:16px;
+}
+
+.top-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.current-role {
+	margin-left: 16px;
+	margin-right: 16px;
+	opacity: 0;
+	animation: fade-in-animation 700ms ease-out forwards;
+}
+
+@keyframes fade-in-animation {
+	from {
+		opacity: 0;
+		transform: translateY(-32px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
